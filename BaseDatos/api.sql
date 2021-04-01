@@ -45,10 +45,11 @@ use fitGym;
         id int(11) primary key not null,
         dias varchar(15) not null,
         fechas timestamp not null default current_timestamp,
+        mes varchar(4) not null,
         horas varchar(15) not null,
         cliente int(11) not null,
         constraint fk_cliente foreign key(cliente) references info_cliente(id)
-    );
+    ); 
 
     alter table horario modify id int(11) not null auto_increment, auto_increment = 1;
 
@@ -59,7 +60,9 @@ use fitGym;
         horario varchar(15) not null,
         bajas varchar(600) not null,
         higiene varchar(600) not null,
-        seguridad varchar(600) not null
+        seguridad varchar(600) not null,
+        usuario int(11) not null,
+        constraint fk_usuario foreign key(usuario) references usuario(id)
     );
 
     alter table gimnasio modify id int(11) not null auto_increment, auto_increment = 1;

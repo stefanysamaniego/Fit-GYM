@@ -1,0 +1,145 @@
+#imagen{
+    width: 40%;
+}
+
+#imagen1{
+    width: 18%;
+}
+
+#Boton{
+    position: absolute;
+    left: 1135px;
+    top: 650px;
+}
+
+#Boton1{
+    position: absolute;
+    left: 970px;
+    top: 650px;
+}
+
+#edita{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 60px;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+#contenido{
+    margin-left: 70px;
+    padding-top: 130px;
+    gap: 10px;
+    width: 90%;
+}
+
+#Inscripcion{
+    position: absolute;
+    font-size: 28px;
+    top: 50px;
+    left: 650px;
+}
+
+#uno{
+    position: absolute;
+    left: 150px;
+}
+
+#inscripciones{
+    position: absolute;  
+}
+
+#descripcion{
+    position: absolute;
+    height: 150px;
+    top: 40px;
+    left: 77px;
+    text-align: justify;
+}
+
+#dos{
+    position: absolute;
+    left: 115px;
+}
+
+#mensualidades{
+    position: absolute;
+    left: 565px;
+}
+
+#mensualidad{
+    position: absolute;
+    height: 150px;
+    top: 40px;
+    left: 42px;
+    text-align: justify;
+}
+
+#tres{
+    position: absolute;
+    left: 85px;
+}
+
+#horarios{
+    position: absolute;
+    left: 1050px;
+}
+
+#horario{
+    position: absolute;
+    height: 150px;
+    top: 40px;
+    text-align: justify;
+}
+
+#cuatro{
+    position: absolute;
+    left: 170px;
+}
+
+#bajas{
+    position: absolute;
+    top: 430px;
+}
+
+#baja{
+    position: absolute;
+    height: 150px;
+    left: 77px;
+    top: 40px;
+    text-align: justify;
+}
+
+#cinco{
+    position: absolute;
+    left: 90px;
+}
+
+#higienes{
+    position: absolute;
+    left: 600px;
+    top: 430px;
+}
+
+#higiene{
+    position: absolute;
+    height: 150px;
+    top: 40px;
+    text-align: justify;
+}
+
+#seis{
+    position: absolute;
+    left: 90px;
+}
+
+#seguridades{
+    position: absolute;
+    left: 1047px;
+    top: 430px;
+}
+
+#seguridad{
+    position: absolute;
+    height: 150px;
+    top: 40px;
+    text-align: justify;
+}

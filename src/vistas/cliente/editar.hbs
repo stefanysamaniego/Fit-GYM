@@ -1,0 +1,40 @@
+<LINK REL=StyleSheet HREF="/css/cliente/editar.css" TYPE="text/css" MEDIA=screen>
+
+<div id="contenido">
+    <form action="/cliente/editar/{{encuentra.id}}" method="post">
+
+        <label id="datos">Datos del Cliente</label>
+
+        <div id="nombres">
+            <label id="uno">Nombres:</label>
+            <input type="text" name="nombres" id="nombre" checked value="{{encuentra.nombres}}">
+        </div>
+        <div id="apellidos">
+            <label id="dos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellido" checked value="{{encuentra.apellidos}}">
+        </div>
+        <div id="cedulas">
+            <label id="tres">Cédula:</label>
+            <input type="number" name="cedula" id="cedula" checked value="{{encuentra.cedula}}">
+        </div>
+        <div id="edades">
+            <label id="cuatro">Edad:</label>
+            <input type="number" name="edad" id="edad" checked value="{{encuentra.edad}}">
+        </div>
+        <div id="telefonos">
+            <label id="cinco">Teléfono</label>
+            <input type="number" name="telefono" id="telefono" checked value="{{encuentra.telefono}}">
+        </div>
+        <div id="alturas">
+            <label id="seis">Altura:</label>
+            <input type="text" name="altura" id="altura" checked value="{{encuentra.altura}}">
+        </div>
+        <div id="pesos">
+            <label id="siete">Peso:</label>
+            <input type="text" name="peso" id="peso" checked value="{{encuentra.peso}}">
+        </div>
+        <div id="Boton">
+            <button type="submit" id="edita"><img src="/img/editar.png" id="imagen1"></button>
+        </div>
+    </form>
+</div>
