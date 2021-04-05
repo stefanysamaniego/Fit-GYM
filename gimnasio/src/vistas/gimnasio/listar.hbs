@@ -1,0 +1,48 @@
+<LINK REL=StyleSheet HREF="/css/gimnasio/listar.css" TYPE="text/css" MEDIA=screen>
+
+<form action="/gimnasio/listar"></form>
+<div id="contenedor">
+    {{#each lista}} 
+    <div>
+        <label id="nombre">Nombre del Gimnasio</label>
+        <p>{{nombre}}</p>
+    </div>
+    <div>
+        <label id="inscripcion">Inscripción</label>
+        <p>{{inscripcion}}</p>
+    </div>
+    <div>
+        <label id="mensualidad">Mensualidad</label>
+        <p>{{mensualidad}}</p>
+    </div>
+    <div>
+        <label id="horario">Horario</label>
+        <p>{{horario}}</p>
+    </div>
+    <div>
+        <label id="bajas">Bajas</label>
+        <p>{{bajas}}</p>
+    </div>
+    <div>
+        <label id="higiene">Higiene</label>
+        <p>{{higiene}}</p>
+    </div>
+    <div>
+        <label id="seguridad">Seguridad</label>
+        <p>{{seguridad}}</p>
+    </div>
+    <div>
+        <label id="contacto">Contactos</label>
+        <p>{{contacto}}</p>
+    </div>
+    <div>
+        <label id="direccion">Dirección</label>
+        <p>{{direccion}}</p>
+    </div>
+    <div>
+        <label id="estado">Estado</label>
+        <p>{{estado}}</p>
+    </div>
+    <a href="/gimnasio/editar/{{id}}" id="edita">Editar</a>
+    {{/each}}
+</div>

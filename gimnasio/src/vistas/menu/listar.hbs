@@ -1,0 +1,28 @@
+  <LINK REL=StyleSheet HREF="/css/menu/listar.css" TYPE="text/css" MEDIA=screen>
+ 
+<form action="/menu/listar"></form>
+<div id="contenedor">
+    {{#each lista}}
+    <div>
+        <label id="nombre">Nombre</label>
+        <p>{{nombre}}</p>
+    </div>
+    <div>
+        <label id="descripcion">Descripción</label>
+        <p>{{descripcion}}</p>
+    </div>
+    <div>
+        <label id="dia">Días</label>
+        <p>{{dias}}</p>
+    </div>
+    <div>
+        <label id="semana">Semanas</label>
+        <p>{{semanas}}</p>
+    </div>
+    <div>
+        <label id="categoria">Categoria</label>
+        <p>{{categoria}}</p>
+    </div>
+    <a href="/menu/editar/{{id}}" id="edita">Editar</a>
+    {{/each}}
+</div>
