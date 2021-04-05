@@ -1,0 +1,20 @@
+modulo de registro{
+    X crud para el gim (se podria aumentar datos)
+    X crud para el cliente
+    X crud horario
+    X crud de menu, resetas o suplementos para fortalecer el rendimiento aumentar tabla categoria (comida, agua)
+    X crud de salud
+    X crud de instructores
+    - crud de usuario (opcional por el momento)
+    guardado de imagenes
+    crear tabla imagenes
+    crud de imagenes
+}
+
+modulo del cliente{
+    crud de cliente
+    crud horario
+    crud de salud
+    visualisar todos los gimnacios registrados
+    lista de informacion de cada gimnasio
+}

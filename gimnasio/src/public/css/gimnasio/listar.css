@@ -1,0 +1,45 @@
+#contenedor{
+    position: absolute;
+    top: 100px;
+    left: 180px;
+}
+
+label{
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+p{
+    text-align: justify;
+    width: 85%;
+}
+
+#edita{
+    font-size: 25px;
+    margin-left: 565px;
+}
+
+#inscripcion{
+    margin-left: 550px;
+}
+
+#mensualidad{
+    margin-left: 535px;
+}
+
+#horario{
+    margin-left: 560px;
+}
+
+#bajas{
+    margin-left: 565px;
+}
+
+#higiene{
+    margin-left: 558px;
+}
+
+#seguridad{
+    margin-left: 550px;
+}

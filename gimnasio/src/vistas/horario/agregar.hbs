@@ -1,0 +1,24 @@
+<LINK REL=StyleSheet HREF="/css/horario/editar.css" TYPE="text/css" MEDIA=screen>
+
+<div id="contenido">
+    <form action="/horario/agregar" method="POST">
+
+        <label id="horario">Datos del Horario del Gimnasio</label>
+
+        <div id="dias">
+            <label id="uno">Dias:</label>
+            <input type="number" name="dias" id="dia" checked>
+        </div>
+        <div id="meses">
+            <label id="dos">Mes:</label>
+            <input type="text" name="mes" id="mes" checked>
+        </div>
+        <div id="horas">
+            <label id="tres">Horas:</label>
+            <input type="text" name="horas" id="hora" checked>
+        </div>
+        <div id="Boton1">
+            <button type="submit" id="edita"><img src="/img/guardar.png" id="imagen1"></button>
+        </div>
+    </form>
+</div>

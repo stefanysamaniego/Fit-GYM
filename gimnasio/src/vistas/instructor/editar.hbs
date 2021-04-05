@@ -1,0 +1,49 @@
+ <LINK REL=StyleSheet HREF="/css/instructor/editar.css" TYPE="text/css" MEDIA=screen>
+ 
+<div id="contenido">
+    <form action="/instructor/editar/{{encuentra.id}}" method="post">
+
+        <label id="datos">Datos del Instructor</label>
+
+        <div id="nombres">
+            <label id="uno">Nombres:</label>
+            <input type="text" name="nombres" id="nombre" checked value="{{encuentra.nombres}}">
+        </div>
+        <div id="apellidos">
+            <label id="dos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellido" checked value="{{encuentra.apellidos}}">
+        </div>
+        <div id="cedulas">
+            <label id="tres">Cédula:</label>
+            <input type="number" name="cedula" id="cedula" checked value="{{encuentra.cedula}}">
+        </div>
+        <div id="edades">
+            <label id="cuatro">Edad:</label>
+            <input type="number" name="edad" id="edad" checked value="{{encuentra.edad}}">
+        </div>
+        <div id="telefonos">
+            <label id="cinco">Teléfono</label>
+            <input type="number" name="telefono" id="telefono" checked value="{{encuentra.telefono}}">
+        </div>
+        <div id="titulos">
+            <label id="seis">Título:</label>
+            <select name="titulo" id="titulo" checked>
+                <option value="{{encuentra.titulo}}">{{encuentra.titulo}}</option>
+                {{#each lista}}
+                    <option value="{{this.nombre}}">{{this.nombre}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div id="años">
+            <label id="siete">Años de experiencia:</label>
+            <input type="number" name="añosExperiencia" id="año" checked value="{{encuentra.añosExperiencia}}">
+        </div>
+        <div id="descripciones">
+            <label id="ocho">Descripción:</label>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" rows="10" spellcheck="true" maxlength="600">{{encuentra.descripcion}}</textarea>
+        </div>
+        <div id="Boton1">
+            <button type="submit" id="edita"><img src="/img/guardar.png" id="imagen1"></button>
+        </div>
+    </form>
+</div>

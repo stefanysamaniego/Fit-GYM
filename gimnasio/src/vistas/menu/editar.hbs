@@ -1,0 +1,37 @@
+  <LINK REL=StyleSheet HREF="/css/menu/editar.css" TYPE="text/css" MEDIA=screen>
+ 
+<div id="contenido">
+    <form action="/menu/editar/{{encuentra.id}}" method="post">
+
+        <label id="datos">Datos del Menú</label>
+
+        <div id="nombres">
+            <label id="uno">Nombre:</label>
+            <input type="text" name="nombres" id="nombre" checked value="{{encuentra.nombre}}">
+        </div>
+        <div id="descripciones">
+            <label id="dos">Descripción:</label>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" rows="10" spellcheck="true" maxlength="2000">{{encuentra.descripcion}}</textarea>
+        </div>
+        <div id="dias">
+            <label id="tres">Días:</label>
+            <input type="number" name="dias" id="dia" checked value="{{encuentra.dias}}">
+        </div>
+        <div id="semanas">
+            <label id="cuatro">Semanas:</label>
+            <input type="text" name="semanas" id="semana" checked value="{{encuentra.semanas}}">
+        </div>
+        <div id="categorias">
+            <label id="cinco">Categoría:</label>
+            <select name="categoría" id="categoria" checked>
+                <option value="{{encuentra.categoria}}">{{encuentra.categoria}}</option>
+                {{#each lista}}
+                    <option value="{{this.nombre}}">{{this.nombre}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div id="Boton1">
+            <button type="submit" id="edita"><img src="/img/guardar.png" id="imagen1"></button>
+        </div>
+    </form>
+</div>
