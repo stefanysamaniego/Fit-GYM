@@ -1,0 +1,36 @@
+<LINK REL=StyleSheet HREF="/css/cliente/listar.css" TYPE="text/css" MEDIA=screen>
+ 
+<form action="/cliente/listar"></form>
+<div id="contenedor">
+    {{#each lista}}
+    <div>
+        <label id="nombre">Nombres</label>
+        <p>{{nombres}}</p>
+    </div>
+    <div>
+        <label id="apellido">Apellidos</label>
+        <p>{{apellidos}}</p>
+    </div>
+    <div>
+        <label id="cedula">Cedula</label>
+        <p>{{cedula}}</p>
+    </div>
+    <div>
+        <label id="edad">Edad</label>
+        <p>{{edad}}</p>
+    </div>
+    <div>
+        <label id="telefono">Teléfono</label>
+        <p>{{telefono}}</p>
+    </div>
+    <div>
+        <label id="altura">Altura</label>
+        <p>{{altura}}</p>
+    </div>
+    <div>
+        <label id="peso">Peso</label>
+        <p>{{peso}}</p>
+    </div>
+    <a href="/cliente/editar/{{id}}" id="edita">Editar</a>
+    {{/each}}
+</div>

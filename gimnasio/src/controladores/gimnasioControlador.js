@@ -3,7 +3,7 @@ const pool = require("../base")
 
 gimnasio.mostrar = (req, res) => {
     res.render("gimnasio/agregar");
-} 
+}  
 
 gimnasio.mandar = async(req, res) => {
     const {nombre, inscripcion, mensualidad, horario, bajas, higiene, seguridad, contacto, direccion, estado} = req.body
@@ -13,7 +13,7 @@ gimnasio.mandar = async(req, res) => {
         mensualidad,
         horario,
         bajas,
-        higiene,
+        higiene, 
         seguridad,
         contacto,
         direccion,

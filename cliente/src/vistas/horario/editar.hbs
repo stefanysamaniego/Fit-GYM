@@ -1,0 +1,24 @@
+<LINK REL=StyleSheet HREF="/css/horario/editar.css" TYPE="text/css" MEDIA=screen>
+
+<div id="contenido">
+    <form action="/horario/editar/{{encuentra.id}}" method="POST">
+
+        <label id="horario">Datos del Horario del Gimnasio</label>
+
+        <div id="dias">
+            <label id="uno">Dias:</label>
+            <input type="number" name="dias" id="dia" checked value="{{encuentra.dias}}">
+        </div>
+        <div id="meses">
+            <label id="dos">Mes:</label>
+            <input type="text" name="mes" id="mes" checked value="{{encuentra.mes}}">
+        </div>
+        <div id="horas">
+            <label id="tres">Horas:</label>
+            <input type="text" name="horas" id="hora" checked value="{{encuentra.horas}}">
+        </div>
+        <div id="Boton1">
+            <button type="submit" id="edita"><img src="/img/editar.png" id="imagen1"></button>
+        </div>
+    </form>
+</div>

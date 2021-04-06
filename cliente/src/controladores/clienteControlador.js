@@ -4,7 +4,7 @@ const pool = require("../base")
 
 cliente.mostrar = (req, res) => {
     res.render("cliente/agregar");
-} 
+}
 
 cliente.mandar = async(req, res) => {
     const { nombres, apellidos, cedula, edad, telefono, altura, peso} = req.body

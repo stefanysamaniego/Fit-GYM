@@ -6,13 +6,15 @@ modulo de registro{
     X crud de salud
     X crud de instructores
     - crud de usuario (opcional por el momento)
-    guardado de imagenes
-    crear tabla imagenes
+    guardado de imagenes, (nutricionista investigar)
+    crear tabla imagenes, (nutricionista investigar)
     crud de imagenes
 }
 
 modulo del cliente{
+    - crud de gimnasio
     crud de cliente
+    crud perfil(listar)
     crud horario
     crud de salud
     visualisar todos los gimnacios registrados
