@@ -13,7 +13,7 @@ const { database } = require("./keys")
 const app = express()
 require("./lib/passport")
 
-app.set("port", process.envPORT || 4000)
+app.set("port", process.envPORT || 5000)
 app.set("views", path.join(__dirname, "vistas"))
 app.engine(".hbs", exphbs({
     defaultLayout: "main",
@@ -53,6 +53,6 @@ app.use(require("./rutas/index"));
 app.use(require("./rutas/login"));
 app.use(require("./rutas/registro"));
 app.use(require("./rutas/gimnasio"));
-
+app.use("/perfil", require("./rutas/perfil"));
 
 module.exports = app

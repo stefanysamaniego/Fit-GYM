@@ -7,7 +7,7 @@ modulo de registro{
     X crud de instructores
     - crud de usuario (opcional por el momento)
     guardado de imagenes
-    crear tabla imagenes
+    Xcrear tabla imagenes
     crud de imagenes
 }
 

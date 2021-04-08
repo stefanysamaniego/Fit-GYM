@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS fitGym;
 create database fitGym;
 use fitGym;
 
@@ -42,7 +43,7 @@ use fitGym;
     );
 
     alter table entrenador modify id int(11) not null auto_increment, auto_increment = 1;
-
+    
     create table salud(
         id int(11) primary key not null,
         lesion_ocia varchar(2) not null,
@@ -118,6 +119,27 @@ use fitGym;
         año int(4) not null,
         descripcion varchar(600) not null
     );
+
+    alter table titulo modify id int(11) not null auto_increment, auto_increment = 1;
+
+    create table imagenGimnasio(
+        id int(11) primary key not null,
+        nombre varchar(1000) not null,
+         gimnasio int(11) not null,
+         constraint fk_gimnasio_imagen foreign key(gimnasio) references gimnasio(id) 
+    );
+
+    alter table imagenGimnasio modify id int(11) not null auto_increment, auto_increment = 1;
+
+    create table imagenMenu(
+        id int(11) primary key not null,
+        nombre varchar(1000) not null,
+        menu int(11) not null, 
+        constraint fk_menu foreign key(menu) references menu(id)
+    );
+    
+    alter table imagenMenu modify id int(11) not null auto_increment, auto_increment = 1;
+
 
     Insert into titulo(id, nombre, descripcion) values (1, "Licenciatura en Actividades y Deportes Ciencia Física", "El Licenciado en Actividades y Deportes Ciencia Física es el promotor de los estilos de vida activos y saludables de la población del entorno donde se desenvuelve." );
     Insert into titulo(id, nombre, descripcion) values (2, "Ciencias de la Actividad Física y del Deporte", "El Grado en Ciencias de la Actividad Física y del Deporte se adquiere la formación necesaria sobre los fundamentos y funciones de la motricidad humana, el entrenamiento deportivo, los aspectos psicológicos, sociales y mecánicos del ejercicio físico, y la aplicación de las nuevas tecnologías en el deporte." );
