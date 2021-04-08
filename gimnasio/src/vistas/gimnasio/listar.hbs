@@ -1,8 +1,8 @@
 <LINK REL=StyleSheet HREF="" TYPE="text/css" MEDIA=screen>
 
 <div id="botones">
-    <button id="abajo"><img src="/img/flecha.png" ></button>
-    <button id="arriba"><img src="/img/flecha1.png" ></button>
+    <button type="button" id="abajo" onclick="imagen.arriba()"><img src="/img/flecha.png" ></button>
+    <button type="button" id="arriba" onclick="imagen.abajo()"><img src="/img/flecha1.png" ></button>
 </div>
 
 <div id="imagenAdd">
@@ -10,6 +10,11 @@
         <input type="file" name="nombre" id="imagenGimnasio">
         <button type="submit" id="agregaImangen">Agregar imagén</button>
     </form>
+</div>
+<div id="listarImagenes">
+    {{#each listaImagen}}
+        <img src="/img/{{nombre}}">
+    {{/each}}
 </div>
 
 <div id="contenedor"> 
@@ -57,3 +62,4 @@
     <a href="/gimnasio/editar/{{id}}" id="edita">Editar</a>
     {{/each}}
 </div>
+<script src="/js/listaGimnasio.js"></script>
