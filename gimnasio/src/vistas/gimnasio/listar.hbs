@@ -8,9 +8,10 @@
 <div id="imagenAdd">
     <form action="/gimnasio/listar" method="POST">
         <input type="file" name="nombre" id="imagenGimnasio">
-        <button onclick="imagenes.foto()" id="agregaImangen">Agregar imagén</button>
+        <button  id="agregaImangen" type="submit">Agregar imagén</button>
     </form>
 </div>
+
 <div id="listarImagenes">
     {{#each listaImagen}}
         <img src="/img/{{nombre}}">

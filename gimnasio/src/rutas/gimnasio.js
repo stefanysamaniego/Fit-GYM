@@ -8,7 +8,7 @@ rutas.get("/agregar", isLogin, mostrar)
 rutas.post("/agregar", isLogin, mandar)
  
 rutas.get("/listar", isLogin, listar)
-rutas.get("/listar", isLogin, imagenAgregar)
+rutas.post("/listar", isLogin, imagenAgregar)
 
 rutas.get("/editar/:id", isLogin, traer)
 rutas.post("/editar/:id", isLogin, editar)
