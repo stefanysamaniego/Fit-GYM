@@ -7,7 +7,7 @@ registro.visualizar = (req, res) => {
 }
 
 registro.autenticacion = passport.authenticate("local.signup", {
-    successRedirect: "/gimasio",
+    successRedirect: "/gimnasio",
     failureRedirect: "/registro",
     failureFlash: true
 })

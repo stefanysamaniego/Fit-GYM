@@ -4,4 +4,4 @@ module.exports = {
             return next()
             res.redirect('/gimnasio');
     }
-}
+} 

@@ -13,7 +13,7 @@ passport.use(
         passReqToCallback: true,
     },
     async (req, username, password, done) => {
-        const rows = await pool.query("SELECT * FROM usuario WHERE username=?", [username]);
+        const rows = await pool.query("SELECT * FROM info_cliente WHERE username=?", [username]);
         if (rows.length > 0) {
             const user = rows[0];
             const validPassword = await helpers.desencriptacion(
@@ -53,7 +53,7 @@ passport.use(
         };
         nuevoUsuario.password = await helpers.encriptacion(password);
         const resultado = await pool.query(
-            "INSERT INTO usuario SET ?",
+            "INSERT INTO info_cliente SET ?",
             nuevoUsuario
         );
         nuevoUsuario.id = resultado.insertId;
@@ -69,6 +69,6 @@ passport.serializeUser((user, done) => {
 
 //metodo para serializar el usuario
 passport.deserializeUser(async (id, done) => {
-    const rows = await pool.query("SELECT * FROM usuario WHERE id = ?", [id]);
+    const rows = await pool.query("SELECT * FROM info_cliente WHERE id = ?", [id]);
     done(null, rows[0]);
 });
