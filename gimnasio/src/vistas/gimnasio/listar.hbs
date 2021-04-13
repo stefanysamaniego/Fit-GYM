@@ -1,21 +1,22 @@
 <LINK REL=StyleSheet HREF="" TYPE="text/css" MEDIA=screen>
 
+{{!-- Se retomara en la proxima interacción
 <div id="botones">
     <button type="button" id="abajo" onclick="imagen.arriba()"><img src="/img/flecha.png" ></button>
     <button type="button" id="arriba" onclick="imagen.abajo()"><img src="/img/flecha1.png" ></button>
 </div>
 
 <div id="imagenAdd">
-    <form action="/gimnasio/listar" method="POST">
+    <form action="/gimnasio/listar" enctype="multipart/form-data" method="POST">
         <input type="file" name="nombre" id="imagenGimnasio">
-        <button type="submit" id="agregaImangen">Agregar imagén</button>
+        <button type="submit" ="agregaImangen">Agregar imagén</button>
     </form>
 </div>
 <div id="listarImagenes">
     {{#each listaImagen}}
         <img src="/img/{{nombre}}">
     {{/each}}
-</div>
+</div>--}}
 
 <div id="contenedor"> 
     {{#each lista}} 

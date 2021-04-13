@@ -6,9 +6,10 @@ modulo de registro{
     X crud de salud
     X crud de instructores
     - crud de usuario (opcional por el momento)
-    guardado de imagenes, (nutricionista investigar), como guardar el directorio (o url) de la imagen a una base de datos
+    - guardado de imagenes, (nutricionista investigar), como guardar el directorio (o url) de la imagen a una base de datos
     X crear tabla imagenes, (nutricionista investigar)
-    crud de imagenes
+    - crud de imagenes(falta especificar el limite de la imagen con la base de datos)
+
 }
 
 modulo del cliente{

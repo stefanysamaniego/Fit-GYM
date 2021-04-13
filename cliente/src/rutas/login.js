@@ -6,6 +6,6 @@ const { mostrar } = require("../controladores/loginControlador")
 
 const { isLogin } = require("../lib/auth")
 
-rutas.get("/inicio", isLogin, mostrar)
+rutas.get("/gimnasio", isLogin, mostrar)
 
 module.exports = rutas

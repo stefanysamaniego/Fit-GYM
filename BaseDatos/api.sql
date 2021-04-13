@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS fitGym;
+DROP DATABASE IF EXISTS finGym;
 CREATE DATABASE fitGym;
 USE fitGym;
 
@@ -6,10 +6,18 @@ USE fitGym;
         id int(11) primary key not null,
         username varchar(16) not null,
         password varchar(60) not null,
-        email varchar(20) not null
+        email varchar(60) not null
     );
 
     alter table usuario modify id int(11) not null auto_increment, auto_increment = 1;
+
+    create table usuario_cliente(
+        id int(11) primary key not null,
+        usuario int(11) not null,
+        cliente int(11) not null,
+        constraint fk_id_usuario foreign key(usuario) references usuario(id),
+        constraint fk_id_cliente foreign key(info_cliente) references cliente(id)
+    );
 
     create table info_cliente(
         id int(11) primary key not null,
@@ -20,8 +28,7 @@ USE fitGym;
         telefono int(10) not null,
         altura varchar(4) not null,
         peso varchar(4) not null,
-        usuario int(11) not null,
-        constraint fk_id_usuario foreign key(usuario) references usuario(id)
+        
     );
 
     alter table info_cliente modify id int(11) not null auto_increment, auto_increment = 1;
