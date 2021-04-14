@@ -1,13 +1,13 @@
 const passport = require("passport");
 
-const registro = {}
+const registro = {} 
 
 registro.visualizar = (req, res) => {
     res.render("registro/registro");
 }
 
 registro.autenticacion = passport.authenticate("local.signup", {
-    successRedirect: "/inicio",
+    successRedirect: "/gimnasio",
     failureRedirect: "/registro",
     failureFlash: true
 })
@@ -17,7 +17,7 @@ registro.logear = (req, res) => {
 }
 
 registro.autenticar = passport.authenticate("local.signin", {
-    successRedirect: "/inicio",
+    successRedirect: "/gimnasio",
     failureRedirect: "/login",
     failureFlash: true
 })

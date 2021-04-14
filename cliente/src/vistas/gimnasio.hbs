@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/Tienda.css">
+<link rel="stylesheet" href="/css/.css">
 
 <form action="/gimnasio" method="post"></form>
 <div id="contenido">
@@ -13,13 +13,13 @@
                         <p>{{horario}}</p>
                         <p>{{contacto}}</p>
                         <p>{{direccion}}</p>
-                        <p>{{imagenInstalacion}}</p>
+                        {{!--<p>{{imagenInstalacion}}</p>futura interacción--}}
                         <p>{{estado}}</p>
-                        <button id="boton"><a href="/producto/lista" id="letra">Productos</a></button>
+                        <button id="boton"><a href="/gimnasio/detalleLista/{{id}}" id="letra">Acceder por aquí!</a></button>
                     </div>
                 </div>
             </div>
             {{/each}}
-        </div>
+        </div> 
     </div>
 </div>

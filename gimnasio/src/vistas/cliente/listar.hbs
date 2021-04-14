@@ -1,36 +1,39 @@
 <LINK REL=StyleSheet HREF="/css/cliente/listar.css" TYPE="text/css" MEDIA=screen>
- 
+
 <form action="/cliente/listar"></form>
 <div id="contenedor">
+    <label id="lista">Lista del Clientes</label>
+    <div id="formulario"></div>
     {{#each lista}}
-    <div>
-        <label id="nombre">Nombres</label>
-        <p>{{nombres}}</p>
+    <div id="nombres">
+        <label id="name">Nombres</label>
+        <p id="nombre">{{nombres}}</p>
     </div>
-    <div>
+    <div id="apellidos">
         <label id="apellido">Apellidos</label>
-        <p>{{apellidos}}</p>
+        <p id="uno">{{apellidos}}</p>
     </div>
-    <div>
+    <div id="cedulas">
         <label id="cedula">Cedula</label>
-        <p>{{cedula}}</p>
+        <p id="dos">{{cedula}}</p>
     </div>
-    <div>
+    <div id="edades">
         <label id="edad">Edad</label>
-        <p>{{edad}}</p>
+        <p id="tres">{{edad}}</p>
     </div>
-    <div>
+    <div id="telefonos">
         <label id="telefono">Teléfono</label>
-        <p>{{telefono}}</p>
+        <p id="cuatro">{{telefono}}</p>
     </div>
-    <div>
+    <div id="alturas">
         <label id="altura">Altura</label>
-        <p>{{altura}}</p>
+        <p id="cinco">{{altura}}</p>
     </div>
-    <div>
+    <div id="pesos">
         <label id="peso">Peso</label>
-        <p>{{peso}}</p>
+        <p id="seis">{{peso}}</p>
     </div>
-    <a href="/cliente/editar/{{id}}" id="edita">Editar</a>
+    <a href="/cliente/editar/{{id}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
     {{/each}}
+</div>
 </div>

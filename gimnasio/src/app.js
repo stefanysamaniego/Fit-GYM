@@ -1,5 +1,4 @@
 const express = require("express")
-const multer = require("multer")
 const morgan = require("morgan")
 const path = require("path")
 const exphbs = require("express-handlebars")
@@ -14,13 +13,6 @@ const { database } = require("./keys")
 const app = express()
 require("./lib/passport")
 
-const imagenDetalle = multer.diskStorage({
-    destination: path.join(__dirname, "public/img"), 
-    filename: (req, file, cb) =>{
-        cb (null, file.originalname)
-    }
-})
-
 app.set("port", process.envPORT || 4000)
 app.set("views", path.join(__dirname, "vistas"))
 app.engine(".hbs", exphbs({
@@ -32,20 +24,6 @@ app.engine(".hbs", exphbs({
 }))
 
 app.set("view engine", ".hbs")
-
-app.use(multer({
-    storage: imagenDetalle,
-    dest: path.join(__dirname, "public/img"),
-    fileFilter: (req, file, cb) => {
-        const tiempoImagen = /jpeg|jpg|png|gif/
-        const multipleImagen = tiempoImagen.test(file.mimetype)
-        const extension = tiempoImagen.test(path.extname(file.originalname))
-        if(multipleImagen && extension){
-            return cb(null, true)
-        }
-        cb ("Error de tipo de imagen") 
-    }
-}).single("nombre"))
 
 app.use(morgan("dev"))
 app.use(bodyparser.urlencoded({extended:false}))

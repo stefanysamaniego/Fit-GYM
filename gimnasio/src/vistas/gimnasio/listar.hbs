@@ -1,66 +1,68 @@
-<LINK REL=StyleSheet HREF="" TYPE="text/css" MEDIA=screen>
+<LINK REL=StyleSheet HREF="/css/gimnasio/listar.css" TYPE="text/css" MEDIA=screen>
 
+{{!-- Se retomara en la proxima interacción
 <div id="botones">
-    <button type="button" id="abajo" onclick="imagen.arriba()"><img src="/img/flecha.png" ></button>
-    <button type="button" id="arriba" onclick="imagen.abajo()"><img src="/img/flecha1.png" ></button>
+    <button type="button" id="abajo" onclick="imagen.arriba()"><img src="/img/flecha.png"></button>
+    <button type="button" id="arriba" onclick="imagen.abajo()"><img src="/img/flecha1.png"></button>
 </div>
-
 <div id="imagenAdd">
-    <form action="/gimnasio/listar" method="POST">
+    <form action="/gimnasio/listar" enctype="multipart/form-data" method="POST">
         <input type="file" name="nombre" id="imagenGimnasio">
-        <button  id="agregaImangen" type="submit">Agregar imagén</button>
+        <button type="submit"="agregaImangen">Agregar imagén</button>
     </form>
 </div>
-
 <div id="listarImagenes">
     {{#each listaImagen}}
-        <img src="/img/{{nombre}}">
+    <img src="/img/{{nombre}}">
     {{/each}}
-</div>
+</div>--}}
 
-<div id="contenedor"> 
-    {{#each lista}} 
-    <div>
-        <label id="nombre">Nombre del Gimnasio</label>
-        <p>{{nombre}}</p>
+<div id="contenido">
+    <label id="lista">Lista del Gimnasios</label>
+    <div id="formulario">
+        {{#each lista}}
+        <div id="nombres">
+            <label id="nombre">Nombre del Gimnasio</label>
+            <p id="name">{{nombre}}</p>
+        </div>
+        <div id="incripciones">
+            <label id="inscripcion">Inscripción</label>
+            <p id="uno">{{inscripcion}}</p>
+        </div>
+        <div id="mensualidades">
+            <label id="mensualidad">Mensualidad</label>
+            <p id="dos">{{mensualidad}}</p>
+        </div>
+        <div id="horarios">
+            <label id="horario">Horario</label>
+            <p id="tres">{{horario}}</p>
+        </div>
+        <div id="baja">
+            <label id="bajas">Bajas</label>
+            <p id="cuatro">{{bajas}}</p>
+        </div>
+        <div id="higienes">
+            <label id="higiene">Higiene</label>
+            <p id="cinco">{{higiene}}</p>
+        </div>
+        <div id="seguridades">
+            <label id="seguridad">Seguridad</label>
+            <p id="seis">{{seguridad}}</p>
+        </div>
+        <div id="contactos">
+            <label id="contacto">Contactos</label>
+            <p id="cont">{{contacto}}</p>
+        </div>
+        <div id="direcciones">
+            <label id="direccion">Dirección</label>
+            <p id="punto">{{direccion}}</p>
+        </div>
+        <div id="estados">
+            <label id="estado">Estado</label>
+            <p id="estad">{{estado}}</p>
+        </div>
+        <a href="/gimnasio/editar/{{id}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+        {{/each}}
     </div>
-    <div>
-        <label id="inscripcion">Inscripción</label>
-        <p>{{inscripcion}}</p>
-    </div>
-    <div>
-        <label id="mensualidad">Mensualidad</label>
-        <p>{{mensualidad}}</p>
-    </div>
-    <div>
-        <label id="horario">Horario</label>
-        <p>{{horario}}</p>
-    </div>
-    <div>
-        <label id="bajas">Bajas</label>
-        <p>{{bajas}}</p>
-    </div>
-    <div>
-        <label id="higiene">Higiene</label>
-        <p>{{higiene}}</p>
-    </div>
-    <div>
-        <label id="seguridad">Seguridad</label>
-        <p>{{seguridad}}</p>
-    </div>
-    <div>
-        <label id="contacto">Contactos</label>
-        <p>{{contacto}}</p>
-    </div>
-    <div>
-        <label id="direccion">Dirección</label>
-        <p>{{direccion}}</p>
-    </div>
-    <div>
-        <label id="estado">Estado</label>
-        <p>{{estado}}</p>
-    </div>
-    <a href="/gimnasio/editar/{{id}}" id="edita">Editar</a>
-    {{/each}}
 </div>
 <script src="/js/listaGimnasio.js"></script>

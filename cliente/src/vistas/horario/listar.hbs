@@ -1,0 +1,20 @@
+<LINK REL=StyleSheet HREF="/css/horario/editar.css" TYPE="text/css" MEDIA=screen>
+
+<form action="/horario/listar"></form>
+<div id="contenedor">
+    {{#each lista}}
+    <div>
+        <label id="dia">Dias</label>
+        <p>{{dias}}</p>
+    </div>
+    <div>
+        <label id="mes">Mes</label>
+        <p>{{mes}}</p>
+    </div>
+    <div>
+        <label id="horas">Horas</label>
+        <p>{{horas}}</p>
+    </div>
+    <a href="/horario/editar/{{id}}">Editar</a>
+    {{/each}}
+</div>

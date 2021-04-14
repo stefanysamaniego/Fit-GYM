@@ -1,20 +1,21 @@
 const gimnasio = {}
+ 
 const pool = require("../base")
 
 gimnasio.mostrar = (req, res) => {
     res.render("gimnasio/agregar");
 }
 
-gimnasio.imagenAgregar = async(req, res) => {
-    const {nombre} = req.body
-    const nuevaImagen = {
-        nombre,
-        gimnasio: req.user.id
-    }
-    await pool.query("INSERT INTO imagenGimnasio SET ?", [nuevaImagen])
-    req.flash("success", "Se ha agregado con exito")
-     res.redirect('/gimnasio/listar');
-}
+//gimnasio.imagenAgregar = async(req, res) => {
+//    const {nombre} = req.body
+//    const nuevaImagen = {
+//        nombre,
+//        gimnasio: req.user.id
+//    }
+//    await pool.query("INSERT INTO imagenGimnasio SET ?", [nuevaImagen])
+//    req.flash("success", "Se ha agregado con exito")
+//     res.redirect('/gimnasio/listar');
+//}
 
 gimnasio.mandar = async(req, res) => {
     const {nombre, inscripcion, mensualidad, horario, bajas, higiene, seguridad, contacto, direccion, estado} = req.body

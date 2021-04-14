@@ -1,0 +1,90 @@
+#imagen1{
+    width: 10%;
+}
+
+#Boton1{
+    position: absolute;
+    left: 600px;
+    top: 360px;
+}
+
+#edita{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 60px;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+#contenido{
+    position: absolute;
+    margin-left: 80px;
+    padding-top: 130px;
+    gap: 10px;
+    width: 80%;
+}
+
+#horario{
+    position: absolute;
+    font-size: 25px;
+    top: 90px;
+    left: 480px;
+}
+
+#dias{
+    position: absolute;
+    top: 10px;
+}
+#uno{
+    position: absolute; 
+    top:140px; 
+    left: 600px;
+}
+#dia{
+    position: absolute;
+    height: 30px;
+    top: 170px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: 510px;
+    text-align: justify;
+}
+
+#meses{
+    position: absolute;
+    top: 10px;
+}
+#dos{
+    position: absolute; 
+    top:210px; 
+    left: 600px;
+}
+#mes{
+    position: absolute;
+    height: 30px;
+    top: 240px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: 510px;
+    text-align: justify;
+}
+
+#horas{
+    position: absolute;
+    top: 10px;
+}
+#tres{
+    position: absolute; 
+    top:280px; 
+    left: 600px;
+}
+#hora{
+    position: absolute;
+    height: 30px;
+    top: 310px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: 510px;
+    text-align: justify;
+}

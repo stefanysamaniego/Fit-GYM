@@ -1,30 +1,41 @@
 DROP DATABASE IF EXISTS fitGym;
-create database fitGym;
-use fitGym;
+CREATE DATABASE fitGym;
+USE fitGym;
 
     create table usuario(
         id int(11) primary key not null,
         username varchar(16) not null,
         password varchar(60) not null,
-        email varchar(20) not null
+        email varchar(60) not null
     );
 
     alter table usuario modify id int(11) not null auto_increment, auto_increment = 1;
 
     create table info_cliente(
         id int(11) primary key not null,
+        username varchar(16) not null,
+        password varchar(60) not null,
+        email varchar(60) not null,
         nombres varchar(50) not null,
         apellidos varchar(50) not null,
         cedula int(10) not null,
         edad int(3) not null,
         telefono int(10) not null,
         altura varchar(4) not null,
-        peso varchar(4) not null,
-        usuario int(11) not null,
-        constraint fk_id_usuario foreign key(usuario) references usuario(id)
+        peso varchar(4) not null   
     );
 
     alter table info_cliente modify id int(11) not null auto_increment, auto_increment = 1;
+
+    create table usuario_cliente(
+        id int(11) primary key not null,
+        usuario int(11) not null,
+        cliente int(11) not null,
+        constraint fk_id_usuario foreign key(usuario) references usuario(id),
+        constraint fk_id_cliente foreign key(cliente) references info_cliente(id)
+    );
+
+    alter table usuario_cliente modify id int(11) not null auto_increment, auto_increment = 1;
 
     create table entrenador(
         id int(11) primary key not null,
@@ -43,7 +54,7 @@ use fitGym;
     );
 
     alter table entrenador modify id int(11) not null auto_increment, auto_increment = 1;
-    
+
     create table salud(
         id int(11) primary key not null,
         lesion_ocia varchar(2) not null,
@@ -120,13 +131,11 @@ use fitGym;
         descripcion varchar(600) not null
     );
 
-    alter table titulo modify id int(11) not null auto_increment, auto_increment = 1;
-
     create table imagenGimnasio(
         id int(11) primary key not null,
         nombre varchar(1000) not null,
-         gimnasio int(11) not null,
-         constraint fk_gimnasio_imagen foreign key(gimnasio) references gimnasio(id) 
+        gimnasio int(11) not null,
+        constraint fk_imagen_gimnasio foreign key(gimnasio) references gimnasio(id)
     );
 
     alter table imagenGimnasio modify id int(11) not null auto_increment, auto_increment = 1;
@@ -134,12 +143,11 @@ use fitGym;
     create table imagenMenu(
         id int(11) primary key not null,
         nombre varchar(1000) not null,
-        menu int(11) not null, 
-        constraint fk_menu foreign key(menu) references menu(id)
+        menu int(11) not null,
+        constraint fk_imagen_menu foreign key(menu) references menu(id)
     );
-    
-    alter table imagenMenu modify id int(11) not null auto_increment, auto_increment = 1;
 
+    alter table imagenMenu modify id int(11) not null auto_increment, auto_increment = 1;
 
     Insert into titulo(id, nombre, descripcion) values (1, "Licenciatura en Actividades y Deportes Ciencia Física", "El Licenciado en Actividades y Deportes Ciencia Física es el promotor de los estilos de vida activos y saludables de la población del entorno donde se desenvuelve." );
     Insert into titulo(id, nombre, descripcion) values (2, "Ciencias de la Actividad Física y del Deporte", "El Grado en Ciencias de la Actividad Física y del Deporte se adquiere la formación necesaria sobre los fundamentos y funciones de la motricidad humana, el entrenamiento deportivo, los aspectos psicológicos, sociales y mecánicos del ejercicio físico, y la aplicación de las nuevas tecnologías en el deporte." );

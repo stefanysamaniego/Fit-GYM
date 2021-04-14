@@ -12,4 +12,4 @@ rutas.post("/login", autenticar)
 
 rutas.get("/finalizar", finalizar)
 
-module.exports = rutas 
+module.exports = rutas

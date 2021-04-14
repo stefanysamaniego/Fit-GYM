@@ -2,6 +2,6 @@ module.exports = {
     isLogin(req, res, next){
         if(req.isAuthenticated())
             return next()
-            res.redirect('/inicio');
+            res.redirect('/gimnasio');
     }
-}
+} 
