@@ -18,7 +18,6 @@ instructor.mandar = async(req, res) => {
         titulo,
         añosExperiencia,
         descripcion,  
-        cliente: req.user.id,
         usuario: req.user.id
     }
     await pool.query("INSERT INTO entrenador SET ?", [nuevoEnvia])

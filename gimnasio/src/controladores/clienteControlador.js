@@ -1,5 +1,4 @@
 const cliente = {}
-const { restart } = require("nodemon");
 const pool = require("../base")
 
 cliente.mostrar = (req, res) => {
@@ -15,8 +14,7 @@ cliente.mandar = async(req, res) => {
         edad,
         telefono,
         altura,
-        peso,
-        usuario: req.user.id
+        peso
     }
     await pool.query("INSERT INTO info_cliente SET ?", [nuevoEnvio])
     req.flash("success", "Se ha agregado con exito")
@@ -24,7 +22,7 @@ cliente.mandar = async(req, res) => {
 }
 
 cliente.listar = async(req, res) => {
-    const lista = await pool.query("SELECT * FROM info_cliente WHERE id=?", [req.user.id])
+    const lista = await pool.query("SELECT * FROM info_cliente")
     res.render("cliente/listar", {lista});
 }
 

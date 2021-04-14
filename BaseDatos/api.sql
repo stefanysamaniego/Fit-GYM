@@ -37,9 +37,7 @@ USE fitGym;
         titulo varchar(200) not null,
         añosExperiencia int(3) not null,
         descripcion varchar(600) not null,
-        cliente int(11) not null,
         usuario int(11) not null,
-        constraint fk_cliente foreign key(cliente) references info_cliente(id),
         constraint fk_info_usuario foreign key(usuario) references usuario(id)
     );
 
@@ -67,7 +65,7 @@ USE fitGym;
         id int(11) primary key not null,
         dias varchar(15) not null,
         fechas timestamp not null default current_timestamp,
-        mes varchar(4) not null,
+        mes varchar(20) not null,
         horas varchar(15) not null,
         cliente int(11) not null,
         usuario int(11) not null,

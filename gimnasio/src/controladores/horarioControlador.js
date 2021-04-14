@@ -6,12 +6,13 @@ horario.mostrar = (req, res) => {
 } 
 
 horario.mandar = async(req, res) => {
-    const {dias, fechas, horas} = req.body
+    const {dias, mes, horas} = req.body
     nuevoIngreso = {
         dias,
-        fechas,
+        mes,
         horas,
-        cliente: req.user.id
+        cliente: req.user.id,
+        usuario: req.user.id
     }
     await pool.query("INSERT INTO horario SET ?", [nuevoIngreso])
     req.flash("success", "Se ha agregado con exito")
@@ -19,7 +20,7 @@ horario.mandar = async(req, res) => {
 }
 
 horario.listar = async(req, res) => {
-    const trae = await pool.query("SELECT * FROM horario WHERE id=?", [req.user.id])
+    const lista = await pool.query("SELECT * FROM horario WHERE cliente=?", [req.user.id])
     res.render("horario/listar", {lista});
 }
 
@@ -32,13 +33,13 @@ horario.traer = async(req, res) => {
 
 horario.editar = async(req, res) => {
     const { id } = req.params
-    const {dias, fechas, horas} = req.body
+    const {dias, mes, horas} = req.body
     const nuevoIngreso = {
         dias,
-        fechas,
+        mes,
         horas
     }
-    await pool.query("INSERT INTO horario SET ?", [nuevoIngreso, id])
+    await pool.query("UPDATE horario SET ? WHERE id=?", [nuevoIngreso, id])
     req.flash("success", "Se ha agregado con exito")
     res.redirect('/horario/listar');
 }
