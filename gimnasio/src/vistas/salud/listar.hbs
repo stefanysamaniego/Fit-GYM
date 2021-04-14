@@ -1,40 +1,41 @@
-<LINK REL=StyleSheet HREF="/css/salud/listar.css" TYPE="text/css" MEDIA=screen>
+<LINK REL=StyleSheet HREF="/css/salud/lista.css" TYPE="text/css" MEDIA=screen>
 
-<form action="/salud/listar"></form>
-<div id="contenedor">
-    {{#each lista}} 
-    <div>
-        <label id="ocia">Lesiones ocias</label>
-        <p>{{lesion_ocia}}</p>
-    </div>
-    <div>
-        <label id="muscular">Lesiones musculares:</label>
-        <p>{{lesion_muscular}}</p>
-    </div>
-    <div>
-        <label id="enfermedad">Enfermedades:</label>
-        <p>{{enfermedad}}</p>
-    </div>
-    <div>
-        <label id="vicio">Vicios:</label>
-        <p>{{vicio}}</p>
-    </div>
-    <div>
-        <label id="embarazo">Embarazos:</label>
-        <p>{{embarazo}}</p>
-    </div>
-    <div>
-        <label id="dificultad">Dificultades:</label>
-        <p>{{dificultades}}</p>
-    </div>
-    <div>
-        <label id="actividad">Actividades deportivas:</label>
-        <p>{{actividad_deportiva}}</p>
-    </div>
-    <div>
-        <label id="entidad">¿Asistia a un gimnasio u entidad deportiva?:</label>
-        <p>{{entidad}}</p>
-    </div>
-    <a href="/salud/editar/{{id}}" id="edita">Editar</a>
-    {{/each}}
+<div class="text-center">
+    <h1 class="responsive1" style="color:black; top:15%">Lista de salud del cliente</h3>
 </div>
+
+<form action="/salud/listar">
+    <div class="container">
+        <table style="width:100%">
+            <thead>
+                <tr>
+                    <th>Lesiones ocias</th>
+                    <th>Lesiones musculares</th>
+                    <th>Enfermedades</th>
+                    <th>Vicios</th>
+                    <th>Embarazo</th>
+                    <th>Dificultades</th>
+                    <th>Actividades deportivas</th>
+                    <th>Entidad deportiva</th>
+                    <th>Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each lista}}
+                <tr>
+                    <td>{{lesion_ocia}}</td>
+                    <td>{{lesion_muscular}}</td>
+                    <td>{{enfermedad}}</td>
+                    <td>{{vicio}}</td>
+                    <td>{{embarazo}}</td>
+                    <td>{{dificultades}}</td>
+                    <td>{{actividad_deportiva}}</td>
+                    <td>{{entidad}}</td>
+                    <td>
+                        <a href="/salud/editar/{{id}}" class="edita">Editar</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+</form>

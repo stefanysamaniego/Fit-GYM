@@ -27,16 +27,6 @@ USE fitGym;
 
     alter table info_cliente modify id int(11) not null auto_increment, auto_increment = 1;
 
-    create table usuario_cliente(
-        id int(11) primary key not null,
-        usuario int(11) not null,
-        cliente int(11) not null,
-        constraint fk_id_usuario foreign key(usuario) references usuario(id),
-        constraint fk_id_cliente foreign key(cliente) references info_cliente(id)
-    );
-
-    alter table usuario_cliente modify id int(11) not null auto_increment, auto_increment = 1;
-
     create table entrenador(
         id int(11) primary key not null,
         nombres varchar(50) not null,
@@ -49,7 +39,7 @@ USE fitGym;
         descripcion varchar(600) not null,
         cliente int(11) not null,
         usuario int(11) not null,
-        constraint fk_info_cliente foreign key(cliente) references info_cliente(id),
+        constraint fk_cliente foreign key(cliente) references info_cliente(id),
         constraint fk_info_usuario foreign key(usuario) references usuario(id)
     );
 
@@ -148,6 +138,16 @@ USE fitGym;
     );
 
     alter table imagenMenu modify id int(11) not null auto_increment, auto_increment = 1;
+
+    create table usuario_cliente(
+        id int(11) primary key not null,
+        usuario int(11) not null,
+        cliente int(11) not null,
+        constraint fk_id_usuario foreign key(usuario) references usuario(id),
+        constraint fk_id_cliente foreign key(cliente) references info_cliente(id)
+    );
+
+    alter table usuario_cliente modify id int(11) not null auto_increment, auto_increment = 1;
 
     Insert into titulo(id, nombre, descripcion) values (1, "Licenciatura en Actividades y Deportes Ciencia Física", "El Licenciado en Actividades y Deportes Ciencia Física es el promotor de los estilos de vida activos y saludables de la población del entorno donde se desenvuelve." );
     Insert into titulo(id, nombre, descripcion) values (2, "Ciencias de la Actividad Física y del Deporte", "El Grado en Ciencias de la Actividad Física y del Deporte se adquiere la formación necesaria sobre los fundamentos y funciones de la motricidad humana, el entrenamiento deportivo, los aspectos psicológicos, sociales y mecánicos del ejercicio físico, y la aplicación de las nuevas tecnologías en el deporte." );

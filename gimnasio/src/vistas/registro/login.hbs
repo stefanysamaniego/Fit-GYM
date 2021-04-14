@@ -1,25 +1,25 @@
 <LINK REL=StyleSheet HREF="/css/login.css" TYPE="text/css" MEDIA=screen>
-<div id="posicion">
-    <img src="/img/logo.png" id="imagen">
+
+<div class="text-center">
+    <img src="/img/icono/icono.png" class="responsive" style="width: 200px; top:30%">
+</div>
+<div class="text-center" style="height: 0px;">
+    <h3 class="responsive1" style="color:black; top:15%">Iniciar Sesión</h3>
 </div>
 
 <form action="/login" method="post">
-    <div id= "contenedor">
-        <div id="formulario">
-            <div>
-                <label id="Usuario">Nombre:</label>
-                <input type="text" name="username" id="usuario">
-            </div>
-            <div>
-                <label id="Contraseña">Contraseña:</label>
-                <input type="password" name="password" id="contraseña">
-            </div>
-            <div>
-                <button type="submit" id="boton">Ingresar</button>
-            </div>
-            <div>
-                <a href="/registro">Registrate</a>
-            </div>
+    <div class="text-center">
+        <div style="width: 200px; top:40%">
+            <input type="text" name="username" placeholder="Nombre" class="nombre">
+        </div>
+        <div style="width: 200px; top:50%">
+            <input type="password" name="password" placeholder="Contraseña" class="contraseña" >
+        </div>
+        <div>
+            <button type="submit" class="boton rounded-left btn btn-primary rounded submit px-3">Ingresar</button>
+        </div>
+        <div class="registro">
+            <a href="/registro">Registrar</a>
         </div>
     </div>
 </form>

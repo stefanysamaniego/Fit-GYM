@@ -1,0 +1,37 @@
+h1{
+    font-size: 3vh;
+	width:50%;
+    height:auto;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	max-width: 100%; 
+	top:30%
+}
+
+.container{
+    width: 85%;
+	height:auto;
+	left: 50%;
+	position: absolute;
+    border: darkturquoise;
+	background: #f3f3f5;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	border: 1px solid #2d9fd9;
+  	padding: 10px;
+	max-width: 100%; 
+	top: 30%;
+}
+
+th{
+    background-color: blue;
+    color: #ffffff;
+    border: 1px solid #000000;
+}
+
+td{
+    background-color: white;
+    color: black;
+    border: 1px solid #000000;
+}

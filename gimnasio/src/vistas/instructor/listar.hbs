@@ -1,40 +1,42 @@
- <LINK REL=StyleSheet HREF="/css/instructor/listar.css" TYPE="text/css" MEDIA=screen>
- 
-<form action="/instructor/listar"></form>
-<div id="contenedor">
-    {{#each lista}}
-    <div>
-        <label id="nombre">Nombres</label>
-        <p>{{nombres}}</p>
-    </div>
-    <div>
-        <label id="apellido">Apellidos</label>
-        <p>{{apellidos}}</p>
-    </div>
-    <div>
-        <label id="cedula">Cedula</label>
-        <p>{{cedula}}</p>
-    </div>
-    <div> 
-        <label id="edad">Edad</label>
-        <p>{{edad}}</p>
-    </div>
-    <div>
-        <label id="telefono">Teléfono</label>
-        <p>{{telefono}}</p>
-    </div>
-    <div>
-        <label id="titulo">Título</label>
-        <p>{{titulo}}</p>
-    </div>
-    <div>
-        <label id="año">Años de experiencia</label>
-        <p>{{añosExperiencia}}</p>
-    </div>
-    <div>
-        <label id="descripcion">Descripción</label>
-        <p>{{descripcion}}</p>
-    </div>
-    <a href="/instructor/editar/{{id}}" id="edita">Editar</a>
-    {{/each}}
+<LINK REL=StyleSheet HREF="/css/instructor/listar.css" TYPE="text/css" MEDIA=screen>
+
+<div class="text-center">
+    <h1 class="responsive1" style="color:black; top:15%">Listas de Instructores</h3>
 </div>
+
+<form action="/instructor/listar">
+    <div class="container">
+        <table style="width:100%">
+            <thead>
+                <tr>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Cedula</th>
+                    <th>Edad</th>
+                    <th>Teléfono</th>
+                    <th>Título</th>
+                    <th>Años</th>
+                    <th>Descripción</th>
+                    <th>Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each lista}}
+                <tr>
+                    <td>{{nombres}}</td>
+                    <td>{{apellidos}}</td>
+                    <td>{{cedula}}</td>
+                    <td>{{edad}}</td>
+                    <td>{{telefono}}</td>
+                    <td>{{titulo}}</td>
+                    <td>{{añosExperiencia}}</td>
+                    <td>{{descripcion}}</td>
+                    <td>
+                        <a href="/instructor/editar/{{id}}" class="edita">Editar</a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</form>
