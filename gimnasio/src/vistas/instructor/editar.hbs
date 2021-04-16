@@ -1,54 +1,49 @@
 <LINK REL=StyleSheet HREF="/css/instructor/editar.css" TYPE="text/css" MEDIA=screen>
+ 
+<div id="contenido">
+    <form action="/instructor/editar/{{encuentra.id}}" method="post">
 
-<div class="text-center">
-    <h1 class="responsive1" style="color:black; top:15%">Editar datos del Instructor del Gimnasio</h3>
-</div>
+        <label id="datos">Datos del Instructor</label>
 
-<form action="/instructor/editar/{{encuentra.id}}" method="post">
-    <div class="container">
-        <div class="">
-            <label class="col">Nombres:</label>
-            <input type="text" name="nombres" class="form-control" id="nombre" checked value="{{encuentra.nombres}}">
+        <div id="nombres">
+            <label id="uno">Nombres:</label>
+            <input type="text" name="nombres" id="nombre" checked value="{{encuentra.nombres}}">
         </div>
-        <div class=""> 
-            <label class="col-lg-auto">Apellidos:</label>
-            <input type="text" name="apellidos" class="form-control" id="apellido" checked
-                value="{{encuentra.apellidos}}">
+        <div id="apellidos">
+            <label id="dos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellido" checked value="{{encuentra.apellidos}}">
         </div>
-        <div class="">
-            <label class="col">Cédula:</label>
-            <input type="number" name="cedula" class="form-control" id="cedula" checked value="{{encuentra.cedula}}">
+        <div id="cedulas">
+            <label id="tres">Cédula:</label>
+            <input type="number" name="cedula" id="cedula" checked value="{{encuentra.cedula}}">
         </div>
-        <div class="">
-            <label class="col-lg-auto">Edad:</label>
-            <input type="number" name="edad" class="form-control" id="edad" checked value="{{encuentra.edad}}">
+        <div id="edades">
+            <label id="cuatro">Edad:</label>
+            <input type="number" name="edad" id="edad" checked value="{{encuentra.edad}}">
         </div>
-        <div class="">
-            <label class="col">Teléfono</label>
-            <input type="number" name="telefono" class="form-control" id="telefono" checked
-                value="{{encuentra.telefono}}">
+        <div id="telefonos">
+            <label id="cinco">Teléfono</label>
+            <input type="number" name="telefono" id="telefono" checked value="{{encuentra.telefono}}">
         </div>
-        <div class="">
-            <label class="col-lg-auto">Título:</label>
-            <select name="titulo" class="form-control" id="titulo" checked>
+        <div id="titulos">
+            <label id="seis">Título:</label>
+            <select name="titulo" id="titulo" checked>
                 <option value="{{encuentra.titulo}}">{{encuentra.titulo}}</option>
                 {{#each lista}}
-                <option value="{{this.nombre}}">{{this.nombre}}</option>
+                    <option value="{{this.nombre}}">{{this.nombre}}</option>
                 {{/each}}
             </select>
         </div>
-        <div class="">
-            <label class="col">Años de experiencia:</label>
-            <input type="number" name="añosExperiencia" class="form-control" id="año" checked
-                value="{{encuentra.añosExperiencia}}">
+        <div id="años">
+            <label id="siete">Años de experiencia:</label>
+            <input type="number" name="añosExperiencia" id="año" checked value="{{encuentra.añosExperiencia}}">
         </div>
-        <div class="">
-            <label class="col-lg-auto">Descripción:</label>
-            <textarea name="descripcion" class="form-control" id="descripcion" cols="30" rows="10" rows="10"
-                spellcheck="true" maxlength="600">{{encuentra.descripcion}}</textarea>
+        <div id="descripciones">
+            <label id="ocho">Descripción:</label>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" rows="10" spellcheck="true" maxlength="600">{{encuentra.descripcion}}</textarea>
         </div>
-        <div class="boton">
-            <button type="submit"><img src="/img/guardar.png" class="guardar" style="width: 80%;"></button>
+        <div id="Boton1">
+            <button type="submit" id="edita"><img src="/img/guardar.png" id="imagen1"></button>
         </div>
-    </div>
-</form>
+    </form>
+</div>

@@ -1,0 +1,151 @@
+#imagen{
+    width: 5%;
+}
+
+#edita{
+    font-size: 180px;
+    margin-left: 320px;
+}
+
+#contenedor{
+    position: absolute;
+    margin-left: 80px;
+    padding-top: 130px;
+    gap: 10px;
+    width: 80%;
+}
+
+#formulario{
+	top: 180px;
+	position: absolute;
+}
+
+#lista{
+    position: absolute;
+    font-size: 25px;
+    top: 70px;
+    left: 500px;
+}
+
+label{
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+p{
+    text-align: justify;
+    width: 50%;
+}
+
+#nombres{
+    position: absolute; 
+    margin-left: 80px;
+}
+#nombre{
+    position: absolute;
+    height: 25px;
+    top: 10px;
+    padding: 10px;
+    left: 10px;
+    text-align: justify;
+}
+
+
+#apellidos{
+    position: absolute; 
+    margin-left: 200px;   
+}
+#uno{
+    position: absolute;
+    height: 25px;
+    top: 10px;
+    padding: 10px;
+    left: 10px;
+    text-align: justify;
+}
+
+#cedulas{
+    position: absolute; 
+    top: 200px;
+}
+#cedula{
+    position: absolute;
+    left: 80px;
+}
+#dos{
+    position: absolute;
+    height: 25px;
+    top: 10px;
+    padding: 10px;
+    left: 80px;
+    text-align: justify;
+}
+
+#edades{
+    position: absolute; 
+    top: 200px;
+}
+#edad{
+    position: absolute;
+    left: 200px;
+}
+#tres{
+    position: absolute;
+    height: 25px;
+    top: 10px;
+    padding: 10px;
+    left: 200px;
+    text-align: justify;
+}
+
+#telefonos{
+    position: absolute; 
+    top: 200px;
+}
+#telefono{
+    position: absolute;
+    left: 340px;
+}
+#cuatro{
+    position: absolute;
+    height: 25px;
+    top: 10px;
+    padding: 10px;
+    left: 350px;
+    text-align: justify;
+}
+
+#alturas{
+    position: absolute; 
+    top: 270px;
+}
+#altura{
+    position: absolute;
+    left: 80px;
+}
+#cinco{
+    position: absolute;
+    height: 25px;
+    top: 10px;
+    padding: 10px;
+    left: 80px;
+    text-align: justify;
+}
+
+#pesos{
+    position: absolute; 
+    top: 270px;
+}
+#peso{
+    position: absolute;
+    left: 200px;
+}
+#seis{
+    position: absolute;
+    height: 25px;
+    top: 10px;
+    padding: 10px;
+    left: 200px;
+    text-align: justify;
+}

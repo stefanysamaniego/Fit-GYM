@@ -3,13 +3,13 @@ const pool = require("../base")
 
 horario.mostrar = (req, res) => {
     res.render("horario/agregar")
-} 
+}
 
 horario.mandar = async(req, res) => {
-    const {dias, mes, horas} = req.body
+    const {dias, fechas, horas} = req.body
     nuevoIngreso = {
         dias,
-        mes,
+        fechas,
         horas,
         cliente: req.user.id,
         usuario: req.user.id

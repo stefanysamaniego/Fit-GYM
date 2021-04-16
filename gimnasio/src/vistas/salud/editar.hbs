@@ -1,45 +1,44 @@
 <LINK REL=StyleSheet HREF="/css/salud/editar.css" TYPE="text/css" MEDIA=screen>
 
-<div class="text-center">
-    <h1 class="responsive1" style="color:black; top:15%">Editar datos de la información de la salud del Cliente</h3>
-</div>
+<div id="contenedor">
+    <form action="/salud/editar/{{encuentra.id}}" method="post">
 
-<form action="/salud/editar/{{encuentra.id}}" method="post">
-    <div class="container">
-        <div class="">
-            <label class="col">Lesiones ocias:</label>
-            <input type="text" name="lesion_ocia" class="form-control" id="ocia" checked value="{{encuentra.lesion_ocia}}">
+        <label id="datos">Datos de la información de la salud del Cliente</label>
+
+        <div id="ocias">
+            <label id="uno">Lesiones ocias:</label>
+            <input type="text" name="lesion_ocia" id="ocia" checked value="{{encuentra.lesion_ocia}}">
         </div>
-        <div class="">
-            <label class="col-lg-auto">Lesiones musculares:</label>
-            <input type="text" name="lesion_muscular" class="form-control" id="muscular" checked value="{{encuentra.lesion_muscular}}">
+        <div id="musculares">
+            <label id="dos">Lesiones musculares:</label>
+            <input type="text" name="lesion_muscular" id="muscular" checked value="{{encuentra.lesion_muscular}}">
         </div>
-        <div class="">
-            <label class="col">Enfermedades:</label>
-            <input type="number" name="enfermedad" class="form-control" id="enfermedad" checked value="{{encuentra.enfermedad}}">
+        <div id="enfermedades">
+            <label id="tres">Enfermedades:</label>
+            <input type="number" name="enfermedad" id="enfermedad" checked value="{{encuentra.enfermedad}}">
         </div>
-        <div class="">
-            <label class="col-lg-auto">Vicios:</label>
-            <input type="number" name="vicios" class="form-control" id="vicio" checked value="{{encuentra.vicios}}">
+        <div id="vicios">
+            <label id="cuatro">Vicios:</label>
+            <input type="number" name="vicios" id="vicio" checked value="{{encuentra.vicios}}">
         </div>
-        <div class="">
-            <label class="col">Embarazos:</label>
-            <input type="number" name="embarazo" class="form-control" id="embarazo" checked value="{{encuentra.embarazo}}">
+        <div id="embarazos">
+            <label id="cinco">Embarazos:</label>
+            <input type="number" name="embarazo" id="embarazo" checked value="{{encuentra.embarazo}}">
         </div>
-        <div class="">
-            <label class="col-lg-auto">Dificultades:</label>
-            <input type="text" name="dificultades" class="form-control" id="dificultad" checked value="{{encuentra.dificultades}}">
+        <div id="dificultades">
+            <label id="seis">Dificultades:</label>
+            <input type="text" name="dificultades" id="dificultad" checked value="{{encuentra.dificultades}}">
         </div>
-        <div class="">
-            <label class="col">Actividades deportivas:</label>
-            <input type="text" name="actividad_deportiva" class="form-control" id="actividad" checked value="{{encuentra.actividad_deportiva}}">
+        <div id="actividades">
+            <label id="siete">Actividades deportivas:</label>
+            <input type="text" name="actividad_deportiva" id="actividad" checked value="{{encuentra.actividad_deportiva}}">
         </div>
-        <div class="">
-            <label class="col-lg-auto">¿Asistia a un gimnasio u entidad deportiva?:</label>
-            <input type="text" name="entidad" class="form-control" id="entidad" checked value="{{encuentra.entidad}}">
+        <div id="entidades">
+            <label id="ocho">¿Asistia a un gimnasio u entidad deportiva?:</label>
+            <input type="text" name="entidad" id="entidad" checked value="{{encuentra.entidad}}">
         </div>
-        <div class="boton">
-            <button type="submit"><img src="/img/editar.png" class="guardar" style="width: 80%;"></button>
+        <div id="Boton">
+            <button type="submit" id="edita"><img src="/img/editar.png" id="imagen"></button>
         </div>
-    </div>
-</form>
+    </form>
+</div>

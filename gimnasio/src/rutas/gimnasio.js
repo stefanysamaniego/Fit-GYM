@@ -1,7 +1,7 @@
 const express = require('express'); 
 const rutas = express.Router()
 //const path = require("path")
-//const multer = require("multer") 
+//const multer = require("multer")
 
 const {mostrar, mandar, listar, traer, editar} = require("../controladores/gimnasioControlador")
 const {isLogin} = require("../lib/auth")

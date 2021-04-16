@@ -1,39 +1,36 @@
-<LINK REL=StyleSheet HREF="/css/menu/editar.css" TYPE="text/css" MEDIA=screen>
+ <LINK REL=StyleSheet HREF="/css/menu/editar.css" TYPE="text/css" MEDIA=screen>
+ 
+<div id="contenido">
+    <form action="/menu/agregar" method="post">
 
-<div class="text-center">
-    <h1 class="responsive1" style="color:black; top:15%">Ingresar datos del Menú</h3>
-</div>
+        <label id="datos">Datos del Menú</label>
 
-<form action="/menu/agregar" method="post">
-    <div class="container">
-        <div class="">
-            <label class="col">Nombre:</label>
-            <input type="text" name="nombre" class="form-control" id="nombre" checked>
+        <div id="nombres">
+            <label id="uno">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" checked>
         </div>
-        <div class="">
-            <label class="col-lg-auto">Descripción:</label>
-            <textarea name="descripcion" class="form-control" id="descripcion" cols="30" rows="10" spellcheck="true"
-                maxlength="2000"></textarea>
+        <div id="descripciones">
+            <label id="dos">Descripción:</label>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" spellcheck="true" maxlength="2000"></textarea>
         </div>
-        <div class="">
-            <label class="col">Días:</label>
-            <input type="text" name="dias" class="form-control" id="dia" checked>
+        <div id="dias">
+            <label id="tres">Días:</label>
+            <input type="text" name="dias" id="dia" checked>
         </div>
-        <div class="">
-            <label class="col-lg-auto">Semanas:</label>
-            <input type="text" name="semanas" class="form-control" id="semana" checked>
+        <div id="semanas">
+            <label id="cuatro">Semanas:</label>
+            <input type="text" name="semanas" id="semana" checked>
         </div>
-        <div class="">
-            <label class="col">Categoria:</label>
-            <select name="categoria" class="form-control" id="categoria" checked>
+        <div id="categorias">
+            <label id="cinco">Categoria:</label>
+            <select name="categoria" id="categoria" checked>
                 {{#each lista}}
-                <option value="{{this.nombre}}">{{this.nombre}}</option>
+                    <option value="{{this.nombre}}">{{this.nombre}}</option>
                 {{/each}}
             </select>
         </div>
-        <div class="boton">
-            <button type="submit"><img src="/img/guardar.png" class="editar" style="width: 80%;"></button>
+        <div id="Boton1">
+            <button type="submit" id="edita"><img src="/img/guardar.png" id="imagen1"></button>
         </div>
-    </div>
-
-</form>
+    </form>
+</div>

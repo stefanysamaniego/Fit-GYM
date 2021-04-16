@@ -1,49 +1,48 @@
 <LINK REL=StyleSheet HREF="/css/instructor/editar.css" TYPE="text/css" MEDIA=screen>
+ 
+<div id="contenido">
+    <form action="/instructor/agregar" method="post">
 
-<div class="text-center"> 
-    <h1 class="responsive1" style="color:black; top:15%">Ingresar datos del Instructor del Gimnasio</h3>
-</div>
+        <label id="datos">Datos del instructor</label> 
 
-<form action="/instructor/agregar" method="post">
-    <div class="container">
-        <div class="">
-            <label class="col">Nombres:</label>
-            <input type="text" name="nombres" class="form-control" id="nombre" checked> 
+        <div id="nombres">
+            <label id="uno">Nombres:</label>
+            <input type="text" name="nombres" id="nombre" checked>
         </div>
-        <div class="">
-            <label class="col-lg-auto">Apellidos:</label>
-            <input type="text" name="apellidos" class="form-control"id="apellido" checked> 
+        <div id="apellidos">
+            <label id="dos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellido" checked>
         </div>
-        <div class="">
-            <label class="col">Cédula:</label>
-            <input type="number" name="cedula" class="form-control" id="cedula" checked> 
+        <div id="cedulas">
+            <label id="tres">Cédula:</label>
+            <input type="number" name="cedula" id="cedula" checked>
         </div>
-        <div class="">
-            <label class="col-lg-auto">Edad:</label>
-            <input type="number" name="edad" class="form-control" id="edad" checked>
+        <div id="edades">
+            <label id="cuatro">Edad:</label>
+            <input type="number" name="edad" id="edad" checked>
         </div>
-        <div class="">
-            <label class="col">Teléfono</label>
-            <input type="number" name="telefono" class="form-control" id="telefono" checked>
+        <div id="telefonos"> 
+            <label id="cinco">Teléfono</label>
+            <input type="number" name="telefono" id="telefono" checked>
         </div>
-        <div class="">
-            <label class="col-lg-auto">Título:</label>
-            <select name="titulo" class="form-control"  id="titulo" checked>
+        <div id="titulos">
+            <label id="seis">Título:</label>
+            <select name="titulo" id="titulo" checked>
                 {{#each lista}}
                     <option value="{{this.nombre}}">{{this.nombre}}</option>
                 {{/each}}
             </select>
         </div>
-        <div class="">
-            <label class="col">Años de experiencia:</label>
-            <input type="text" name="añosExperiencia" class="form-control" id="año" checked>
+        <div id="años">
+            <label id="siete">Años de experiencia:</label>
+            <input type="text" name="añosExperiencia" id="año" checked>
         </div>
-        <div class="">
-            <label class="col-lg-auto">Descripción:</label>
-            <textarea name="descripcion" class="form-control" id="descripcion" cols="30" rows="10" rows="10" spellcheck="true" maxlength="600"></textarea>
+        <div id="descripciones">
+            <label id="ocho">Descripción:</label>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" rows="10" spellcheck="true" maxlength="600"></textarea>
         </div>
-        <div class="boton">
-            <button type="submit"><img src="/img/guardar.png" class="guardar" style="width: 80%;"></button>
+        <div id="Boton1">
+            <button type="submit" id="edita"><img src="/img/guardar.png" id="imagen1"></button>
         </div>
-    </div> 
-</form>
+    </form>
+</div>

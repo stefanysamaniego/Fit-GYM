@@ -1,36 +1,89 @@
-<LINK REL=StyleSheet HREF="/css/cliente/listar.css" TYPE="text/css" MEDIA=screen>
- 
-<form action="/cliente/listar"></form>
-<div id="contenedor">
-    {{#each lista}}
-    <div>
-        <label id="nombre">Nombres</label>
-        <p>{{nombres}}</p>
-    </div>
-    <div>
-        <label id="apellido">Apellidos</label>
-        <p>{{apellidos}}</p>
-    </div>
-    <div>
-        <label id="cedula">Cedula</label>
-        <p>{{cedula}}</p>
-    </div>
-    <div>
-        <label id="edad">Edad</label>
-        <p>{{edad}}</p>
-    </div>
-    <div>
-        <label id="telefono">Teléfono</label>
-        <p>{{telefono}}</p>
-    </div>
-    <div>
-        <label id="altura">Altura</label>
-        <p>{{altura}}</p>
-    </div>
-    <div>
-        <label id="peso">Peso</label>
-        <p>{{peso}}</p>
-    </div>
-    <a href="/cliente/editar/{{id}}" id="edita">Editar</a>
-    {{/each}}
+<link rel="stylesheet" href=".css">
+
+<div id="contenido">
+    <form action="/gimnasio/detalleLista/{{listar.id}}">
+        {{#if user}}
+        <div id="contenedor">
+            <p>{{listar.nombre}}</p>
+        </div>
+        <div id="contenedor1">
+            <label id="inscripcion">Inscripción</label>
+            <p>{{listar.inscripcion}}</p>
+        </div>
+        <div id="contenedor2">
+            <label id="mensualidad">Mensualidad</label>
+            <p>{{listar.mensualidad}}</p>
+        </div>
+        <div id="contenedor3">
+            <label id="horario">Horario</label>
+            <p>{{listar.horario}}</p>
+        </div>
+        <div id="contenedor4">
+            <label id="bajas">Motivo de la inactividad</label>
+            <p>{{listar.bajas}}</p>
+        </div>
+        <div id="contenedor5">
+            <label id="higiene">Higiene</label>
+            <p>{{listar.higiene}}</p>
+        </div>
+        <div id="contenedor6">
+            <label id="seguridad">Seguridad</label>
+            <p>{{listar.seguridad}}</p>
+        </div>
+        <div id="contenedor7">
+            <label id="contacto">Contacto</label>
+            <p>{{listar.contato}}</p>
+        </div>
+        <div id="contenedor8">
+            <label id="direccion">Dirección</label>
+            <p>{{listar.direccion}}</p>
+        </div>
+        <div id="contenedor9">
+            <label id="estado">Estado</label>
+            <p>{{listar.estado}}</p>
+        </div>
+        <a href="/registro" id="registro">Registrate</a>
+        {{else}}
+        <div id="contenedor">
+            <p>{{listar.nombre}}</p>
+        </div>
+        <div id="contenedor1">
+            <label id="inscripcion">Inscripción</label>
+            <p>{{listar.inscripcion}}</p>
+        </div>
+        <div id="contenedor2">
+            <label id="mensualidad">Mensualidad</label>
+            <p>{{listar.mensualidad}}</p>
+        </div>
+        <div id="contenedor3">
+            <label id="horario">Horario</label>
+            <p>{{listar.horario}}</p>
+        </div>
+        <div id="contenedor4">
+            <label id="bajas">Motivo de la inactividad</label>
+            <p>{{listar.bajas}}</p>
+        </div>
+        <div id="contenedor5">
+            <label id="higiene">Higiene</label>
+            <p>{{listar.higiene}}</p>
+        </div>
+        <div id="contenedor6">
+            <label id="seguridad">Seguridad</label>
+            <p>{{listar.seguridad}}</p>
+        </div>
+        <div id="contenedor7">
+            <label id="contacto">Contacto</label>
+            <p>{{listar.contato}}</p>
+        </div>
+        <div id="contenedor8">
+            <label id="direccion">Dirección</label>
+            <p>{{listar.direccion}}</p>
+        </div>
+        <div id="contenedor9">
+            <label id="estado">Estado</label>
+            <p>{{listar.estado}}</p>
+        </div>
+        <a href="/login" id="registro">Registrate</a>
+        {{/if}}
+    </form>
 </div>

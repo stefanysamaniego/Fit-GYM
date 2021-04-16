@@ -1,0 +1,86 @@
+#imagen{
+    width: 5%;
+}
+
+#edita{
+    font-size: 260px;
+    margin-left: 200px;
+}
+
+#contenido{
+    position: absolute;
+    margin-left: 80px;
+    padding-top: 130px;
+    gap: 10px;
+    width: 80%;
+}
+
+#lista{
+    position: absolute;
+    font-size: 25px;
+    top: 70px;
+    left: 500px;
+}
+
+#formulario{
+	top: 180px;
+	position: absolute;
+}
+
+label{
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+p{
+    text-align: justify;
+    width: 50%;
+}
+
+#dias{
+    position: absolute; 
+    margin-left: 200px;   
+}
+#uno{
+    position: absolute;
+    height: 25px;
+    top: 10px;
+    padding: 10px;
+    left: 10px;
+    text-align: justify;
+}
+
+#meses{
+    position: absolute; 
+    top: 200px;
+}
+#mes{
+    position: absolute;
+    left: 200px;
+}
+#dos{
+    position: absolute;
+    height: 25px;
+    top: 10px;
+    padding: 10px;
+    left: 200px;
+    text-align: justify;
+}
+
+#hora{
+    position: absolute; 
+    top: 270px;
+}
+#horas{
+    position: absolute;
+    left: 200px;
+}
+#tres{
+    position: absolute;
+    height: 25px;
+    top: 10px;
+    padding: 10px;
+    left: 200px;
+    text-align: justify;
+}

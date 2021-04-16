@@ -1,5 +1,5 @@
 body{
-	background-color: rgb(201, 194, 194);
+	background-color: white;
 	color: black;
 	font-family: 'Itim', cursive;
 	font-style: italic;
@@ -9,7 +9,7 @@ body{
 	box-sizing: border-box;
 	text-align: justify;
 	margin: auto;
-	padding: 0%;
+	padding: 10px;
 }
 
 input{

@@ -1,0 +1,141 @@
+#contenido{
+    position: absolute;
+    margin-left: 80px;
+    padding-top: 130px;
+    gap: 10px;
+    width: 80%;
+}
+
+#datos{
+    position: absolute;
+    font-size: 25px;
+    top: 70px;
+    left: 500px;
+}
+#uno{
+    position: absolute;
+    top: 130px;
+    left: 250px;
+}
+#nombre{
+    position: absolute;
+    height: 30px;
+    top: 155px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: 220px;
+    text-align: justify;
+}
+
+#dos{
+    position: absolute;
+    top: 130px;
+    left: 500px;
+}
+#apellido{
+    position: absolute;
+    height: 30px;
+    top: 155px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: 470px;
+    text-align: justify;
+}
+
+#tres{
+    position: absolute;
+    top: 200px;
+    left: 250px;
+}
+#cedula{
+    position: absolute;
+    height: 30px;
+    top: 225px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: 220px;
+    text-align: justify;
+}
+
+#cuatro{
+    position: absolute;
+    top: 200px;
+    left: 500px;
+}
+#edad{
+    position: absolute;
+    height: 30px;
+    top: 225px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: 470px;
+    text-align: justify;
+}
+
+#cinco{
+    position: absolute;
+    top: 200px;
+    left: 760px;
+}
+#telefono{
+    position: absolute;
+    height: 30px;
+    top: 225px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: 730px;
+    text-align: justify;
+}
+
+#seis{
+    position: absolute;
+    top: 270px;
+    left: 250px;
+}
+#altura{
+    position: absolute;
+    height: 30px;
+    top: 295px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: 220px;
+    text-align: justify;
+}
+
+#siete{
+    position: absolute;
+    top: 270px;
+    left: 500px;
+}
+#peso{
+    position: absolute;
+    height: 30px;
+    top: 295px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: 470px;
+    text-align: justify;
+}
+
+#Boton1{
+    position: absolute;
+    left: 730px;
+    top: 270px;
+}
+
+#imagen1{
+    width: 20%;
+}
+
+#edita{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 60px;
+    border-color: rgba(0, 0, 0, 0);
+}

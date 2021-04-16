@@ -1,39 +1,37 @@
 <LINK REL=StyleSheet HREF="/css/menu/editar.css" TYPE="text/css" MEDIA=screen>
+ 
+<div id="contenido">
+    <form action="/menu/editar/{{encuentra.id}}" method="post">
 
-<div class="text-center">
-    <h1 class="responsive1" style="color:black; top:15%">Editar datos del Menú</h3>
-</div>
+        <label id="datos">Datos del Menú</label>
 
-<form action="/menu/editar/{{encuentra.id}}" method="post">
-    <div class="container">
-        <div class="">
-            <label class="col">Nombre:</label>
-            <input type="text" name="nombres" class="form-control" id="nombre" checked value="{{encuentra.nombre}}">
+        <div id="nombres">
+            <label id="uno">Nombre:</label>
+            <input type="text" name="nombres" id="nombre" checked value="{{encuentra.nombre}}">
         </div>
-        <div class="">
-            <label class="col-lg-auto">Descripción:</label>
-            <textarea name="descripcion" class="form-control" id="descripcion" cols="30" rows="10" rows="10" spellcheck="true"
-                maxlength="2000">{{encuentra.descripcion}}</textarea>
+        <div id="descripciones">
+            <label id="dos">Descripción:</label>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" rows="10" spellcheck="true" maxlength="2000">{{encuentra.descripcion}}</textarea>
         </div>
-        <div class="">
-            <label class="col">Días:</label>
-            <input type="number" name="dias" class="form-control" id="dia" checked value="{{encuentra.dias}}">
+        <div id="dias">
+            <label id="tres">Días:</label>
+            <input type="number" name="dias" id="dia" checked value="{{encuentra.dias}}">
         </div>
-        <div class="">
-            <label class="col-lg-auto">Semanas:</label>
-            <input type="text" name="semanas" class="form-control" id="semana" checked value="{{encuentra.semanas}}">
+        <div id="semanas">
+            <label id="cuatro">Semanas:</label>
+            <input type="text" name="semanas" id="semana" checked value="{{encuentra.semanas}}">
         </div>
-        <div class="">
-            <label class="col">Categoría:</label>
-            <select name="categoría" class="form-control" id="categoria" checked>
+        <div id="categorias">
+            <label id="cinco">Categoría:</label>
+            <select name="categoría" id="categoria" checked>
                 <option value="{{encuentra.categoria}}">{{encuentra.categoria}}</option>
                 {{#each lista}}
-                <option value="{{this.nombre}}">{{this.nombre}}</option>
+                    <option value="{{this.nombre}}">{{this.nombre}}</option>
                 {{/each}}
             </select>
         </div>
-        <div class="boton">
-            <button type="submit"><img src="/img/guardar.png" class="editar" style="width: 80%;"></button>
+        <div id="Boton1">
+            <button type="submit" id="edita"><img src="/img/guardar.png" id="imagen1"></button>
         </div>
-    </div>
-</form>
+    </form>
+</div>

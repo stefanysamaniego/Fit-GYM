@@ -7,9 +7,9 @@ const {mostrar, mandar, listar, traer, editar} = require("../controladores/horar
 rutas.get("/agregar", isLogin, mostrar)
 rutas.post("/agregar", isLogin, mandar)
 
-rutas.get("/listar", isLogin, listar) 
+rutas.get("/listar", isLogin, listar)
 
 rutas.get("/editar/:id", isLogin, traer)
 rutas.post("/editar/:id", isLogin, editar)
 
-module.exports = rutas 
+module.exports = rutas
