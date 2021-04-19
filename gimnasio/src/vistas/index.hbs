@@ -1,5 +1,24 @@
-<LINK REL=StyleSheet HREF="/css/inicio.css" TYPE="text/css" MEDIA=screen>
+<LINK REL=StyleSheet HREF="/css/index.css" TYPE="text/css" MEDIA=screen>
 
-<div id = "bienvenido">
-    <img src="" >
+<div id="bienvenido">
+    <img src="/img/Bienvenido.png" id="imagen">
 </div>
+
+<div id="carrusel">
+    <img src="/img/1.png" id="uno">
+    <img src="/img/2.png" id="dos">
+    <img src="/img/3.png" id="tres">
+</div>
+
+<div id="boton">
+    <button id="der" onclick="imagen.mostrarDer()"></button>
+    <button id="izq" onclick="imagen.mostrarIzq()"></button>
+    
+    <button id="der1" onclick="imagen.mostrarDer1()"></button>
+    <button id="izq1" onclick="imagen.mostrarIzq1()"></button>
+    
+    <button id="der2" onclick="imagen.mostrarDer2()"></button>
+    <button id="izq2" onclick="imagen.mostrarIzq2()"></button>
+</div>
+
+<script src="/js/imagenes.js"></script>
