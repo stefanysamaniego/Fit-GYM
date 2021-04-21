@@ -1,27 +1,28 @@
 <LINK REL=StyleSheet HREF="/css/login.css" TYPE="text/css" MEDIA=screen>
+
 <div id="posicion">
     <img src="/img/icono.png" id="imagen">
 </div>
 
-<form action="/login" method="post">
-    <div id= "contenedor">
-        <div id="formulario">
-            <div>
-                <label id="Usuario">Nombre:</label>
-                <input type="text" name="username" id="usuario">
-            </div>
-            <div>
-                <label id="Contraseña">Contraseña:</label>
-                <input type="password" name="password" id="contraseña">
-            </div>
-            <div>
-                <button type="submit" id="boton">Ingresar</button>
-            </div>
-            <div>
-                <a href="/registro">
-                    Registrate
-                </a>
-            </div>
+<div id="contenedor">
+    <form action="/login" method="post">
+        <div id="uno">
+            <label id="Usuario">Nombre:</label>
+            <input type="text" name="username" id="usuario">
         </div>
-    </div>
-</form>
+        <div id="dos">
+            <label id="Contraseña">Contraseña:</label>
+            <input type="password" name="password" id="contraseña">
+        </div>
+        <div id="tres">
+            <button type="submit" id="boton">
+                <p id="letra">Ingresar</p>
+            </button>
+        </div>
+        <div id="cuatro">
+            <a id="registra" href="/registro">
+                Registrate
+            </a>
+        </div>
+    </form>
+</div>
