@@ -8,8 +8,6 @@ body{
 	max-height: 100%;
 	box-sizing: border-box;
 	text-align: justify;
-	margin: auto;
-	padding: 10px;
 }
 
 input{
@@ -23,22 +21,10 @@ textarea{
 	overflow: hidden;
 	display: flex;
 }
+
 button{
 	border-radius: 20px;
 	overflow: hidden;
 	display: flex;
-}
-
-@media(max-width: 840px){
-	textarea{
-		grid-template-columns: repeat(3, 1fr);
-		height: auto;
-	}
-}
-
-@media(max-width: 600px){
-	textarea{
-		grid-template-columns: repeat(1, 1fr);
-		height: auto;
-	}
+	cursor: pointer;
 }

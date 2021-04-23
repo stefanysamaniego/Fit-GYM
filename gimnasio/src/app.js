@@ -1,7 +1,7 @@
 const express = require("express")
 const morgan = require("morgan")
-const path = require("path")
 const exphbs = require("express-handlebars")
+const path = require("path")
 const session = require("express-session")
 const passport = require("passport")
 const flash = require("connect-flash")
@@ -14,7 +14,7 @@ const app = express()
 require("./lib/passport")
 
 app.set("port", process.envPORT || 4000)
-app.set("views", path.join(__dirname, "vistas"))
+app.set("views", path.join(__dirname, "vistas")) //views
 app.engine(".hbs", exphbs({
     defaultLayout: "main",
     layoutsDir: path.join(app.get("views"), "layouts"),

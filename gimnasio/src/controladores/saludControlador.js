@@ -16,7 +16,8 @@ salud.mandar = async(req, res) => {
         dificultades,
         actividad_deportiva,
         entidad,
-        cliente: req.user.id
+        cliente: req.user.id,
+        usuario: req.user.id
     }
     await pool.query("INSERT INTO salud SET ?", [nuevoEnvia])
     req.flash("success", "Se ha guardado con exito")

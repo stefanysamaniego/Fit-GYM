@@ -1,26 +1,29 @@
 <LINK REL=StyleSheet HREF="/css/registro.css" TYPE="text/css" MEDIA=screen>
 <div id="posicion">
-    <img src="/img/logo.png" id="imagen">
+    <img src="/img/icono.png" id="imagen">
 </div>
 
-<form action="/registro" method="post">
-    <div id= "contenedor">
-        <div id="formulario">
-            <div>
-                <label id="Correo">Email:</label>
-                <input type="email" name="email" id="correo">
-            </div>
-            <div>
-                <label id="Usuario">Nombre:</label>
-                <input type="text" name="username" id="usuario">
-            </div>
-            <div>
-                <label id="Contraseña">Contraseña:</label>
-                <input type="password" name="password" id="contraseña">
-            </div>
-            <div>
-                <button type="submit" id="boton">Ingresar</button>
-            </div>
-        </div> 
-    </div>
-</form>
+<div id="contenedor">
+    <form action="/registro" method="post">
+        <div id="uno">
+            <label id="Correo">Email:</label>
+            <input type="email" name="email" id="correo">
+        </div>
+        <div id="dos">
+            <label id="Usuario">Nombre:</label>
+            <input type="text" name="username" id="usuario">
+        </div>
+        <div id="tres">
+            <label id="Contraseña">Contraseña:</label>
+            <input type="password" name="password" id="contraseña">
+        </div>
+        <div id="cuatro">
+            <button type="submit" id="boton">
+                <p id="letra">
+                    Ingresar
+                </p>
+            </button>
+        </div>
+
+    </form>
+</div>
