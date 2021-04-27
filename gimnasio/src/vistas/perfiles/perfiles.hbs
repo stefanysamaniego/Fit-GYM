@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="style.css">
+{{#each cliente}}
+<form action="/perfil/perfil/{{id}}" method="get"></form>
+{{/each}}
+
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card bg-light">
+                <div class="card-body">
+                    {{#each cliente}}
+                    <div>
+                        <label>Cedula</label>
+                        <p>{{cedula}}</p>
+                    </div>
+                    <div>
+                        <label>Nombres:</label>
+                        <p>{{nombres}} {{apellidos}}</p>
+                    </div>
+                    {{/each}}
+                    {{#each instructor}}
+                    <div>
+                        <label>Instructor</label>
+                        <p>{{nombres}} {{apellidos}}</p>
+                    </div>
+                    {{/each}}
+                    {{#each salud}}
+                    <div>
+                        <label>Enfermedad</label>
+                        <p>{{enfermedad}}</p>
+                    </div>
+                    {{/each}}
+                    {{#each menu}}
+                    <div>
+                        <label>Menú</label>
+                        <p>{{nombre}}</p>
+                        <p>{{categoria}}</p>
+                    </div>
+                    {{/each}}
+                    {{#each horario}}
+                    <div>
+                        <label>Hora</label>
+                        <p>{{horas}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

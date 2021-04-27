@@ -1,0 +1,31 @@
+#contenedor{
+    position: absolute;
+    top: 180px;
+    left: 300px;
+    text-align: center;
+}
+
+#cliente{
+    position: absolute;
+}
+
+#instructor{
+    position: absolute;
+    
+    left: 341px;
+}
+
+#salud{
+    position: absolute;
+    left: 592px;
+}
+
+#menu{
+    position: absolute;
+    left: 634px;
+}
+
+#horario{
+    position: absolute;
+    left: 806px;
+}

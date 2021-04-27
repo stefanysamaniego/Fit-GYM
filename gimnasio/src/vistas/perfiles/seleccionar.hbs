@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="style.css">
+
+<form action="/perfil/seleccion" method="get"></form>
+<div class="container p-4">
+    <div class="row">
+        {{#each lista}}
+        <div class="col-md-6 mx-auto">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <div>
+                        <label>Cedula</label>
+                        <p>{{cedula}}</p>
+                    </div>
+                    <div>
+                        <label>Nombres</label>
+                        <p>{{nombres}} {{apellidos}}</p>
+                    </div>
+                    <div>
+                        <label>Horario</label>
+                        <p>{{horario}}</p>
+                    </div>
+                    <div>
+                        <button type="submit"><a href="/perfil/perfil/{{id}}">Acceder</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

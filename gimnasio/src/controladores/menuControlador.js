@@ -45,7 +45,7 @@ menu.editar = async(req, res) => {
         categoria
     }
     await pool.query("UPDATE menu SET ? WHERE id=?", [nuevoEnvia, id])
-    req.flash("success", "Se ha actualizo con exito")
+    req.flash("success", "Se ha guardado con exito")
     res.redirect('/menu/listar');
 }
 
