@@ -1,0 +1,120 @@
+#imagen{
+    width: 90px;
+}
+
+#imagen1{
+    width: 70px;
+}
+
+#Boton{
+    position: absolute;
+    left: 615px;
+    top: 310px;
+}
+
+#Boton1{
+    position: absolute;
+    left: 615px;
+    top: 310px;
+}
+
+#edita{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 60px;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+#contenido{
+    position: absolute;
+    margin-left: 80px;
+    padding-top: 130px;
+    gap: 10px;
+    width: 80%;
+}
+
+#datos{
+    position: absolute;
+    font-size: 25px;
+    top: 75px;
+    left: 460px;
+}
+
+#nombres{
+    position: absolute;
+    top: 125px;
+    left: 360px;
+}
+#nombre{
+    position: absolute;
+    height: 30px;
+    top: 25px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: -20px;
+    text-align: justify;
+}
+
+#categorias{
+    position: absolute;
+    top: 125px;
+    left: 630px;
+}
+#categoria{
+    position: absolute;
+    height: 45px;
+    top: 25px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: -20px;
+    
+}
+
+#dias{
+    position: absolute;
+    top: 210px;
+    left: 360px;
+}
+#dia{
+    position: absolute;
+    height: 30px;
+    top: 25px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: -20px;
+    text-align: justify;
+}
+
+#semanas{
+    position: absolute;
+    top: 210px;
+    left: 630px;
+}
+#semana{
+    position: absolute;
+    height: 30px;
+    top: 25px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: -20px;
+    text-align: justify;
+}
+
+#descripciones{
+    position: absolute;
+    top: 290px;
+    left: 360px;
+}
+#descripcion{
+    position: absolute;
+    height: 120px;
+    top: 25px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: -20px;
+    text-align: justify;
+}

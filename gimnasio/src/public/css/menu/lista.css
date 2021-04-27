@@ -1,0 +1,111 @@
+#imagen{
+    width: 5%;
+}
+
+#edita{
+    font-size: 180px;
+    margin-left: 320px;
+}
+
+#contenedor{
+    position: absolute;
+    margin-left: 80px;
+    padding-top: 130px;
+    gap: 10px;
+    width: 80%;
+}
+
+#lista{
+    position: absolute;
+    font-size: 25px;
+    top: 90px;
+    left: 500px;
+}
+
+label{
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+p{
+    text-align: justify;
+    width: 50%;
+}
+
+#nombres{
+    position: absolute; 
+    margin-left: 80px;
+}
+#nombre{
+    position: absolute;
+    height: 25px;
+    top: 10px;
+    padding: 10px;
+    left: 10px;
+    text-align: justify;
+}
+
+#categorias{
+    position: absolute; 
+    margin-left: 190px;
+}
+#categoria{
+    position: absolute;
+    height: 25px;
+    top: 10px;
+    padding: 10px;
+    left: 10px;
+    text-align: justify;
+}
+
+#dias{
+    position: absolute; 
+    top: 200px;
+}
+#tres{
+    position: absolute;
+    left: 80px;
+}
+#dia{
+    position: absolute;
+    height: 25px;
+    top: 10px;
+    padding: 10px;
+    left: 80px;
+    text-align: justify;
+}
+
+#semanas{
+    position: absolute; 
+    top: 200px;
+}
+#cuatro{
+    position: absolute;
+    left: 190px;
+}
+#semana{
+    position: absolute;
+    height: 25px;
+    top: 10px;
+    padding: 10px;
+    left: 200px;
+    text-align: justify;
+}
+
+#descripciones{
+    position: absolute; 
+    top: 270px;
+}
+#cinco{
+    position: absolute;
+    left: 80px;
+}
+#descripcion{
+    position: absolute;
+    height: 25px;
+    top: 10px;
+    padding: 10px;
+    left: 80px;
+    text-align: justify;
+}
