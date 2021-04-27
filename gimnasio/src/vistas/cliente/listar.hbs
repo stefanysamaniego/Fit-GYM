@@ -3,37 +3,35 @@
 <form action="/cliente/listar"></form>
 <div id="contenedor">
     <label id="lista">Lista del Clientes</label>
-    <div id="formulario"></div>
-    {{#each lista}}
-    <div id="nombres">
-        <label id="name">Nombres</label>
-        <p id="nombre">{{nombres}}</p>
-    </div>
-    <div id="apellidos">
-        <label id="apellido">Apellidos</label>
-        <p id="uno">{{apellidos}}</p>
-    </div>
-    <div id="cedulas">
-        <label id="cedula">Cedula</label>
-        <p id="dos">{{cedula}}</p>
-    </div>
-    <div id="edades">
-        <label id="edad">Edad</label>
-        <p id="tres">{{edad}}</p>
-    </div>
-    <div id="telefonos">
-        <label id="telefono">Teléfono</label>
-        <p id="cuatro">{{telefono}}</p>
-    </div>
-    <div id="alturas">
-        <label id="altura">Altura</label>
-        <p id="cinco">{{altura}}</p>
-    </div>
-    <div id="pesos">
-        <label id="peso">Peso</label>
-        <p id="seis">{{peso}}</p>
-    </div>
-    <a href="/cliente/editar/{{id}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
-    {{/each}}
-</div>
+        {{#each lista}}
+        <div id="nombres">
+            <label id="name">Nombres</label>
+            <p id="nombre">{{nombres}}</p>
+        </div>
+        <div id="apellidos">
+            <label id="apellido">Apellidos</label>
+            <p id="uno">{{apellidos}}</p>
+        </div>
+        <div id="cedulas">
+            <label id="cedula">Cedula</label>
+            <p id="dos">{{cedula}}</p>
+        </div>
+        <div id="edades">
+            <label id="edad">Edad</label>
+            <p id="tres">{{edad}}</p>
+        </div>
+        <div id="telefonos">
+            <label id="telefono">Teléfono</label>
+            <p id="cuatro">{{telefono}}</p>
+        </div>
+        <div id="alturas">
+            <label id="altura">Altura</label>
+            <p id="cinco">{{altura}}</p>
+        </div>
+        <div id="pesos">
+            <label id="peso">Peso</label>
+            <p id="seis">{{peso}}</p>
+        </div>
+        <a href="/cliente/editar/{{id}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+        {{/each}}
 </div>

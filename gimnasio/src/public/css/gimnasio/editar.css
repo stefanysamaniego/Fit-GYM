@@ -1,21 +1,21 @@
 #imagen{
-    width: 80%;
+    width: 90px;
 }
 
 #imagen1{
-    width: 80%;
+    width: 90px;
 }
 
 #Boton{
     position: absolute;
-    left: 1000px;
-    top: 570px;
+    left: 720px;
+    top: 500px;
 }
 
 #Boton1{
     position: absolute;
-    left: 1000px;
-    top: 570px;
+    left: 720px;
+    top: 500px;
 }
 
 #edita{
@@ -36,12 +36,12 @@
     position: absolute;
     font-size: 25px;
     top: 70px;
-    left: 550px;
+    left: 450px;
 }
 
 #name{
     position: absolute;
-    left: 400px;
+    left: 180px;
 }
 #nombres{
     position: absolute; 
@@ -54,7 +54,7 @@
     border: 2px solid rgba(81, 255, 0, 0.644);
   	padding: 10px;
   	border-radius: 40px 10px;
-    left: 320px;
+    left: 160px;
     text-align: justify;
 }
 
@@ -64,7 +64,8 @@
 }
 #contactos{
     position: absolute;
-    top:180px;
+    top:120px;
+    left: 138px;
 }
 #contacto{
     position: absolute;
@@ -84,7 +85,8 @@
 }
 #direcciones{
     position: absolute;
-    top:240px;
+    top:120px;
+    left: 440px;
 }
 #direccion{
     position: absolute;
@@ -103,7 +105,8 @@
 }
 #estados{
     position: absolute;
-    top:240px;
+    top:500px;
+    left: -150px;
 }
 #estado{
     position: absolute;
@@ -118,11 +121,11 @@
 
 #uno{
     position: absolute;
-    left: 400px;
+    left: 180px;
 }
 #inscripciones{
     position: absolute;
-    top:320px;
+    top:220px;
 }
 #descripcion{
     position: absolute;
@@ -131,7 +134,7 @@
     border: 2px solid rgba(81, 255, 0, 0.644);
   	padding: 10px;
   	border-radius: 40px 10px;
-    left: 320px;
+    left: 150px;
     text-align: justify;
 }
 
@@ -141,7 +144,8 @@
 }
 #mensualidades{
     position: absolute;
-    top:320px;
+    top:220px;
+    left: -160px;
 }
 #mensualidad{
     position: absolute;
@@ -160,7 +164,8 @@
 }
 #horarios{
     position: absolute;
-    top:320px;
+    top:220px;
+    left: -147px;
 }
 #horario{
     position: absolute;
@@ -175,11 +180,12 @@
 
 #cuatro{
     position: absolute;
-    left: 400px;
+    left: 350px;
 }
 #bajas{
     position: absolute;
-    top:440px;
+    top:360px;
+    left: -170px;
 }
 #baja{
     position: absolute;
@@ -198,7 +204,8 @@
 }
 #higienes{
     position: absolute;
-    top:440px;
+    top:360px;
+    left: -160px;
 }
 #higiene{
     position: absolute;
@@ -217,7 +224,8 @@
 }
 #seguridades{
     position: absolute;
-    top:440px;
+    top:360px;
+    left: -147px;
 }
 #seguridad{
     position: absolute;
@@ -229,3 +237,10 @@
     left: 900px;
     text-align: justify;
 }
+
+#mensaje{
+    position: absolute;  
+    top:300px;
+    left: 150px;
+  }
+  
