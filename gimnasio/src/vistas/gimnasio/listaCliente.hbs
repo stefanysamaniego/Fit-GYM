@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="">
+
+<form action="/gimnasio/listaCliente" method="get"></form>
+
+<div>
+    <div id="cliente">
+        <table border="1">
+        <tr>
+            <td>Cédula</td>
+            <td>Nombres</td>
+        </tr>
+        {{#each cliente}}
+        <tr>
+            <td>{{cedula}}</td>
+            <td>{{nombres}} {{apellidos}}</td>
+        </tr>
+        {{/each}}
+    </table>
+    </div>
+    
+    <div id="instructor">
+        <table border="1">
+        <tr>
+            <td>Instructor</td>
+        </tr>
+        {{#each instructor}}
+        <tr>
+            <td>{{nombres}} {{apellidos}}</td>
+        </tr>
+        {{/each}}
+    </table>
+    </div>
+    
+    <div id="salud">
+        <table border="1">
+        <tr>
+            <td>Salud</td>
+        </tr>
+        {{#each salud}}
+        <tr>
+            <td>{{enfermedad}}</td>
+        </tr>    
+        {{/each}}
+    </table>
+    </div>
+    
+    <div id="menu">
+        <table border="1">
+        <tr>
+            <td>Menú</td>
+            <td>Categoria</td>
+        </tr>
+        {{#each menu}}
+        <tr>
+            <td>{{nombre}}</td>
+            <td>{{categoria}}</td>
+        </tr>
+        {{/each}}
+    </table>
+    </div>
+    
+    <div id="horario">
+        <table border="1">
+        <tr>
+            <td>Horario</td>
+        </tr>
+        {{#each horario}}
+        <tr>
+            <td>{{horas}}</td>
+        </tr>
+        {{/each}}
+    </table>
+    </div>
+</div>

@@ -43,6 +43,15 @@ gimnasio.listar = async(req, res) => {
     res.render("gimnasio/listar", {lista, listaImagen});
 }
 
+gimnasio.seleccionar = async(req, res) => {
+    const cliente = await pool.query("SELECT * FROM info_cliente")
+    const horario = await pool.query("SELECT * FROM horario")
+    const menu = await pool.query("SELECT * FROM menu")
+    const salud = await pool.query("SELECT * FROM salud")
+    const instructor = await pool.query("SELECT * FROM entrenador")
+    res.render("gimnasio/listaCliente", {cliente, horario, menu, salud, instructor});
+}
+
 gimnasio.traer = async(req, res) => {
     const { id } = req.params
     const trae = await pool.query("SELECT * FROM gimnasio WHERE id=?", [id])

@@ -58,5 +58,6 @@ app.use("/horario", require("./rutas/horario"))
 app.use("/salud", require("./rutas/salud")) 
 app.use("/instructor", require("./rutas/instructor"))
 app.use("/menu", require("./rutas/menu"))
+app.use("/perfil", require("./rutas/perfil") )
 
 module.exports = app
