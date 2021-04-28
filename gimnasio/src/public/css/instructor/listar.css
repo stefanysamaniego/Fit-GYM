@@ -10,7 +10,7 @@
 #contenedor{
     position: absolute;
     margin-left: 80px;
-    padding-top: 130px;
+    padding-top: 140px;
     gap: 10px;
     width: 80%;
 }
@@ -117,7 +117,7 @@ p{
 #año{
     position: absolute;
     height: 25px;
-    top: 10px;
+    top: 26px;
     padding: 10px;
     left: 350px;
     text-align: justify;
@@ -142,17 +142,17 @@ p{
 
 #descripciones{
     position: absolute; 
-    top: 340px;
+    top: 270px;
 }
 #ocho{
     position: absolute;
-    left: 80px;
+    left: 200px;
 }
 #descripcion{
     position: absolute;
     height: 25px;
     top: 10px;
     padding: 10px;
-    left: 80px;
+    left: 200px;
     text-align: justify;
 }
