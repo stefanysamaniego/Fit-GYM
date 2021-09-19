@@ -1,4 +1,5 @@
 const cliente = {}
+
 const pool = require("../base")
 
 cliente.mostrar = (req, res) => {
