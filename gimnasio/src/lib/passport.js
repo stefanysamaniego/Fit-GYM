@@ -1,7 +1,7 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
-const pool = require("../base");
+const pool = require("../configuracionBaseDeDatos/baseDatos.orm");
 const helpers = require("./helpers");
 
 // metodo de logeo
@@ -13,9 +13,9 @@ passport.use(
         passReqToCallback: true,
     },
     async (req, username, password, done) => {
-        const rows = await pool.query("SELECT * FROM usuario WHERE username=?", [username]);
-        if (rows.length > 0) {
-            const user = rows[0];
+        const rows = await pool.usuario.finOne({where: {username: username}});
+        if (rows) {
+            const user = rows;
             const validPassword = await helpers.desencriptacion(
             password,
             user.password
@@ -45,30 +45,47 @@ passport.use(
         passReqToCallback: true,
     },
     async (req, username, password, done) => {
-        const { email } = req.body;
-        let nuevoUsuario = {
-            username,
-            password,
-            email,
-        };
-        nuevoUsuario.password = await helpers.encriptacion(password);
-        const resultado = await pool.query(
-            "INSERT INTO usuario SET ?",
-            nuevoUsuario
-        );
-        nuevoUsuario.id = resultado.insertId;
-        return done(null, nuevoUsuario);
+        const usuarios = await pool.usuario.finOne({where: {username: username}});
+        if(usuarios === null){
+            const { email } = req.body;
+            let nuevoUsuario = {
+                username,
+                password,
+                email,
+            };
+            nuevoUsuario.password = await helpers.encriptacion(password);
+            const resultado = await pool.usuario.creat(nuevoUsuario);
+            nuevoUsuario.id = resultado.insertId;
+            return done(null, nuevoUsuario);   
+        } else{
+            if(usuarios){
+                const usuario = usuarios
+            }
+            if(username = usuario.username){
+                done(null, false, req.flash('message', 'El nombre de usuario ya existe'))
+            } else{
+                const { email } = req.body;
+            let nuevoUsuario = {
+                username,
+                password,
+                email,
+            };
+            nuevoUsuario.password = await helpers.encriptacion(password);
+            const resultado = await pool.usuario.creat(nuevoUsuario);
+            nuevoUsuario.id = resultado.insertId;
+            return done(null, nuevoUsuario);
+            }
+        }
     }
   )
 );
 
 //metodo para serializar el usuario
 passport.serializeUser((user, done) => {
-    done(null, user.id);
+    done(null, user);
 });
 
 //metodo para serializar el usuario
 passport.deserializeUser(async (id, done) => {
-    const rows = await pool.query("SELECT * FROM usuario WHERE id = ?", [id]);
-    done(null, rows[0]);
+    done(null, user);
 });

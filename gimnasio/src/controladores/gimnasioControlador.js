@@ -1,6 +1,6 @@
 const gimnasio = {}
  
-const pool = require("../base")
+const pool = require("../configuracionBaseDeDatos/base.sql")
 
 gimnasio.mostrar = (req, res) => {
     res.render("gimnasio/agregar");

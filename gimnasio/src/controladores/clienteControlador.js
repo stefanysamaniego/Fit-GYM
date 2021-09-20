@@ -1,5 +1,5 @@
 const cliente = {}
-const pool = require("../base")
+const pool = require("../configuracionBaseDeDatos/base.sql")
 
 cliente.mostrar = (req, res) => {
     res.render("cliente/agregar");

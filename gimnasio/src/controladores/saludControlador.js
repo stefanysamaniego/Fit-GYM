@@ -1,5 +1,5 @@
 const salud = {}
-const pool = require("../base")
+const pool = require("../configuracionBaseDeDatos/base.sql")
 
 salud.mostrar = (req, res) => {
     res.render("salud/agregar");

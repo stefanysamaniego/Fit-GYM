@@ -1,5 +1,5 @@
 const menu = {}
-const pool = require("../base")
+const pool = require("../configuracionBaseDeDatos/base.sql")
 
 menu.mostrar = async(req, res) => {
     const lista = await pool.query("SELECT * FROM categoria")

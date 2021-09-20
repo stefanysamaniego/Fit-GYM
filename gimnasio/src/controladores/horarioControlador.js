@@ -1,5 +1,5 @@
 const horario = {}
-const pool = require("../base")
+const pool = require("../configuracionBaseDeDatos/base.sql")
 
 horario.mostrar = (req, res) => {
     res.render("horario/agregar")

@@ -1,5 +1,5 @@
 const instructor = {}
-const pool = require("../base")
+const pool = require("../configuracionBaseDeDatos/base.sql")
 
 instructor.mostrar = async(req, res) => {
     const lista = await pool.query("SELECT * FROM titulo")
