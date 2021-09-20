@@ -1,5 +1,6 @@
 const cliente = {}
-const pool = require("../configuracionBaseDeDatos/base.sql")
+const sql = require("../configuracionBaseDeDatos/base.sql");
+const orm = require("../configuracionBaseDeDatos/baseDatos.orm");
 
 cliente.mostrar = (req, res) => {
     res.render("cliente/agregar");
@@ -16,19 +17,19 @@ cliente.mandar = async(req, res) => {
         altura,
         peso
     }
-    await pool.query("INSERT INTO info_cliente SET ?", [nuevoEnvio])
+    await orm.info_cliente.create(nuevoEnvio)
     req.flash("success", "Se ha agregado con exito")
     res.redirect('/cliente/listar');
 }
 
 cliente.listar = async(req, res) => {
-    const lista = await pool.query("SELECT * FROM info_cliente")
+    const lista = await sql.query("SELECT * FROM info_cliente")
     res.render("cliente/listar", {lista});
 }
 
 cliente.traer = async(req, res) => {
     const { id } = req.params
-    const trae = await pool.query("SELECT * FROM info_cliente WHERE id=?", [id])
+    const trae = await sql.query("SELECT * FROM info_cliente WHERE id=?", [id])
     console.log(trae)
     res.render("cliente/editar", {encuentra: trae[0]});
 }
@@ -45,9 +46,12 @@ cliente.editar = async(req, res) => {
         altura,
         peso
     }
-    await pool.query("UPDATE info_cliente SET ? WHERE id=?", [nuevoEnvio, id])
-    req.flash("success", "Se ha actualizado con exito")
-    res.redirect('/cliente/listar');
+    await orm.info_cliente.findOne({ where: {idInfo_Cliente: id}})
+    .then(clientes =>{
+        clientes.update(nuevoEnvio)
+        req.flash("success", "Se ha actualizado con exito")
+        res.redirect('/cliente/listar');
+    })
 }
 
 module.exports = cliente
