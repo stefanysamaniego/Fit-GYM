@@ -1,18 +1,20 @@
-const ImagenMenu = (sequelize,type) =>{
-    return sequelize.define('imagenMenus',{
-        idImagenMenu: {
+const Horario = (sequelize,type) =>{
+    return sequelize.define('horarios',{
+        idHorario: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
-    nombre: type.STRING,
-    menu: type.INTEGER,
-        creacionImagenMenus:{
+    dias: type.STRING,
+    fechas: type.STRING,
+    mes: type.STRING,
+    horas: type.STRING,
+        creacionHorarios:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionImagenMenus:{
+        actualizacionHorarios:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -21,4 +23,4 @@ const ImagenMenu = (sequelize,type) =>{
         timestamps: false,
 })
 }
-module.exports = ImagenMenu;
+module.exports = Horario;

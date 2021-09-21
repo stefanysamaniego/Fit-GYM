@@ -18,6 +18,7 @@ gimnasio.mostrar = (req, res) => {
 //}
 
 gimnasio.mandar = async(req, res) => {
+    const usuario = req.params.id
     const {nombre, inscripcion, mensualidad, horario, bajas, higiene, seguridad, contacto, direccion, estado} = req.body
     const nuevoIngreso = {
         nombre,
@@ -30,37 +31,38 @@ gimnasio.mandar = async(req, res) => {
         contacto,
         direccion,
         estado,
-        usuario: req.user.id
+        usuarioIdUsuario: usuario
     }
     await orm.gimnasio.create(nuevoIngreso)
     req.flash("success", "Se ha agregado con exito")
-    res.redirect('/gimnasio/listar');
+    res.redirect('/gimnasio/listar/' + usuario);
 }
 
 gimnasio.listar = async(req, res) => {
-    const lista = await sql.query("SELECT * FROM gimnasio WHERE usuario=?", [req.user.id])
-    const listaImagen = await sql.query("SELECT * FROM imagenGimnasio WHERE gimnasio=?", [req.user.id])
+    const usuario = req.user.idUsuario
+    const lista = await sql.query("SELECT * FROM gimnasios WHERE usuarioIdUsuario=?", [usuario])
+    const listaImagen = await sql.query("SELECT * FROM imagenGimnasios WHERE gimnasioIdGimnasio=?", [usuario])
     res.render("gimnasio/listar", {lista, listaImagen});
 }
 
 gimnasio.seleccionar = async(req, res) => {
-    const cliente = await sql.query("SELECT * FROM info_cliente")
-    const horario = await sql.query("SELECT * FROM horario")
-    const menu = await sql.query("SELECT * FROM menu")
-    const salud = await sql.query("SELECT * FROM salud")
-    const instructor = await sql.query("SELECT * FROM entrenador")
+    const cliente = await sql.query("SELECT * FROM info_clientes")
+    const horario = await sql.query("SELECT * FROM horarios")
+    const menu = await sql.query("SELECT * FROM menus")
+    const salud = await sql.query("SELECT * FROM saluds")
+    const instructor = await sql.query("SELECT * FROM entrenadores")
     res.render("gimnasio/listaCliente", {cliente, horario, menu, salud, instructor});
 }
 
 gimnasio.traer = async(req, res) => {
-    const { id } = req.params
-    const trae = await sql.query("SELECT * FROM gimnasio WHERE id=?", [id])
+    const id = req.params.id
+    const trae = await sql.query("SELECT * FROM gimnasios WHERE idGimnasio=?", [id])
     console.log(trae)
     res.render("gimnasio/editar", {encuentra: trae[0]});
 }
 
 gimnasio.editar = async(req, res) => {
-    const { id } = req.params
+    const id = req.params.id
     const {nombre, inscripcion, mensualidad, horario, bajas, higiene, seguridad, contacto, direccion, estado} = req.body
     const nuevoIngreso = {
         nombre,

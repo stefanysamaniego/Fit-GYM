@@ -16,7 +16,6 @@ const Gimnasio = (sequelize,type) =>{
     direccion: type.STRING,   
     imagenInstalacion: type.STRING,
     estado: type.STRING,      
-    usuario: type.INTEGER,
         creacionGimnasios:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

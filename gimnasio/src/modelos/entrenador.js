@@ -1,22 +1,24 @@
-const Menu = (sequelize,type) =>{
-    return sequelize.define('menus',{
-        idMenu: {
+const Entrenador = (sequelize,type) =>{
+    return sequelize.define('Entrenadores',{
+        idEntrenador: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
-    nombre: type.STRING,
+    nombres: type.STRING,
+    apellidos: type.STRING,
+    cedula: type.INTEGER,
+    edad: type.INTEGER,
+    telefono: type.INTEGER,
+    titulo: type.STRING,
+    añosExperencia: type.INTEGER,
     descripcion: type.STRING,
-    dias: type.STRING,
-    semanas: type.STRING,
-    categoria: type.STRING,
-    usuario: type.INTEGER,
-        creacionMenus:{
+        creacionEntrenadores:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionMenus:{
+        actualizacionEntrenadores:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -25,4 +27,4 @@ const Menu = (sequelize,type) =>{
         timestamps: false,
 })
 }
-module.exports = Menu;
+module.exports = Entrenador;

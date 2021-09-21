@@ -4,7 +4,7 @@ const LocalStrategy = require("passport-local").Strategy;
 const pool = require("../configuracionBaseDeDatos/baseDatos.orm");
 const helpers = require("./helpers");
 
-// metodo de logeo
+// metodo de logeo 
 passport.use(
     "local.signin",
     new LocalStrategy({ 
@@ -13,7 +13,7 @@ passport.use(
         passReqToCallback: true,
     },
     async (req, username, password, done) => {
-        const rows = await pool.usuario.finOne({where: {username: username}});
+        const rows = await pool.usuario.findOne({where: {username: username}});
         if (rows) {
             const user = rows;
             const validPassword = await helpers.desencriptacion(
@@ -45,7 +45,7 @@ passport.use(
         passReqToCallback: true,
     },
     async (req, username, password, done) => {
-        const usuarios = await pool.usuario.finOne({where: {username: username}});
+        const usuarios = await pool.usuario.findOne({where: {username: username}});
         if(usuarios === null){
             const { email } = req.body;
             let nuevoUsuario = {
@@ -54,7 +54,7 @@ passport.use(
                 email,
             };
             nuevoUsuario.password = await helpers.encriptacion(password);
-            const resultado = await pool.usuario.creat(nuevoUsuario);
+            const resultado = await pool.usuario.create(nuevoUsuario);
             nuevoUsuario.id = resultado.insertId;
             return done(null, nuevoUsuario);   
         } else{
@@ -71,7 +71,7 @@ passport.use(
                 email,
             };
             nuevoUsuario.password = await helpers.encriptacion(password);
-            const resultado = await pool.usuario.creat(nuevoUsuario);
+            const resultado = await pool.usuario.create(nuevoUsuario);
             nuevoUsuario.id = resultado.insertId;
             return done(null, nuevoUsuario);
             }
@@ -86,6 +86,6 @@ passport.serializeUser((user, done) => {
 });
 
 //metodo para serializar el usuario
-passport.deserializeUser(async (id, done) => {
+passport.deserializeUser(async (user, done) => {
     done(null, user);
 });

@@ -1,22 +1,16 @@
-const Horario = (sequelize,type) =>{
-    return sequelize.define('horarios',{
-        idHorario: {
+const Usuario_cliente = (sequelize,type) =>{
+    return sequelize.define('usuario_clientes',{
+        idUsuarioCliente: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
-    dias: type.STRING,
-    fechas: type.STRING,
-    mes: type.STRING,
-    horas: type.STRING,
-    cliente: type.INTEGER,
-    usuario: type.INTEGER,
-        creacionHorarios:{
+        creacionUsuario_clientes:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionHorarios:{
+        actualizacionUsuario_clientes:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -25,4 +19,4 @@ const Horario = (sequelize,type) =>{
         timestamps: false,
 })
 }
-module.exports = Horario;
+module.exports = Usuario_cliente;

@@ -1,18 +1,17 @@
-const Usuario_cliente = (sequelize,type) =>{
-    return sequelize.define('usuario_clientes',{
-        idTitulo: {
+const ImagenGimnasio = (sequelize,type) =>{
+    return sequelize.define('imagenGimnasios',{
+        idImagenGimnasio: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
-    usuario: type.INTEGER,
-    cliente: type.INTEGER,
-        creacionUsuario_clientes:{
+    nombre: type.STRING,
+        creacionImagenGimnasios:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionUsuario_clientes:{
+        actualizacionImagenGimnasios:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -21,4 +20,4 @@ const Usuario_cliente = (sequelize,type) =>{
         timestamps: false,
 })
 }
-module.exports = Usuario_cliente;
+module.exports = ImagenGimnasio;

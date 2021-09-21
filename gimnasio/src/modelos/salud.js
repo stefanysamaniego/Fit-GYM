@@ -13,8 +13,6 @@ const Salud = (sequelize,type) =>{
     dificultades: type.STRING,
     actividad_deportiva: type.STRING,
     entidad: type.STRING,
-    cliente: type.INTEGER,
-    usuario: type.INTEGER,
         creacionSaluds:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
