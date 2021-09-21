@@ -1,28 +1,29 @@
-<LINK REL=StyleSheet HREF="/css/menu/listar.css" TYPE="text/css" MEDIA=screen>
+<LINK REL=StyleSheet HREF="/css/menu/lista.css" TYPE="text/css" MEDIA=screen>
  
 <form action="/menu/listar"></form>
 <div id="contenedor">
+    <label id="lista">Lista del Menús</label>
     {{#each lista}}
-    <div>
-        <label id="nombre">Nombre</label>
-        <p>{{nombre}}</p>
+    <div id="nombres">
+        <label id="uno">Nombre</label>
+        <p id="nombre">{{nombre}}</p>
     </div>
-    <div>
-        <label id="descripcion">Descripción</label>
-        <p>{{descripcion}}</p>
+    <div id="categorias">
+        <label id="dos">Categoria</label>
+        <p id="categoria">{{categoria}}</p>
     </div>
-    <div>
-        <label id="dia">Días</label>
-        <p>{{dias}}</p>
+    <div id="dias">
+        <label id="tres">Días</label>
+        <p id="dia">{{dias}}</p>
     </div>
-    <div>
-        <label id="semana">Semanas</label>
-        <p>{{semanas}}</p>
+    <div id="semanas">
+        <label id="cuatro">Semanas</label>
+        <p id="semana">{{semanas}}</p>
     </div>
-    <div>
-        <label id="categoria">Categoria</label>
-        <p>{{categoria}}</p>
+    <div id="descripciones">
+        <label id="cinco">Descripción</label>
+        <p id="descripcion">{{descripcion}}</p>
     </div>
-    <a href="/menu/editar/{{id}}" id="edita">Editar</a>
+    <a href="/menu/editar/{{id}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
     {{/each}}
 </div>

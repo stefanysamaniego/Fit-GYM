@@ -7,11 +7,11 @@
 
 #gimnasio{
     position: absolute;
-    left: 750px;
+    left: 620px;
     font-size: 25px;
     font-family: 'Libre Baskerville', serif;
     font-style: italic;
-    top: 550px;
+    top: 450px;
 }
 
 #boton{
@@ -26,6 +26,116 @@
     color: white;
 }
 
+#bienvenido{
+    position: absolute;
+}
+
 #mensaje{
+  position: absolute;  
+  top:300px;
+  left: 150px;
+}
+
+@media(max-width: 1125px){
+    #gimnasio{
+        position: absolute;
+        left: 440px;
+    }
+
+    #bienvenido{
+        position: absolute;
+        left: -150px;
+    }
     
+    #mensaje{
+      position: absolute;  
+      left: 150px;
+    }
+}
+
+@media(max-width: 1000px){
+    #gimnasio{
+        position: absolute;
+        left: 300px;
+    }
+
+    #bienvenido{
+        position: absolute;
+        left: -220px;
+    }
+    
+    #mensaje{
+      position: absolute;  
+      left: 90px;
+    }
+}
+
+@media(max-width: 900px){
+    #gimnasio{
+        position: absolute;
+        left: 200px;
+    }
+
+    #bienvenido{
+        position: absolute;
+        left: -300px;
+    }
+    
+    #mensaje{
+      position: absolute;  
+      left: 150px;
+    }
+}
+
+@media(max-width: 800px){
+    #gimnasio{
+        position: absolute;
+        left: 100px;
+    }
+}
+
+@media(max-width: 700px){
+    #gimnasio{
+        position: absolute;
+        left: 35px;
+    }
+
+    #bienvenido{
+        position: absolute;
+        left: -400px;
+    }
+    
+    #mensaje{
+      position: absolute;  
+      left: 150px;
+    }
+}
+
+@media(max-width: 660px){
+    #gimnasio{
+        position: absolute;
+        left: -10px;
+    }
+
+    #mensaje{
+      position: absolute;  
+      left: 100px;
+    }
+}
+
+@media(max-width: 495px){
+    #gimnasio{
+        position: absolute;
+        left: -170px;
+    }
+
+    #bienvenido{
+        position: absolute;
+        left: -500px;
+    }
+    
+    #mensaje{
+      position: absolute;  
+      left: 20px;
+    }
 }

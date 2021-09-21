@@ -1,0 +1,167 @@
+#imagen{
+    width: 90px;
+}
+
+#imagen1{
+    width: 90px;
+}
+
+#Boton{
+    position: absolute;
+    left: 580px;
+    top: 380px;
+}
+
+#Boton1{
+    position: absolute;
+    left: 580px;
+    top: 380px;
+}
+
+#edita{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 60px;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+#contenido{
+    position: absolute;
+    margin-left: 80px;
+    padding-top: 130px;
+    gap: 10px;
+    width: 80%;
+}
+
+#datos{
+    position: absolute;
+    font-size: 25px;
+    top: 75px;
+    left: 500px;
+}
+
+#nombres{
+    position: absolute;
+    top: 125px;
+    left: 300px;
+}
+#nombre{
+    position: absolute;
+    height: 30px;
+    top: 25px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: -20px;
+    text-align: justify;
+}
+
+#apellidos{
+    position: absolute;
+    top: 125px;
+    left: 520px;
+}
+#apellido{
+    position: absolute;
+    height: 30px;
+    top: 25px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: -20px;
+    text-align: justify;
+}
+
+#edades{
+    position: absolute;
+    top: 125px;
+    left: 740px;
+}
+#edad{
+    position: absolute;
+    height: 30px;
+    top: 25px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: -20px;
+    text-align: justify;
+}
+
+#cedulas{
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
+#cedula{
+    position: absolute;
+    height: 30px;
+    top: 25px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: -20px;
+    text-align: justify;
+}
+
+#telefonos{
+    position: absolute;
+    top: 200px;
+    left: 520px;
+}
+#telefono{
+    position: absolute;
+    height: 30px;
+    top: 25px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: -20px;
+    text-align: justify;
+}
+
+#años{
+    position: absolute;
+    top: 200px;
+    left: 740px;
+}
+#año{
+    position: absolute;
+    height: 30px;
+    top: 25px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: -20px;
+    text-align: justify;
+}
+
+#titulos{
+    position: absolute;
+    top: 275px;
+    left: 300px;
+}
+#titulo{
+    position: absolute;
+    height: 45px;
+    top: 25px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: -20px;
+}
+
+#descripciones{
+    position: absolute;
+    top: 363px;
+    left: 300px;
+}
+#descripcion{
+    position: absolute;
+    height: 100px;
+    top: 25px;
+    border: 2px solid rgba(81, 255, 0, 0.644);
+  	padding: 10px;
+  	border-radius: 40px 10px;
+    left: -20px;
+    text-align: justify;
+}

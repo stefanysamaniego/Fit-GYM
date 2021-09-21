@@ -1,5 +1,6 @@
 const salud = {}
-const pool = require("../base")
+const sql = require("../configuracionBaseDeDatos/base.sql")
+const orm = require("../configuracionBaseDeDatos/baseDatos.orm")
 
 salud.mostrar = (req, res) => {
     res.render("salud/agregar");
@@ -7,7 +8,7 @@ salud.mostrar = (req, res) => {
 
 salud.mandar = async(req, res) => {
     const {lesion_ocia, lesion_muscular, enfermedad, vicios, embarazo, dificultades, actividad_deportiva, entidad} = req.body
-    const nuevoEnvia = {
+    const nuevoEnvio = {
         lesion_ocia,
         lesion_muscular,
         enfermedad,
@@ -19,19 +20,19 @@ salud.mandar = async(req, res) => {
         cliente: req.user.id,
         usuario: req.user.id
     }
-    await pool.query("INSERT INTO salud SET ?", [nuevoEnvia])
+    await orm.salud.create(nuevoEnvio)
     req.flash("success", "Se ha guardado con exito")
     res.redirect('/salud/listar');
 }
 
 salud.listar = async(req, res) => {
-    const lista = await pool.query("SELECT * FROM salud WHERE id=?", [req.user.id])
+    const lista = await sql.query("SELECT * FROM salud WHERE id=?", [req.user.id])
     res.render("salud/listar", {lista});
 }
 
 salud.traer = async(req, res) =>{
     const { id } = req.params
-    const trae = await pool.query("SELECT * FROM salud WHERE id=?", [id])
+    const trae = await sql.query("SELECT * FROM salud WHERE id=?", [id])
     console.log(trae)
     res.render("salud/editar", {encuentra: trae[0]})
 }
@@ -39,7 +40,7 @@ salud.traer = async(req, res) =>{
 salud.editar = async(req, res) => {
     const { id } = req.params
     const {lesion_ocia, lesion_muscular, enfermedad, vicios, embarazo, dificultades, actividad_deportiva, entidad} = req.body
-    const nuevoEnvia = {
+    const nuevoEnvio = {
         lesion_ocia,
         lesion_muscular,
         enfermedad,
@@ -49,9 +50,12 @@ salud.editar = async(req, res) => {
         actividad_deportiva,
         entidad
     }
-    await pool.query("UPDATE salud SET ? WHERE id=?", [nuevoEnvia, id])
-    req.flash("success", "Se ha guardado con exito")
-    res.redirect('/salud/listar');
+    await orm.salud.findOne({ where: {idSalud: id}})
+    .then(saluds =>{
+        saluds.update(nuevoEnvio)
+        req.flash("success", "Se ha guardado con exito")
+        res.redirect('/salud/listar');
+    })
 }
 
 module.exports = salud

@@ -3,10 +3,9 @@
 <form action="/cliente/listar"></form>
 <div id="contenedor">
     <label id="lista">Lista del Clientes</label>
-    <div id="formulario"></div>
     {{#each lista}}
     <div id="nombres">
-        <label id="name">Nombres</label>
+          <label id="name">Nombres</label>
         <p id="nombre">{{nombres}}</p>
     </div>
     <div id="apellidos">
@@ -35,5 +34,4 @@
     </div>
     <a href="/cliente/editar/{{id}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
     {{/each}}
-</div>
 </div>

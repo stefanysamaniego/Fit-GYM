@@ -1,6 +1,6 @@
 const gimnasio = {}
- 
-const pool = require("../base")
+const sql = require("../configuracionBaseDeDatos/base.sql")
+const orm = require("../configuracionBaseDeDatos/baseDatos.orm")
 
 gimnasio.mostrar = (req, res) => {
     res.render("gimnasio/agregar");
@@ -32,29 +32,29 @@ gimnasio.mandar = async(req, res) => {
         estado,
         usuario: req.user.id
     }
-    await pool.query("INSERT INTO gimnasio SET ?", [nuevoIngreso])
+    await orm.gimnasio.create(nuevoIngreso)
     req.flash("success", "Se ha agregado con exito")
     res.redirect('/gimnasio/listar');
 }
 
 gimnasio.listar = async(req, res) => {
-    const lista = await pool.query("SELECT * FROM gimnasio WHERE usuario=?", [req.user.id])
-    const listaImagen = await pool.query("SELECT * FROM imagenGimnasio WHERE gimnasio=?", [req.user.id])
+    const lista = await sql.query("SELECT * FROM gimnasio WHERE usuario=?", [req.user.id])
+    const listaImagen = await sql.query("SELECT * FROM imagenGimnasio WHERE gimnasio=?", [req.user.id])
     res.render("gimnasio/listar", {lista, listaImagen});
 }
 
 gimnasio.seleccionar = async(req, res) => {
-    const cliente = await pool.query("SELECT * FROM info_cliente")
-    const horario = await pool.query("SELECT * FROM horario")
-    const menu = await pool.query("SELECT * FROM menu")
-    const salud = await pool.query("SELECT * FROM salud")
-    const instructor = await pool.query("SELECT * FROM entrenador")
+    const cliente = await sql.query("SELECT * FROM info_cliente")
+    const horario = await sql.query("SELECT * FROM horario")
+    const menu = await sql.query("SELECT * FROM menu")
+    const salud = await sql.query("SELECT * FROM salud")
+    const instructor = await sql.query("SELECT * FROM entrenador")
     res.render("gimnasio/listaCliente", {cliente, horario, menu, salud, instructor});
 }
 
 gimnasio.traer = async(req, res) => {
     const { id } = req.params
-    const trae = await pool.query("SELECT * FROM gimnasio WHERE id=?", [id])
+    const trae = await sql.query("SELECT * FROM gimnasio WHERE id=?", [id])
     console.log(trae)
     res.render("gimnasio/editar", {encuentra: trae[0]});
 }
@@ -74,9 +74,13 @@ gimnasio.editar = async(req, res) => {
         direccion,
         estado
     }
-    await pool.query("UPDATE gimnasio SET ? WHERE id=?", [nuevoIngreso, id])
-    req.flash("success", "Se ha actualizado con exito")
-    res.redirect('/gimnasio/listar');
+    await orm.gimnasio.findOne({ where: {idGimnasio: id}})
+    .then(gimnasios =>{
+        gimnasios.update(nuevoIngreso)
+        req.flash("success", "Se ha actualizado con exito")
+        res.redirect('/gimnasio/listar');
+    })
+    
 }
 
 module.exports = gimnasio

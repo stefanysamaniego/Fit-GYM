@@ -13,6 +13,7 @@ class imagenes {
         this.botone2.style.display = "block";
         this.imagen.style.display = "block";
     }
+    
     abajo(){
         this.botone2.style.display = "none";
         this.botone1.style.display = "block";

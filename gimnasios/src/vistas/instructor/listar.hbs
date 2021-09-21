@@ -1,40 +1,41 @@
 <LINK REL=StyleSheet HREF="/css/instructor/listar.css" TYPE="text/css" MEDIA=screen>
- 
+
 <form action="/instructor/listar"></form>
 <div id="contenedor">
+    <label id="lista">Lista del Instructores</label>
     {{#each lista}}
-    <div>
-        <label id="nombre">Nombres</label>
-        <p>{{nombres}}</p>
+    <div id="nombres">
+        <label id="uno">Nombres</label>
+        <p id="nombre">{{nombres}}</p>
     </div>
-    <div>
-        <label id="apellido">Apellidos</label>
-        <p>{{apellidos}}</p>
+    <div id="apellidos">
+        <label id="dos">Apellidos</label>
+        <p id="apellido">{{apellidos}}</p>
     </div>
-    <div>
-        <label id="cedula">Cedula</label>
-        <p>{{cedula}}</p>
+    <div id="cedulas">
+        <label id="tres">Cedula</label>
+        <p id="cedula">{{cedula}}</p>
     </div>
-    <div> 
-        <label id="edad">Edad</label>
-        <p>{{edad}}</p>
+    <div id="edades">
+        <label id="cuatro">Edad</label>
+        <p id="edad">{{edad}}</p>
     </div>
-    <div>
-        <label id="telefono">Teléfono</label>
-        <p>{{telefono}}</p>
+    <div id="telefonos">
+        <label id="cinco">Teléfono</label>
+        <p id="telefono">{{telefono}}</p>
     </div>
-    <div>
-        <label id="titulo">Título</label>
-        <p>{{titulo}}</p>
+    <div id="titulos">
+        <label id="seis">Título</label>
+        <p id="titulo">{{titulo}}</p>
     </div>
-    <div>
-        <label id="año">Años de experiencia</label>
-        <p>{{añosExperiencia}}</p>
+    <div id="años">
+        <label id="siete">Años de experiencia</label>
+        <p id="año">{{añosExperiencia}}</p>
     </div>
-    <div>
-        <label id="descripcion">Descripción</label>
-        <p>{{descripcion}}</p>
+    <div id="descripciones">
+        <label id="ocho">Descripción</label>
+        <p id="descripcion">{{descripcion}}</p>
     </div>
-    <a href="/instructor/editar/{{id}}" id="edita">Editar</a>
+    <a href="/instructor/editar/{{id}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
     {{/each}}
 </div>
