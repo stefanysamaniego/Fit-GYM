@@ -3,7 +3,7 @@ const rutas = express.Router()
 
 const {seleccion, seleccionar} = require("../controladores/perfilControlador")
 
-rutas.get("/seleccionar", seleccion)
+rutas.get("/seleccionar/:id", seleccion)
 
 rutas.get("/perfil/:id", seleccionar)
 
