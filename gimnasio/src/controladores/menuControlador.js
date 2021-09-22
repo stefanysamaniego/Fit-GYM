@@ -3,11 +3,12 @@ const sql = require("../configuracionBaseDeDatos/base.sql")
 const orm = require("../configuracionBaseDeDatos/baseDatos.orm")
 
 menu.mostrar = async(req, res) => {
-    const lista = await sql.query("SELECT * FROM categoria")
+    const lista = await sql.query("SELECT * FROM categorias")
     res.render("menu/agregar", {lista});
 }
 
 menu.mandar = async(req, res) => {
+    const usuario = req.user.idUsuario
     const {nombre, descripcion, dias, semanas, categoria} = req.body
     const nuevoEnvio = {
         nombre,
@@ -15,7 +16,7 @@ menu.mandar = async(req, res) => {
         dias,
         semanas,
         categoria,
-        usuario: req.user.id
+        usuarioIdUsuario: usuario
     }
     await orm.menu.create(nuevoEnvio)
     req.flash("success", "Se ha guardado con exito")
@@ -23,12 +24,13 @@ menu.mandar = async(req, res) => {
 }
 
 menu.listar = async(req, res) => {
-    const lista = await sql.query("SELECT * FROM menu WHERE usuario=?", [req.user.id])
+    const usuario = req.user.idUsuario
+    const lista = await sql.query("SELECT * FROM menu WHERE usuario=?", [usuario])
     res.render("menu/listar", {lista});
 }
 
 menu.traer = async(req, res) =>{
-    const { id } = req.params
+    const id = req.params.id
     const trae = await sql.query("SELECT * FROM menu WHERE id=?", [id])
     const lista = await sql.query("SELECT * FROM categoria")
     console.log(trae)
@@ -36,7 +38,7 @@ menu.traer = async(req, res) =>{
 }
 
 menu.editar = async(req, res) => {
-    const { id } = req.params
+    const id = req.params.id
     const {nombre, descripcion, dias, semanas, categoria} = req.body
     const nuevoEnvio = {
         nombre,

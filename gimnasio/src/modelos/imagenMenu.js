@@ -6,7 +6,6 @@ const ImagenMenu = (sequelize,type) =>{
         autoIncrement: true,
     },
     nombre: type.STRING,
-    menu: type.INTEGER,
         creacionImagenMenus:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

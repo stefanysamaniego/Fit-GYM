@@ -1,12 +1,10 @@
 const Usuario_cliente = (sequelize,type) =>{
     return sequelize.define('usuario_clientes',{
-        idTitulo: {
+        idUsuarioCliente: {
         type: type.INTEGER,
         primaryKey: true,
         autoIncrement: true,
     },
-    usuario: type.INTEGER,
-    cliente: type.INTEGER,
         creacionUsuario_clientes:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

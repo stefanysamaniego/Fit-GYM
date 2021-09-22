@@ -26,10 +26,10 @@ const {isLogin} = require("../lib/auth")
 //    }
 //}).single("nombre")
 
-rutas.get("/agregar", isLogin, mostrar)
-rutas.post("/agregar", isLogin, mandar)
+rutas.get("/agregar/:id", isLogin, mostrar)
+rutas.post("/agregar/:id", isLogin, mandar)
  
-rutas.get("/listar", isLogin, listar) 
+rutas.get("/listar/:id", isLogin, listar) 
 //rutas.post("/listar", isLogin, imagenAgregar)
 
 rutas.get("/editar/:id", isLogin, traer)

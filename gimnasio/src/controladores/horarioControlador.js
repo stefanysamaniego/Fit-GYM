@@ -7,13 +7,15 @@ horario.mostrar = (req, res) => {
 }
 
 horario.mandar = async(req, res) => {
+    const cliente = req.params.id
+    const usuario = req.user.idUsuario
     const {dias, fechas, horas} = req.body
     nuevoIngreso = {
         dias,
         fechas,
-        horas,
-        cliente: req.user.id,
-        usuario: req.user.id
+        horas, 
+        infoClienteIdInfoCliente: cliente,
+        usuarioIdUsuario: usuario
     }
     await orm.horario.create(nuevoIngreso)
     req.flash("success", "Se ha agregado con exito")
@@ -21,19 +23,20 @@ horario.mandar = async(req, res) => {
 }
 
 horario.listar = async(req, res) => {
-    const lista = await sql.query("SELECT * FROM horario WHERE cliente=?", [req.user.id])
+    const usuario = req.user.idUsuario
+    const lista = await sql.query("SELECT * FROM horarios WHERE infoClienteIdInfoCliente=?", [usuario])
     res.render("horario/listar", {lista});
 }
 
 horario.traer = async(req, res) => {
-    const { id } = req.params
-    const trae = await sql.query("SELECT * FROM horario WHERE id=?", [id])
+    const id = req.params.id
+    const trae = await sql.query("SELECT * FROM horarios WHERE 	idHorario=?", [id])
     console.log(trae)
     res.render("horario/editar", {encuentra: trae[0]});
 }
 
 horario.editar = async(req, res) => {
-    const { id } = req.params
+    const id = req.params.id
     const {dias, mes, horas} = req.body
     const nuevoIngreso = {
         dias,

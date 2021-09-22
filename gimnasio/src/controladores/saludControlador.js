@@ -7,6 +7,8 @@ salud.mostrar = (req, res) => {
 }
 
 salud.mandar = async(req, res) => {
+    const cliente = req.params.id
+    const usuario = req.user.idUsuario
     const {lesion_ocia, lesion_muscular, enfermedad, vicios, embarazo, dificultades, actividad_deportiva, entidad} = req.body
     const nuevoEnvio = {
         lesion_ocia,
@@ -17,8 +19,8 @@ salud.mandar = async(req, res) => {
         dificultades,
         actividad_deportiva,
         entidad,
-        cliente: req.user.id,
-        usuario: req.user.id
+        infoClienteIdInfoCliente: cliente,
+        usuarioIdUsuario: usuario
     }
     await orm.salud.create(nuevoEnvio)
     req.flash("success", "Se ha guardado con exito")
@@ -26,19 +28,20 @@ salud.mandar = async(req, res) => {
 }
 
 salud.listar = async(req, res) => {
-    const lista = await sql.query("SELECT * FROM salud WHERE id=?", [req.user.id])
+    const usuario = req.user.idUsuario
+    const lista = await sql.query("SELECT * FROM saluds WHERE idSalud=?", [usuario])
     res.render("salud/listar", {lista});
 }
 
 salud.traer = async(req, res) =>{
-    const { id } = req.params
-    const trae = await sql.query("SELECT * FROM salud WHERE id=?", [id])
+    const id = req.params.id
+    const trae = await sql.query("SELECT * FROM saluds WHERE idSalud=?", [id])
     console.log(trae)
     res.render("salud/editar", {encuentra: trae[0]})
 }
 
 salud.editar = async(req, res) => {
-    const { id } = req.params
+    const id = req.params.id
     const {lesion_ocia, lesion_muscular, enfermedad, vicios, embarazo, dificultades, actividad_deportiva, entidad} = req.body
     const nuevoEnvio = {
         lesion_ocia,

@@ -6,7 +6,6 @@ const ImagenGimnasio = (sequelize,type) =>{
         autoIncrement: true,
     },
     nombre: type.STRING,
-    gimnasio: type.INTEGER,
         creacionImagenGimnasios:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

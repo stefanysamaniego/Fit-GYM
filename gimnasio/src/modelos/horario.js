@@ -9,8 +9,6 @@ const Horario = (sequelize,type) =>{
     fechas: type.STRING,
     mes: type.STRING,
     horas: type.STRING,
-    cliente: type.INTEGER,
-    usuario: type.INTEGER,
         creacionHorarios:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

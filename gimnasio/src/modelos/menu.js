@@ -10,7 +10,6 @@ const Menu = (sequelize,type) =>{
     dias: type.STRING,
     semanas: type.STRING,
     categoria: type.STRING,
-    usuario: type.INTEGER,
         creacionMenus:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

@@ -13,7 +13,6 @@ const Entrenador = (sequelize,type) =>{
     titulo: type.STRING,
     añosExperencia: type.INTEGER,
     descripcion: type.STRING,
-    usuario: type.INTEGER,
         creacionEntrenadores:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

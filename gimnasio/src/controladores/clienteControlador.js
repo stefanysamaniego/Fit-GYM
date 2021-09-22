@@ -23,19 +23,19 @@ cliente.mandar = async(req, res) => {
 }
 
 cliente.listar = async(req, res) => {
-    const lista = await sql.query("SELECT * FROM info_cliente")
+    const lista = await sql.query("SELECT * FROM info_clientes")
     res.render("cliente/listar", {lista});
 }
 
 cliente.traer = async(req, res) => {
-    const { id } = req.params
-    const trae = await sql.query("SELECT * FROM info_cliente WHERE id=?", [id])
+    const id = req.params.id
+    const trae = await sql.query("SELECT * FROM info_clientes WHERE idInfo_Cliente=?", [id])
     console.log(trae)
     res.render("cliente/editar", {encuentra: trae[0]});
 }
 
 cliente.editar = async(req, res) => {
-    const { id } = req.params
+    const id = req.params.id
     const {nombres, apellidos, cedula, edad, telefono, altura, peso} = req.body
     const nuevoEnvio = {
         nombres,
