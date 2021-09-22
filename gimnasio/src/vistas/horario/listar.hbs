@@ -1,6 +1,6 @@
 <LINK REL=StyleSheet HREF="/css/horario/editar.css" TYPE="text/css" MEDIA=screen>
 
-<form action="/horario/listar"></form>
+<form action="/horario/listar/{{user.idUsuario}}"></form>
 <div id="contenedor">
     <label id="lista">Lista de Horarios</label>
     <div id="formulario">
@@ -17,7 +17,12 @@
             <label id="horas">Horas</label>
             <p id="tres">{{horas}}</p>
         </div>
-        <a href="/horario/editar/{{id}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+        <a href="/horario/editar/{{idHorario}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+        <div id="agregaSalud">
+        <button type="submit" id="horario">
+            <a href="/salud/agregar/{{idHorario}}">Agregar Salud</a>
+        </button>
+        </div>
         {{/each}}
     </div>
 </div>

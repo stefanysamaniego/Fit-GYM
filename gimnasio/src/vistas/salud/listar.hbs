@@ -1,6 +1,6 @@
 <LINK REL=StyleSheet HREF="/css/salud/lista.css" TYPE="text/css" MEDIA=screen>
 
-<form action="/salud/listar"></form>
+<form action="/salud/listar/{{user.idUsuario}}"></form>
 <div id="contenido">
     <label id="lista">Lista de la salud de los Clientes</label>
         {{#each lista}}
@@ -36,6 +36,10 @@
             <label id="entidad">¿Asistia a un gimnasio u entidad deportiva?:</label>
             <p id="siete">{{entidad}}</p>
         </div>
-        <a href="/salud/editar/{{id}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+        <a href="/salud/editar/{{idSalud}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+        <button type="submit" id="instructor">
+            <a href="/instructor/agregar/{{idSalud}}">Agregar Instructor</a>
+        </button>
+        </div>
         {{/each}}
 </div>

@@ -24,7 +24,7 @@ instructor.mandar = async(req, res) => {
     }
     await orm.entrenador.create(nuevoEnvio)
     req.flash("success", "Se ha guardado con exito")
-    res.redirect('/instructor/listar');
+    res.redirect('/instructor/listar/' + usuario);
 } 
 
 instructor.listar = async(req, res) => {
@@ -38,10 +38,11 @@ instructor.traer = async(req, res) =>{
     const trae = await sql.query("SELECT * FROM entrenadores WHERE idEntrenador=?", [id])
     const lista = await sql.query("SELECT * FROM titulos")
     console.log(trae)
-    res.render("instructor/editar", {encuentra: trae[0], lista})
+    res.render("instructor/editar", {trae, lista})
 }
  
 instructor.editar = async(req, res) => {
+    const usuario = req.user.idUsuario
     const id = req.params.id
     const {nombres, apellidos, cedula, edad, telefono, titulo, añosExperiencia, descripcion} = req.body
     const nuevoEnvio = {
@@ -58,7 +59,7 @@ instructor.editar = async(req, res) => {
     .then(entrenadores =>{
         entrenadores.update(nuevoEnvio)
         req.flash("success", "Se ha guardado con exito")
-        res.redirect('/instructor/listar');
+        res.redirect('/instructor/listar/' + usuario);
     })
 }
 

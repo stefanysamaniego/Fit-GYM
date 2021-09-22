@@ -20,24 +20,25 @@ menu.mandar = async(req, res) => {
     }
     await orm.menu.create(nuevoEnvio)
     req.flash("success", "Se ha guardado con exito")
-    res.redirect('/menu/listar');
+    res.redirect('/menu/listar/' + usuario);
 }
 
 menu.listar = async(req, res) => {
     const usuario = req.user.idUsuario
-    const lista = await sql.query("SELECT * FROM menu WHERE usuario=?", [usuario])
+    const lista = await sql.query("SELECT * FROM menus WHERE usuarioIdUsuario=?", [usuario])
     res.render("menu/listar", {lista});
 }
 
 menu.traer = async(req, res) =>{
     const id = req.params.id
-    const trae = await sql.query("SELECT * FROM menu WHERE id=?", [id])
-    const lista = await sql.query("SELECT * FROM categoria")
+    const trae = await sql.query("SELECT * FROM menus WHERE idMenu=?", [id])
+    const lista = await sql.query("SELECT * FROM categorias")
     console.log(trae)
-    res.render("menu/editar", {encuentra: trae[0], lista})
+    res.render("menu/editar", {trae, lista})
 }
 
 menu.editar = async(req, res) => {
+    const usuario = req.user.idUsuario
     const id = req.params.id
     const {nombre, descripcion, dias, semanas, categoria} = req.body
     const nuevoEnvio = {
@@ -51,7 +52,7 @@ menu.editar = async(req, res) => {
     .then(menus =>{
         menus.update(nuevoEnvio)
         req.flash("success", "Se ha guardado con exito")
-        res.redirect('/menu/listar');
+        res.redirect('/menu/listar/' + usuario);
     })
 }
 

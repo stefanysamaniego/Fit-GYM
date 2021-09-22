@@ -1,8 +1,8 @@
 <LINK REL=StyleSheet HREF="/css/menu/lista.css" TYPE="text/css" MEDIA=screen>
  
-<form action="/menu/listar"></form>
+<form action="/menu/listar/{{user.idUsuario}}"></form>
 <div id="contenedor">
-    <label id="lista">Lista del Menús</label>
+    <label id="lista">Lista del Menú</label>
     {{#each lista}}
     <div id="nombres">
         <label id="uno">Nombre</label>
@@ -24,6 +24,6 @@
         <label id="cinco">Descripción</label>
         <p id="descripcion">{{descripcion}}</p>
     </div>
-    <a href="/menu/editar/{{id}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+    <a href="/menu/editar/{{idMenu}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
     {{/each}}
 </div>

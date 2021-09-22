@@ -1,6 +1,6 @@
 <LINK REL=StyleSheet HREF="/css/cliente/listar.css" TYPE="text/css" MEDIA=screen>
 
-<form action="/cliente/listar"></form>
+<form action="/cliente/listar/{{user.idUsuario}}"></form>
 <div id="contenedor">
     <label id="lista">Lista del Clientes</label>
     {{#each lista}}
@@ -32,6 +32,11 @@
         <label id="peso">Peso</label>
         <p id="seis">{{peso}}</p>
     </div>
-    <a href="/cliente/editar/{{id}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+    <a href="/cliente/editar/{{idInfo_Cliente}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+    <div id="agregaHorario">
+        <button type="submit" id="cliente">
+            <a href="/horario/agregar/{{idInfo_Cliente}}">Agregar Horario</a>
+        </button>
+    </div>
     {{/each}}
 </div>
