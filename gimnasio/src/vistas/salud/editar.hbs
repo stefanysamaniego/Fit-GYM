@@ -1,44 +1,51 @@
 <LINK REL=StyleSheet HREF="/css/salud/editar.css" TYPE="text/css" MEDIA=screen>
 
 <div id="contenedor">
-    <form action="/salud/editar/{{encuentra.id}}" method="post">
+    {{#each trae}}
+    <form action="/salud/editar/{{idSalud}}" method="post">
 
         <label id="datos">Datos de la información de la salud del Cliente</label>
 
         <div id="ocias">
             <label id="uno">Lesiones ocias:</label>
-            <input type="text" name="lesion_ocia" id="ocia" checked value="{{encuentra.lesion_ocia}}">
+            <input type="text" name="lesion_ocia" id="ocia" checked value="{{lesion_ocia}}">
         </div>
         <div id="musculares">
             <label id="dos">Lesiones musculares:</label>
-            <input type="text" name="lesion_muscular" id="muscular" checked value="{{encuentra.lesion_muscular}}">
+            <input type="text" name="lesion_muscular" id="muscular" checked value="{{lesion_muscular}}">
         </div>
         <div id="enfermedades">
             <label id="tres">Enfermedades:</label>
-            <input type="number" name="enfermedad" id="enfermedad" checked value="{{encuentra.enfermedad}}">
+            <input type="number" name="enfermedad" id="enfermedad" checked value="{{enfermedad}}">
         </div>
         <div id="vicios">
             <label id="cuatro">Vicios:</label>
-            <input type="number" name="vicios" id="vicio" checked value="{{encuentra.vicios}}">
+            <input type="number" name="vicios" id="vicio" checked value="{{vicios}}">
         </div>
         <div id="embarazos">
             <label id="cinco">Embarazos:</label>
-            <input type="number" name="embarazo" id="embarazo" checked value="{{encuentra.embarazo}}">
+            <input type="number" name="embarazo" id="embarazo" checked value="{{embarazo}}">
         </div>
         <div id="dificultades">
             <label id="seis">Dificultades:</label>
-            <input type="text" name="dificultades" id="dificultad" checked value="{{encuentra.dificultades}}">
+            <input type="text" name="dificultades" id="dificultad" checked value="{{dificultades}}">
         </div>
         <div id="actividades">
             <label id="siete">Actividades deportivas:</label>
-            <input type="text" name="actividad_deportiva" id="actividad" checked value="{{encuentra.actividad_deportiva}}">
+            <input type="text" name="actividad_deportiva" id="actividad" checked value="{{actividad_deportiva}}">
         </div>
         <div id="entidades">
             <label id="ocho">¿Asistia a un gimnasio u entidad deportiva?:</label>
-            <input type="text" name="entidad" id="entidad" checked value="{{encuentra.entidad}}">
+            <input type="text" name="entidad" id="entidad" checked value="{{entidad}}">
         </div>
         <div id="Boton">
             <button type="submit" id="edita"><img src="/img/editar.png" id="imagen"></button>
         </div>
+         <div id="agregar">
+            <button type="submit" id="instructor">
+                <a href="/instructor/agregar/{{idSalud}}">Agregar Instructor</a>
+            </button>
+        </div>
     </form>
+    {{/each}}
 </div>

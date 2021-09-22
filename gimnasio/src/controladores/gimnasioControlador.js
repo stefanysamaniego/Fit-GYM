@@ -18,7 +18,7 @@ gimnasio.mostrar = (req, res) => {
 //}
 
 gimnasio.mandar = async(req, res) => {
-    const usuario = req.params.id
+    const usuario = req.user.idUsuario
     const {nombre, inscripcion, mensualidad, horario, bajas, higiene, seguridad, contacto, direccion, estado} = req.body
     const nuevoIngreso = {
         nombre,
@@ -58,11 +58,12 @@ gimnasio.traer = async(req, res) => {
     const id = req.params.id
     const trae = await sql.query("SELECT * FROM gimnasios WHERE idGimnasio=?", [id])
     console.log(trae)
-    res.render("gimnasio/editar", {encuentra: trae[0]});
+    res.render("gimnasio/editar", {trae});
 }
 
 gimnasio.editar = async(req, res) => {
     const id = req.params.id
+    const usuario = req.user.idUsuario
     const {nombre, inscripcion, mensualidad, horario, bajas, higiene, seguridad, contacto, direccion, estado} = req.body
     const nuevoIngreso = {
         nombre,
@@ -80,7 +81,7 @@ gimnasio.editar = async(req, res) => {
     .then(gimnasios =>{
         gimnasios.update(nuevoIngreso)
         req.flash("success", "Se ha actualizado con exito")
-        res.redirect('/gimnasio/listar');
+        res.redirect('/gimnasio/listar'+ usuario);
     })
     
 }

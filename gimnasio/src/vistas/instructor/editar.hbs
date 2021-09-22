@@ -1,34 +1,35 @@
 <LINK REL=StyleSheet HREF="/css/instructor/editar.css" TYPE="text/css" MEDIA=screen>
  
 <div id="contenido">
-    <form action="/instructor/editar/{{encuentra.id}}" method="post">
+    {{#each trae}}
+    <form action="/instructor/editar/{{idEntrenador}}" method="post">
 
         <label id="datos">Datos del Instructor</label>
 
         <div id="nombres">
             <label id="uno">Nombres:</label>
-            <input type="text" name="nombres" id="nombre" checked value="{{encuentra.nombres}}">
+            <input type="text" name="nombres" id="nombre" checked value="{{nombres}}">
         </div>
         <div id="apellidos">
             <label id="dos">Apellidos:</label>
-            <input type="text" name="apellidos" id="apellido" checked value="{{encuentra.apellidos}}">
+            <input type="text" name="apellidos" id="apellido" checked value="{{apellidos}}">
         </div>
         <div id="cedulas">
             <label id="tres">Cédula:</label>
-            <input type="number" name="cedula" id="cedula" checked value="{{encuentra.cedula}}">
+            <input type="number" name="cedula" id="cedula" checked value="{{cedula}}">
         </div>
         <div id="edades">
             <label id="cuatro">Edad:</label>
-            <input type="number" name="edad" id="edad" checked value="{{encuentra.edad}}">
+            <input type="number" name="edad" id="edad" checked value="{{edad}}">
         </div>
         <div id="telefonos">
             <label id="cinco">Teléfono</label>
-            <input type="number" name="telefono" id="telefono" checked value="{{encuentra.telefono}}">
+            <input type="number" name="telefono" id="telefono" checked value="{{telefono}}">
         </div>
         <div id="titulos">
             <label id="seis">Título:</label>
             <select name="titulo" id="titulo" checked>
-                <option value="{{encuentra.titulo}}">{{encuentra.titulo}}</option>
+                <option value="{{titulo}}">{{titulo}}</option>
                 {{#each lista}}
                     <option value="{{this.nombre}}">{{this.nombre}}</option>
                 {{/each}}
@@ -36,7 +37,7 @@
         </div>
         <div id="años">
             <label id="siete">Años de experiencia:</label>
-            <input type="number" name="añosExperiencia" id="año" checked value="{{encuentra.añosExperiencia}}">
+            <input type="number" name="añosExperiencia" id="año" checked value="{{añosExperiencia}}">
         </div>
         <div id="descripciones">
             <label id="ocho">Descripción:</label>
@@ -45,5 +46,6 @@
           <div id="Boton">
             <button type="submit" id="edita"><img src="/img/editar.png" id="imagen1"></button>
         </div>
+        
     </form>
 </div>

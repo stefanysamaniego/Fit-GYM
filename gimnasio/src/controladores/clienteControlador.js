@@ -7,6 +7,7 @@ cliente.mostrar = (req, res) => {
 } 
 
 cliente.mandar = async(req, res) => {
+    const id = req.user.idUsuario
     const { nombres, apellidos, cedula, edad, telefono, altura, peso} = req.body
     const nuevoEnvio = {
         nombres,
@@ -19,7 +20,7 @@ cliente.mandar = async(req, res) => {
     }
     await orm.info_cliente.create(nuevoEnvio)
     req.flash("success", "Se ha agregado con exito")
-    res.redirect('/cliente/listar');
+    res.redirect('/cliente/listar'+ id);
 }
 
 cliente.listar = async(req, res) => {
@@ -31,11 +32,12 @@ cliente.traer = async(req, res) => {
     const id = req.params.id
     const trae = await sql.query("SELECT * FROM info_clientes WHERE idInfo_Cliente=?", [id])
     console.log(trae)
-    res.render("cliente/editar", {encuentra: trae[0]});
+    res.render("cliente/editar", {trae});
 }
 
 cliente.editar = async(req, res) => {
     const id = req.params.id
+    const usuario = req.user.idUsuario
     const {nombres, apellidos, cedula, edad, telefono, altura, peso} = req.body
     const nuevoEnvio = {
         nombres,
@@ -50,7 +52,7 @@ cliente.editar = async(req, res) => {
     .then(clientes =>{
         clientes.update(nuevoEnvio)
         req.flash("success", "Se ha actualizado con exito")
-        res.redirect('/cliente/listar');
+        res.redirect('/cliente/listar'+ usuario);
     })
 }
 

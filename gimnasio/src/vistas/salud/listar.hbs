@@ -1,6 +1,6 @@
 <LINK REL=StyleSheet HREF="/css/salud/lista.css" TYPE="text/css" MEDIA=screen>
 
-<form action="/salud/listar"></form>
+<form action="/salud/listar/{{user.idUsuario}}"></form>
 <div id="contenido">
     <label id="lista">Lista de la salud de los Clientes</label>
         {{#each lista}}

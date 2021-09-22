@@ -1,30 +1,31 @@
 <LINK REL=StyleSheet HREF="/css/menu/editar.css" TYPE="text/css" MEDIA=screen>
  
 <div id="contenido">
-    <form action="/menu/editar/{{encuentra.id}}" method="post">
+    {{#each trae}}
+    <form action="/menu/editar/{{idMenu}}" method="post">
 
         <label id="datos">Datos del Menú</label>
 
         <div id="nombres">
             <label id="uno">Nombre:</label>
-            <input type="text" name="nombres" id="nombre" checked value="{{encuentra.nombre}}">
+            <input type="text" name="nombres" id="nombre" checked value="{{nombre}}">
         </div>
         <div id="descripciones">
             <label id="dos">Descripción:</label>
-            <textarea name="descripcion" id="descripcion" cols="30" rows="10" rows="10" spellcheck="true" maxlength="2000">{{encuentra.descripcion}}</textarea>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" rows="10" spellcheck="true" maxlength="2000">{{descripcion}}</textarea>
         </div>
         <div id="dias">
             <label id="tres">Días:</label>
-            <input type="number" name="dias" id="dia" checked value="{{encuentra.dias}}">
+            <input type="number" name="dias" id="dia" checked value="{{dias}}">
         </div>
         <div id="semanas">
             <label id="cuatro">Semanas:</label>
-            <input type="text" name="semanas" id="semana" checked value="{{encuentra.semanas}}">
+            <input type="text" name="semanas" id="semana" checked value="{{.semanas}}">
         </div>
         <div id="categorias">
             <label id="cinco">Categoría:</label>
             <select name="categoría" id="categoria" checked>
-                <option value="{{encuentra.categoria}}">{{encuentra.categoria}}</option>
+                <option value="{{categoria}}">{{categoria}}</option>
                 {{#each lista}}
                     <option value="{{this.nombre}}">{{this.nombre}}</option>
                 {{/each}}

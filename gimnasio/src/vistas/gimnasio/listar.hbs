@@ -61,7 +61,12 @@
             <label id="estado">Estado</label>
             <p id="estad">{{estado}}</p>
         </div>
-        <a href="/gimnasio/editar/{{id}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+        <a href="/gimnasio/editar/{{idGimnasio}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+        <div id="agregar">
+            <button type="submit" id="cliente">
+                <a href="/cliente/agregar/{{idGimnasio}}">Agregar Clinete</a>
+            </button>
+        </div>
         {{/each}}
     </div>
 </div>

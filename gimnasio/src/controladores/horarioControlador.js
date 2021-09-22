@@ -13,13 +13,14 @@ horario.mandar = async(req, res) => {
     nuevoIngreso = {
         dias,
         fechas,
+        mes,
         horas, 
         infoClienteIdInfoCliente: cliente,
         usuarioIdUsuario: usuario
     }
     await orm.horario.create(nuevoIngreso)
     req.flash("success", "Se ha agregado con exito")
-    res.redirect('/horario/listar');
+    res.redirect('/horario/listar'+ usuario);
 }
 
 horario.listar = async(req, res) => {
@@ -32,11 +33,12 @@ horario.traer = async(req, res) => {
     const id = req.params.id
     const trae = await sql.query("SELECT * FROM horarios WHERE 	idHorario=?", [id])
     console.log(trae)
-    res.render("horario/editar", {encuentra: trae[0]});
+    res.render("horario/editar", {trae});
 }
 
 horario.editar = async(req, res) => {
     const id = req.params.id
+    const usuario = req.user.idUsuario
     const {dias, mes, horas} = req.body
     const nuevoIngreso = {
         dias,
@@ -47,7 +49,7 @@ horario.editar = async(req, res) => {
     .then(horarios =>{
         horarios.update(nuevoIngreso)
         req.flash("success", "Se ha agregado con exito")
-        res.redirect('/horario/listar');
+        res.redirect('/horario/listar'+ id);
     })
 }
 

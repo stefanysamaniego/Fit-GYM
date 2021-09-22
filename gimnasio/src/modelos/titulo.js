@@ -7,7 +7,7 @@ const Titulo = (sequelize,type) =>{
     },
     nombre: type.STRING,
     año: type.INTEGER,
-    decripcion: type.STRING,
+    descripcion: type.STRING,
         creacionTitulos:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

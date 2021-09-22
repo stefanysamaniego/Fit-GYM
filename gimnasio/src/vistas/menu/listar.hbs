@@ -1,6 +1,6 @@
 <LINK REL=StyleSheet HREF="/css/menu/lista.css" TYPE="text/css" MEDIA=screen>
  
-<form action="/menu/listar"></form>
+<form action="/menu/listar/{{user.idUsuario}}"></form>
 <div id="contenedor">
     <label id="lista">Lista del Menús</label>
     {{#each lista}}
