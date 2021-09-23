@@ -24,7 +24,7 @@ instructor.mandar = async(req, res) => {
     }
     await orm.entrenador.create(nuevoEnvio)
     req.flash("success", "Se ha guardado con exito")
-    res.redirect('/instructor/listar'+ usuario);
+    res.redirect('/instructor/listar/'+ usuario);
 } 
 
 instructor.listar = async(req, res) => {
@@ -59,7 +59,7 @@ instructor.editar = async(req, res) => {
     .then(entrenadores =>{
         entrenadores.update(nuevoEnvio)
         req.flash("success", "Se ha guardado con exito")
-        res.redirect('/instructor/listar'+usuario);
+        res.redirect('/instructor/listar/'+usuario);
     })
 }
 

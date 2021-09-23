@@ -20,7 +20,7 @@ menu.mandar = async(req, res) => {
     }
     await orm.menu.create(nuevoEnvio)
     req.flash("success", "Se ha guardado con exito")
-    res.redirect('/menu/listar'+ usuario);
+    res.redirect('/menu/listar/'+ usuario);
 }
 
 menu.listar = async(req, res) => {
@@ -52,7 +52,7 @@ menu.editar = async(req, res) => {
     .then(menus =>{
         menus.update(nuevoEnvio)
         req.flash("success", "Se ha guardado con exito")
-        res.redirect('/menu/listar'+ usuario);
+        res.redirect('/menu/listar/'+ usuario);
     })
 }
 

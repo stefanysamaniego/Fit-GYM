@@ -20,7 +20,7 @@ horario.mandar = async(req, res) => {
     }
     await orm.horario.create(nuevoIngreso)
     req.flash("success", "Se ha agregado con exito")
-    res.redirect('/horario/listar'+ usuario);
+    res.redirect('/horario/listar/'+ usuario);
 }
 
 horario.listar = async(req, res) => {
@@ -49,7 +49,7 @@ horario.editar = async(req, res) => {
     .then(horarios =>{
         horarios.update(nuevoIngreso)
         req.flash("success", "Se ha agregado con exito")
-        res.redirect('/horario/listar'+ id);
+        res.redirect('/horario/listar/'+ id);
     })
 }
 

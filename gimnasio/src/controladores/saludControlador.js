@@ -24,7 +24,7 @@ salud.mandar = async(req, res) => {
     }
     await orm.salud.create(nuevoEnvio)
     req.flash("success", "Se ha guardado con exito")
-    res.redirect('/salud/listar'+ usuario);
+    res.redirect('/salud/listar/'+ usuario);
 }
 
 salud.listar = async(req, res) => {
@@ -58,7 +58,7 @@ salud.editar = async(req, res) => {
     .then(saluds =>{
         saluds.update(nuevoEnvio)
         req.flash("success", "Se ha guardado con exito")
-        res.redirect('/salud/listar'+ usuario);
+        res.redirect('/salud/listar/'+ usuario);
     })
 }
 

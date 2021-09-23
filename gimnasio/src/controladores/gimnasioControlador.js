@@ -81,7 +81,7 @@ gimnasio.editar = async(req, res) => {
     .then(gimnasios =>{
         gimnasios.update(nuevoIngreso)
         req.flash("success", "Se ha actualizado con exito")
-        res.redirect('/gimnasio/listar'+ usuario);
+        res.redirect('/gimnasio/listar/'+ usuario);
     })
     
 }
