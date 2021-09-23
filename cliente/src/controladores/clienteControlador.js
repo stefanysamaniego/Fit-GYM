@@ -1,11 +1,13 @@
 const cliente = {}
-const pool = require("../base")
+const sql = require("../configuracionBaseDeDatos/base.sql");
+const orm = require("../configuracionBaseDeDatos/baseDatos.orm");
 
 cliente.mostrar = (req, res) => {
     res.render("cliente/agregar");
 }
 
 cliente.mandar = async(req, res) => {
+    const cliente = req.user.idUsuario
     const { nombres, apellidos, cedula, edad, telefono, altura, peso} = req.body
     const nuevoEnvio = {
         nombres,
@@ -14,28 +16,29 @@ cliente.mandar = async(req, res) => {
         edad,
         telefono,
         altura,
-        peso,
-        usuario: req.user.id
+        peso
     }
-    await pool.query("INSERT INTO info_cliente SET ?", [nuevoEnvio])
+    await orm.info_cliente.create(nuevoEnvio)
     req.flash("success", "Se ha agregado con exito")
-    res.redirect('/cliente/listar');
+    res.redirect('/cliente/listar/' + cliente);
 }
 
 cliente.listar = async(req, res) => {
-    const lista = await pool.query("SELECT * FROM info_cliente WHERE id=?", [req.user.id])
+    const usuario = req.user.idUsuario
+    const lista = await sql.query("SELECT * FROM info_clientes WHERE idInfo_Cliente=?", [usuario])
     res.render("cliente/listar", {lista});
 }
 
 cliente.traer = async(req, res) => {
-    const { id } = req.params
-    const trae = await pool.query("SELECT * FROM info_cliente WHERE id=?", [id])
+    const id = req.params.id
+    const trae = await sql.query("SELECT * FROM info_clientes WHERE idInfo_Cliente=?", [id])
     console.log(trae)
-    res.render("cliente/editar", {encuentra: trae[0]});
+    res.render("cliente/editar", {trae});
 }
 
 cliente.editar = async(req, res) => {
-    const { id } = req.params
+    const usuario = req.user.idUsuario
+    const id = req.params.id
     const {nombres, apellidos, cedula, edad, telefono, altura, peso} = req.body
     const nuevoEnvio = {
         nombres,
@@ -46,9 +49,12 @@ cliente.editar = async(req, res) => {
         altura,
         peso
     }
-    await pool.query("UPDATE info_cliente SET ? WHERE id=?", [nuevoEnvio, id])
-    req.flash("success", "Se ha actualizado con exito")
-    res.redirect('/cliente/listar');
+    await orm.info_cliente.findOne({ where: {idInfo_Cliente: id}})
+    .then(clientes =>{
+        clientes.update(nuevoEnvio)
+        req.flash("success", "Se ha actualizado con exito")
+        res.redirect('/cliente/listar/' + usuario);
+    })
 }
 
 module.exports = cliente

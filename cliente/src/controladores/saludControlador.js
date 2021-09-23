@@ -1,13 +1,15 @@
 const salud = {}
-const pool = require("../base")
+const sql = require("../configuracionBaseDeDatos/base.sql")
+const orm = require("../configuracionBaseDeDatos/baseDatos.orm")
 
 salud.mostrar = (req, res) => {
     res.render("salud/agregar");
 }
 
 salud.mandar = async(req, res) => {
+    const cliente = req.user.idUsuario
     const {lesion_ocia, lesion_muscular, enfermedad, vicios, embarazo, dificultades, actividad_deportiva, entidad} = req.body
-    const nuevoEnvia = {
+    const nuevoEnvio = {
         lesion_ocia,
         lesion_muscular,
         enfermedad,
@@ -16,29 +18,31 @@ salud.mandar = async(req, res) => {
         dificultades,
         actividad_deportiva,
         entidad,
-        cliente: req.user.id
+        infoClienteIdInfoCliente: cliente
     }
-    await pool.query("INSERT INTO salud SET ?", [nuevoEnvia])
+    await orm.salud.create(nuevoEnvio)
     req.flash("success", "Se ha guardado con exito")
-    res.redirect('/salud/listar');
+    res.redirect('/salud/listar/' + cliente);
 }
 
 salud.listar = async(req, res) => {
-    const lista = await pool.query("SELECT * FROM salud WHERE id=?", [req.user.id])
+    const usuario = req.user.idUsuario
+    const lista = await sql.query("SELECT * FROM saluds WHERE idSalud=?", [usuario])
     res.render("salud/listar", {lista});
 }
 
 salud.traer = async(req, res) =>{
-    const { id } = req.params
-    const trae = await pool.query("SELECT * FROM salud WHERE id=?", [id])
+    const id = req.params.id
+    const trae = await sql.query("SELECT * FROM saluds WHERE idSalud=?", [id])
     console.log(trae)
-    res.render("salud/editar", {encuentra: trae[0]})
+    res.render("salud/editar", {trae})
 }
 
 salud.editar = async(req, res) => {
-    const { id } = req.params
+    const usuario = req.user.idUsuario
+    const id = req.params.id
     const {lesion_ocia, lesion_muscular, enfermedad, vicios, embarazo, dificultades, actividad_deportiva, entidad} = req.body
-    const nuevoEnvia = {
+    const nuevoEnvio = {
         lesion_ocia,
         lesion_muscular,
         enfermedad,
@@ -48,9 +52,12 @@ salud.editar = async(req, res) => {
         actividad_deportiva,
         entidad
     }
-    await pool.query("UPDATE salud SET ? WHERE id=?", [nuevoEnvia, id])
-    req.flash("success", "Se ha guardado con exito")
-    res.redirect('/salud/listar');
+    await orm.salud.findOne({ where: {idSalud: id}})
+    .then(saluds =>{
+        saluds.update(nuevoEnvio)
+        req.flash("success", "Se ha guardado con exito")
+        res.redirect('/salud/listar/' + usuario);
+    })
 }
 
 module.exports = salud

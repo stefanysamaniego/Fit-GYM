@@ -41,6 +41,7 @@ salud.traer = async(req, res) =>{
 }
 
 salud.editar = async(req, res) => {
+    const usuario = req.user.idUsuario
     const id = req.params.id
     const {lesion_ocia, lesion_muscular, enfermedad, vicios, embarazo, dificultades, actividad_deportiva, entidad} = req.body
     const nuevoEnvio = {
@@ -57,7 +58,7 @@ salud.editar = async(req, res) => {
     .then(saluds =>{
         saluds.update(nuevoEnvio)
         req.flash("success", "Se ha guardado con exito")
-        res.redirect('/salud/listar/' + id);
+        res.redirect('/salud/listar/' + usuario);
     })
 }
 

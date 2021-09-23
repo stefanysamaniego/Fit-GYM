@@ -1,5 +1,5 @@
 const listaPerfil = {}
-const pool = require("../base")
+const pool = require("../configuracionBaseDeDatos/base.sql")
 
 listaPerfil.listar = (req, res) => {
     res.render("perfil/listar"); 
