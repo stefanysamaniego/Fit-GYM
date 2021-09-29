@@ -1,76 +1,38 @@
-<link rel="stylesheet" href="/css/navegacion.css">
+<link rel="stylesheet" href="/css/nav.css">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img src="/img/logo.png" id="img"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-            {{#if user}}
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gimnasio</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/gimnasio/listar">Lista de información del Gimnasio</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clientes</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/cliente/agregar">Agregar Clientes</a>
-                    <a class="dropdown-item" href="/cliente/listar">Lista de Clientes</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Horarios</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/horario/agregar">Agregar Horarios</a>
-                    <a class="dropdown-item" href="/horario/listar">Lista de Horarios</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Suplementos</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/clientes/add">Agregar Intructores</a>
-                    <a class="dropdown-item" href="/clientes/list">Lista de Intructores</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Salud</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/salud/agregar">Agregar información de la salud del cliente</a>
-                    <a class="dropdown-item" href="/salud/listar">Lista de la información de la salud del cliente</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Intructores</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/instructor/agregar">Agregar Intructores</a>
-                    <a class="dropdown-item" href="/instructor/listar">Lista de Intructores</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menús</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/menu/agregar">Agregar Menú</a>
-                    <a class="dropdown-item" href="/menu/listar">Lista de menús</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/finalizar" id="cerrar">Cerrar Sesión</a>
-            </li>
-            {{else}}
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Inicio<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/login" id="session">Iniciar Sesión</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/registro" id="registro">Registrate</a>
-            </li>
-            {{/if}}
-        </ul>
+<nav>
+    <a href="/"><img src="/img/logo.png" id="logo"></a>
+    {{#if user}}
+    <div id="nav1">
+        <a href="/entradaSalida/eleccion/{{user.idUsuarios}}">Entrada-Salida</a>
     </div>
+    <div id="nav2">
+        <a id="nav" href="/clientes/lista/{{user.idUsuarios}}"> Clientes</a>
+    </div>
+    <div id="nav3">
+        <a href="/productos/lista/{{user.idUsuarios}}"> Productos</a>
+    </div>
+    <div id="nav4">
+        <a href="/ProductoEntrada/lista/{{user.idUsuarios}}"> Productos Entrada</a>
+    </div>
+    <div id="nav5">
+        <a href="/proveedor/lista/{{user.idUsuarios}}"> Proveedores</a>
+    </div>
+    <div id="nav6">
+        <a href="/tienda/lista/{{user.idUsuarios}}"> Tienda</a>
+    </div>
+    <div id="nav7">
+        <a href="/CerrarSecion">Cierre la Sesión</a>
+    </div>
+    {{else}}
+    <div id="nav8">
+        <a href="/gimnasio">Gimnasios</a>
+    </div>
+    <div id="nav9">
+        <a href="/login">Iniciar Sesión</a>
+    </div>
+    <div id="nav10">
+        <a href="/registro">Registro</a>
+    </div>
+    {{/if}}
 </nav>

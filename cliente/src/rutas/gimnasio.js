@@ -1,10 +1,8 @@
 const express = require('express');
-const rutas = express.Router();
+const ruta = express.Router();
 
-const { listar, listaDetalle } = require("../controladores/gimnasioControlador")
+const {mostrar} = require("../controladores/gimnasioControlador")
 
-rutas.get("/", listar)
+ruta.get("/gimnasio", mostrar);
 
-rutas.get("/detalleLista/:id", listaDetalle)
-
-module.exports = rutas 
+module.exports = ruta;
