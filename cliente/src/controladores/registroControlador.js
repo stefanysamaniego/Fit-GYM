@@ -3,7 +3,7 @@ const registro = {};
 const passport = require('passport');
 
 registro.mostrarRegistro = async(req, res) => {
-    res.render('Usuario/Registro');
+    res.render('usuario/registro');
 };
 
 registro.Registro = passport.authenticate('local.signup', {
@@ -13,7 +13,7 @@ registro.Registro = passport.authenticate('local.signup', {
 });
 
 registro.mostrarLogin = (req, res, next) => {
-    res.render('Usuario/Login');
+    res.render('usuario/login');
 };
 
 registro.Login = passport.authenticate('local.signin', {
@@ -21,6 +21,10 @@ registro.Login = passport.authenticate('local.signin', {
     failureRedirect: '/',
     failureFlash: true
 }); 
+
+registro.actualizacion = (req, res) => {
+    res.render('usuario/actualizacion');
+}
 
 registro.cierreSesion = (req, res, next) => {
     req.logOut();

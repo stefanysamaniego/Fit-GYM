@@ -50,6 +50,7 @@ app.use(express.static(path.join(__dirname, "public")))
 
 //aqui rutas
 app.use(require("./rutas/index"));
+app.use(require("./rutas/registro"))
 app.use(require("./rutas/gimnasio"));
 app.use(require("./rutas/servicio"));
 app.use(require("./rutas/entrenador"));
