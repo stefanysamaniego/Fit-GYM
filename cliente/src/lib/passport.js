@@ -69,6 +69,6 @@ passport.serializeUser((user, done) => {
 
 //metodo para serializar el usuario
 passport.deserializeUser(async (id, done) => {
-    const rows = await pool.query("SELECT * FROM info_clientes WHERE idInfo_Clientegit = ?", [id]);
+    const rows = await pool.query("SELECT * FROM info_clientes WHERE idInfo_Cliente = ?", [id]);
     done(null, rows[0]);
 });

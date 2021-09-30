@@ -50,9 +50,7 @@ app.use(express.static(path.join(__dirname, "public")))
 
 //aqui rutas
 app.use(require("./rutas/index"));
-app.use(require("./rutas/login"));
-app.use(require("./rutas/registro"));
-app.use("/gimnasio", require("./rutas/gimnasio"));
-app.use("/perfil", require("./rutas/perfil"))
+app.use(require("./rutas/gimnasio"));
+app.use(require("./rutas/servicio"));
 
 module.exports = app

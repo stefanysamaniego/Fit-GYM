@@ -1,30 +1,30 @@
-const passport = require("passport");
+const registro = {};
 
-const registro = {} 
+const passport = require('passport');
 
-registro.visualizar = (req, res) => {
-    res.render("registro/registro");
-}
+registro.mostrarRegistro = async(req, res) => {
+    res.render('Usuario/Registro');
+};
 
-registro.autenticacion = passport.authenticate("local.signup", {
-    successRedirect: "/gimnasio",
-    failureRedirect: "/registro",
+registro.Registro = passport.authenticate('local.signup', {
+    successRedirect: '/CerrarSecion',
+    failureRedirect: '/registro',
     failureFlash: true
-})
+});
 
-registro.logear = (req, res) => {
-    res.render("registro/login");
-}
+registro.mostrarLogin = (req, res, next) => {
+    res.render('Usuario/Login');
+};
 
-registro.autenticar = passport.authenticate("local.signin", {
-    successRedirect: "/gimnasio",
-    failureRedirect: "/login",
+registro.Login = passport.authenticate('local.signin', {
+    successRedirect: '/',
+    failureRedirect: '/',
     failureFlash: true
-})
+}); 
 
-registro.finalizar = (req, res) => {
-    req.logOut()
+registro.cierreSesion = (req, res, next) => {
+    req.logOut();
     res.redirect('/');
-}
+};
 
-module.exports = registro
+module.exports = registro;
