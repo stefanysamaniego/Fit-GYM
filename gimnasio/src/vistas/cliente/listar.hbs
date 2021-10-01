@@ -5,7 +5,7 @@
     <label id="lista">Lista del Clientes</label>
     {{#each lista}}
     <div id="nombres">
-        <label id="name">Nombres</label>
+          <label id="name">Nombres</label>
         <p id="nombre">{{nombres}}</p>
     </div>
     <div id="apellidos">
@@ -33,7 +33,7 @@
         <p id="seis">{{peso}}</p>
     </div>
     <a href="/cliente/editar/{{idInfo_Cliente}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
-    <div id="agregar">
+    <div id="agregaHorario">
         <button type="submit" id="cliente">
             <a href="/horario/agregar/{{idInfo_Cliente}}">Agregar Horario</a>
         </button>

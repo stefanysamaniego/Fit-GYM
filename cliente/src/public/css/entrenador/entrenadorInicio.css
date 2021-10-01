@@ -1,0 +1,84 @@
+body{
+    background-image: url(/img/servicio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.row{
+    gap: 3%;
+    row-gap: 20px;
+}
+#gris{
+    background-color: rgba(56, 54, 54, 0.651);
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 92.7%;
+    top: 7.3%;
+    position: absolute;
+}
+#menu{
+    position: absolute;
+    top: 8.5%;
+    left: 80%;
+}
+#menu button{
+    border-color: transparent;
+    background-color: rgba(95, 153, 24, 0.589);
+    border-radius: 10px;
+}
+#menu a{
+    color: white;
+    font-size: 25px;
+}
+#entrenador{
+    position: absolute;
+    top: 8.5%;
+    left: 87%;
+}
+#entrenador button{
+    border-color: transparent;
+    background-color: rgba(95, 153, 24, 0.589);
+    border-radius: 10px;
+}
+#entrenador a{
+    color: white;
+    font-size: 25px;
+}
+#contenido{
+    width: 100%;
+    height: auto;
+    max-width: 1410px;
+    max-height: auto;
+    position: absolute;
+    top: 15%;
+    left: 4%;
+}
+#tarjeta{
+    row-gap: 20px;
+    background-image: url(/img/gimnasio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    max-height: auto;
+    text-align: center;
+}
+#titulo{
+    margin-top: 35%;
+    color: white;
+}
+
+#contacto{
+    margin-top: 40%;
+    margin-left: 
+}
+
+#servicios h2{
+    margin-top: 40%;
+    margin-left: 30%;
+}

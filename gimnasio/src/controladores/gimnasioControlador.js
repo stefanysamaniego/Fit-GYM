@@ -62,8 +62,8 @@ gimnasio.traer = async(req, res) => {
 }
 
 gimnasio.editar = async(req, res) => {
-    const id = req.params.id
     const usuario = req.user.idUsuario
+    const id = req.params.id
     const {nombre, inscripcion, mensualidad, horario, bajas, higiene, seguridad, contacto, direccion, estado} = req.body
     const nuevoIngreso = {
         nombre,
@@ -81,7 +81,7 @@ gimnasio.editar = async(req, res) => {
     .then(gimnasios =>{
         gimnasios.update(nuevoIngreso)
         req.flash("success", "Se ha actualizado con exito")
-        res.redirect('/gimnasio/listar/'+ usuario);
+        res.redirect('/gimnasio/listar/' + usuario);
     })
     
 }

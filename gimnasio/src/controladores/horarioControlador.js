@@ -9,7 +9,7 @@ horario.mostrar = (req, res) => {
 horario.mandar = async(req, res) => {
     const cliente = req.params.id
     const usuario = req.user.idUsuario
-    const {dias, fechas, horas} = req.body
+    const {dias, fechas, mes, horas} = req.body
     nuevoIngreso = {
         dias,
         fechas,
@@ -20,7 +20,7 @@ horario.mandar = async(req, res) => {
     }
     await orm.horario.create(nuevoIngreso)
     req.flash("success", "Se ha agregado con exito")
-    res.redirect('/horario/listar/'+ usuario);
+    res.redirect('/horario/listar/' + usuario);
 }
 
 horario.listar = async(req, res) => {
@@ -37,19 +37,20 @@ horario.traer = async(req, res) => {
 }
 
 horario.editar = async(req, res) => {
-    const id = req.params.id
     const usuario = req.user.idUsuario
-    const {dias, mes, horas} = req.body
+    const id = req.params.id
+    const {dias, fechas, mes, horas} = req.body
     const nuevoIngreso = {
         dias,
+        fechas,
         mes,
         horas
     }
     await orm.horario.findOne({ where:{idHorario: id}})
-    .then(horarios =>{
+    .then(horarios => {
         horarios.update(nuevoIngreso)
         req.flash("success", "Se ha agregado con exito")
-        res.redirect('/horario/listar/'+ id);
+        res.redirect('/horario/listar/' + usuario);
     })
 }
 

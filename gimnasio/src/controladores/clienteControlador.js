@@ -20,7 +20,7 @@ cliente.mandar = async(req, res) => {
     }
     await orm.info_cliente.create(nuevoEnvio)
     req.flash("success", "Se ha agregado con exito")
-    res.redirect('/cliente/listar/'+ id);
+    res.redirect('/cliente/listar/' + id);
 }
 
 cliente.listar = async(req, res) => {
@@ -36,8 +36,8 @@ cliente.traer = async(req, res) => {
 }
 
 cliente.editar = async(req, res) => {
-    const id = req.params.id
     const usuario = req.user.idUsuario
+    const id = req.params.id
     const {nombres, apellidos, cedula, edad, telefono, altura, peso} = req.body
     const nuevoEnvio = {
         nombres,
@@ -52,7 +52,7 @@ cliente.editar = async(req, res) => {
     .then(clientes =>{
         clientes.update(nuevoEnvio)
         req.flash("success", "Se ha actualizado con exito")
-        res.redirect('/cliente/listar/'+ usuario);
+        res.redirect('/cliente/listar/' + usuario);
     })
 }
 

@@ -17,6 +17,7 @@ USE fitGym;
         password varchar(60) not null,
         email varchar(60) not null,
         nombres varchar(50) not null,
+        apellidos varchar(50) not null,
         cedula int(10) not null,
         edad int(3) not null,
         telefono int(10) not null,

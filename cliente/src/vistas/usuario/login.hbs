@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/usuario/login.css">
+<div id="imagen">
+    <img src="/img/usuario.jpg" id="usuario">
+    <div id="verde"></div>
+    <img src="/img/avatar.png" id="avatar">
+</div>
+<form action="/login" method="post">
+    <div id="contenido">
+        <div id="Email">
+            <label>Correo Eléctronico</label>
+            <input type="text" name="username" required>
+        </div>
+        <div id="Password">
+            <label>Contraseña</label>
+            <input type="password" name="password" required>
+            <button id="noVer">
+                <img src="/img/password.jpg" id="password">
+            </button>
+            <button id="ver">
+                <img src="/img/password1.jpg" id="password1">
+            </button>
+        </div>
+        <div id="Boton">
+            <button type="submit">Ingresar</button>
+        </div>
+        <div id="Actualizar">
+            <p>¿Has olvidado tu contraseña?</p>
+            <a href="/actualizar">Recuperar</a>
+        </div>
+    </div>
+</form>
