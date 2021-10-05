@@ -1,10 +1,14 @@
 <link rel="stylesheet" href="/css/usuario/actualizar.css">
-<div id="imagen">
-    <img src="/img/usuario.jpg" id="usuario">
-    <div id="verde"></div>
-    <img src="/img/avatar.png" id="avatar">
+<div id="login">
+    <img src="/img/login.jpg">
 </div>
-<form action="/actualizar" method="post">
+<div id="azul"></div>
+<div id="avatar">
+    <img src="/img/avatar.png">
+</div>
+{{#each trae}}
+<form action="/actualizar/{{idUsuario}}" method="post">
+    {{/each}}
     <div id="contenido">
         <div id="Password">
             <label>Nueva Contraseña</label>
@@ -18,7 +22,7 @@
         </div>
         <div id="Password1">
             <label>Repetir Nueva Contraseña</label> <p id="mensaje"></p>
-            <input type="password" name="password" id="repetir" onkeyup="contrasena.validarPassword()" required>
+            <input type="password" name="" id="repetir" onkeyup="contrasena.validarPassword()" required>
             <button id="noVer1" onclick="contrasena.ocultarPassword1()" type="button">
                 <img src="/img/password.jpg" id="password">
             </button>

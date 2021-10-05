@@ -1,29 +1,49 @@
-<LINK REL=StyleSheet HREF="/css/registro.css" TYPE="text/css" MEDIA=screen>
-<div id="posicion">
-    <img src="/img/icono.png" id="imagen">
+<link rel="stylesheet" href="/css/usuario/registro.css">
+<div id="login">
+    <img src="/img/usuario.jpg">
 </div>
-
-<div id="contenedor">
-    <form action="/registro" method="post">
-        <div id="uno">
-            <label id="Correo">Email:</label>
-            <input type="email" name="email" id="correo">
+<div id="azul"></div>
+<div id="avatar">
+    <img src="/img/avatar.png">
+</div>
+<form action="/registro" method="POST">
+    <div id="contenido">
+        <div id="Nombre">
+            <label>Nombres:</label>
+            <input type="text" name="nombres" required>
         </div>
-        <div id="dos">
-            <label id="Usuario">Nombre:</label>
-            <input type="text" name="username" id="usuario">
+        <div id="Apellido">
+            <label>Apellidos:</label>
+            <input type="text" name="apellidos" required>
         </div>
-        <div id="tres">
-            <label id="Contraseña">Contraseña:</label>
-            <input type="password" name="password" id="contraseña">
+        <div id="Email">
+            <label>Correo Eléctronico</label>
+            <input type="text" name="username" required>
         </div>
-        <div id="cuatro">
-            <button type="submit" id="boton">
-                <p id="letra">
-                    Ingresar
-                </p>
+        <div id="Password">
+            <label>Contraseña</label>
+            <input type="password" name="password" id="contraseña" required>
+            <button id="noVer" onclick="contrasena.ocultarPassword()" type="button">
+                <img src="/img/password.jpg" id="password">
+            </button>
+            <button id="ver" onclick="contrasena.mostrarPassword()" type="button">
+                <img src="/img/password1.jpg" id="password1">
             </button>
         </div>
+        <div id="Password1">
+            <label>Repetir Contraseña</label> <p id="mensaje"></p>
+            <input type="password" name="" id="repetir" onkeyup="contrasena.validarPassword()" required>
+            <button id="noVer1" onclick="contrasena.ocultarPassword1()" type="button">
+                <img src="/img/password.jpg" id="password">
+            </button>
+            <button id="ver1" onclick="contrasena.mostrarPassword1()" type="button">
+                <img src="/img/password1.jpg" id="password1">
+            </button>
+        </div>
+        <div id="Boton">
+            <button type="submit">Registrar</button>
+        </div>
+    </div>
+</form>
 
-    </form>
-</div>
+<script src="/js/contraseña.js"></script>

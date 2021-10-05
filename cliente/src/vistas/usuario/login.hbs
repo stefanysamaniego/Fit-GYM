@@ -12,11 +12,11 @@
         </div>
         <div id="Password">
             <label>Contraseña</label>
-            <input type="password" name="password" required>
-            <button id="noVer">
+            <input type="password" name="password" id="contraseña" required>
+            <button id="noVer" onclick="contrasena.ocultarPassword()" type="button">
                 <img src="/img/password.jpg" id="password">
             </button>
-            <button id="ver">
+            <button id="ver" onclick="contrasena.mostrarPassword()" type="button">
                 <img src="/img/password1.jpg" id="password1">
             </button>
         </div>
@@ -29,3 +29,5 @@
         </div>
     </div>
 </form>
+
+<script src="/js/contraseña.js"></script>

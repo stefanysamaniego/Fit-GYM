@@ -79,7 +79,6 @@ label{
     width: 100%;
     top: 80%;
     position: absolute;
-    
 }
 #Password1 Input{
     width: 100%;
@@ -111,12 +110,18 @@ label{
     position: absolute;
     top: 59%;
     left: 90%;
-}
+} 
 #password{
     width: 30px;
 }
 #password1{
     width: 30px;
+}
+#mensaje{
+    width: 100%;
+    top: 5%;
+    position: absolute;
+    left: 50%;
 }
 #Boton{
     position: absolute;

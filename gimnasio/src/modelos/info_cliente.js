@@ -7,7 +7,6 @@ const Info_cliente = (sequelize,type) =>{
     },
     username: type.STRING,
     password: type.STRING,
-    email: type.STRING,
     nombres: type.STRING,
     cedula: type.INTEGER,
     edad: type.INTEGER,
