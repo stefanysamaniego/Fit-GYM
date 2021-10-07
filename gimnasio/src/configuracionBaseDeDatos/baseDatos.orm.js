@@ -10,7 +10,7 @@ mysql.createConnection({
     password: process.env.DB_PASSWORD || ''
 }).then( connection => {
     connection.query(`CREATE DATABASE IF NOT EXISTS ${devName};`).then((res) => {
-        console.info("Base de Datos creada o comprada correctamente")
+        console.info("Base de Datos se ha creado u comprobado correctamente")
     })
 })
 

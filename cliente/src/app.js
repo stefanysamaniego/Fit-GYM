@@ -29,7 +29,7 @@ app.use(morgan("dev"))
 app.use(bodyparser.urlencoded({extended:false}))
 app.use(bodyparser.json())
 app.use(session({
-    secret: "Hola Stefany",
+    secret: "Hola Bienvenido",
     resave: false,
     saveUninitialized: false,
     store: new mysqlstore(database)

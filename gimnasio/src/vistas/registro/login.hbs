@@ -1,28 +1,36 @@
-<LINK REL=StyleSheet HREF="/css/login.css" TYPE="text/css" MEDIA=screen>
-
-<div id="posicion">
-    <img src="/img/icono.png" id="imagen">
+<LINK REL=StyleSheet HREF="/css/usuario/login.css" TYPE="text/css" MEDIA=screen>
+<div id="login">
+    <img src="/img/login.jpg">
 </div>
-
-<div id="contenedor">
-    <form action="/login" method="post">
-        <div id="uno">
-            <label id="Usuario">Nombre:</label>
-            <input type="text" name="username" id="usuario">
+<div id="azul"></div>
+<div id="avatar">
+    <img src="/img/avatar.png">
+</div>
+{{#each trae}}
+<form action="/login/{{idUsuario}}" method="post">
+    <div id="contenido">
+        <div id="Email">
+            <label>Correo Eléctronico</label>
+            <input type="text" name="username" required value="{{username}}">
         </div>
-        <div id="dos">
-            <label id="Contraseña">Contraseña:</label>
-            <input type="password" name="password" id="contraseña">
-        </div>
-        <div id="tres">
-            <button type="submit" id="boton">
-                <p id="letra">Ingresar</p>
+        <div id="Password">
+            <label>Contraseña</label>
+            <input type="password" name="password" id="contraseña" required>
+            <button id="noVer" onclick="contrasena.ocultarPassword()" type="button">
+                <img src="/img/password.jpg" id="password">
+            </button>
+            <button id="ver" onclick="contrasena.mostrarPassword()" type="button">
+                <img src="/img/password1.jpg" id="password1">
             </button>
         </div>
-        <div id="cuatro">
-            <a id="registra" href="/registro">
-                Registrate
-            </a>
+        <div id="Boton">
+            <button type="submit">Ingresar</button>
         </div>
-    </form>
-</div>
+        <div id="Actualizar">
+            <p>¿Has olvidado tu contraseña?</p>
+            <a href="/actualizar/{{idUsuario}}">Recuperar</a>
+        </div>
+    </div>
+</form>
+{{/each}}
+<script src="/js/contraseña.js"></script>

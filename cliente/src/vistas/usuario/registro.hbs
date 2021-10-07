@@ -21,20 +21,20 @@
         <div id="Password">
             <label>Contraseña</label>
             <input type="password" name="password" id="contraseña" required>
-            <button id="noVer">
+            <button id="noVer" onclick="contrasena.ocultarPassword()" type="button">
                 <img src="/img/password.jpg" id="password">
             </button>
-            <button id="ver">
+            <button id="ver" onclick="contrasena.mostrarPassword()" type="button">
                 <img src="/img/password1.jpg" id="password1">
             </button>
         </div>
         <div id="Password1">
-            <label>Repetir Contraseña</label>
-            <input type="password" name="password" id="repetir" required>
-            <button id="noVer1">
+            <label>Repetir Contraseña</label> <p id="mensaje"></p>
+            <input type="password" name="password" id="repetir" onkeyup="contrasena.validarPassword()" required>
+            <button id="noVer1" onclick="contrasena.ocultarPassword1()" type="button">
                 <img src="/img/password.jpg" id="password">
             </button>
-            <button id="ver1">
+            <button id="ver1" onclick="contrasena.mostrarPassword1()" type="button">
                 <img src="/img/password1.jpg" id="password1">
             </button>
         </div>
@@ -43,3 +43,5 @@
         </div>
     </div>
 </form>
+
+<script src="/js/contraseña.js"></script>
