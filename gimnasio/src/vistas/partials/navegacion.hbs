@@ -1,30 +1,31 @@
 <link rel="stylesheet" href="/css/nav.css">
 
 <nav>
-    <a href="/"><img src="/img/logo.png" id="logo"></a>
     {{#if user}}
+    <a href="/inicio"><img src="/img/logo.png" id="logo"></a>
     <div id="nav1">
-        <a href="/entradaSalida/eleccion/{{user.idUsuarios}}">Entrada-Salida</a>
+        <a href="/menu/listar/{{user.idUsuario}}">Menu</a>
     </div>
     <div id="nav2">
-        <a id="nav" href="/clientes/lista/{{user.idUsuarios}}"> Clientes</a>
+        <a id="nav" href="/salud/listar/{{user.idUsuario}}">Salud</a>
     </div>
     <div id="nav3">
-        <a href="/productos/lista/{{user.idUsuarios}}"> Productos</a>
+        <a href="/cliente/listar/{{user.idUsuario}}">Cliente</a>
     </div>
     <div id="nav4">
-        <a href="/ProductoEntrada/lista/{{user.idUsuarios}}"> Productos Entrada</a>
+        <a href="/instructor/listar/{{user.idUsuario}}">Instructor</a>
     </div>
     <div id="nav5">
-        <a href="/proveedor/lista/{{user.idUsuarios}}"> Proveedores</a>
+        <a href="/horario/listar/{{user.idUsuario}}">Horario</a>
     </div>
     <div id="nav6">
-        <a href="/tienda/lista/{{user.idUsuarios}}"> Tienda</a>
+        <a href="/gimnasio/listar/{{user.idUsuario}}">Gimnasio</a>
     </div>
     <div id="nav7">
-        <a href="/Finalizar">Cierre la Sesión</a>
+        <a href="/Finalizar">Cerrar Sesión</a>
     </div>
     {{else}}
+    <a href="/"><img src="/img/logo.png" id="logo"></a>
     <div id="nav9">
         <a href="/validacion">Iniciar Sesión</a>
     </div>
