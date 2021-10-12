@@ -17,11 +17,13 @@
     {{/each}}
 </div>--}}
 <form action="/gimnasio/listar/{{user.idUsuario}}" method="get"></form>
-
-<div id="contenido">
+<div id="gris">
     <label id="lista">Lista del Gimnasios</label>
+</div>
+<div id="contenido">
+    <div class="row">
+    {{#each lista}}
     <div id="formulario">
-        {{#each lista}}
         <div id="nombres">
             <label id="nombre">Nombre del Gimnasio</label>
             <p id="name">{{nombre}}</p>
@@ -68,7 +70,8 @@
                 <a href="/cliente/agregar/{{idGimnasio}}">Agregar Clientes</a>
             </button>
         </div>
-        {{/each}}
+    </div>    
+    {{/each}}
     </div>
 </div>
 <script src="/js/listaGimnasio.js"></script>

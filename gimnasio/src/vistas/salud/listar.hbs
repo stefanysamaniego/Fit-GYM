@@ -1,45 +1,50 @@
 <LINK REL=StyleSheet HREF="/css/salud/lista.css" TYPE="text/css" MEDIA=screen>
 
 <form action="/salud/listar/{{user.idUsuario}}"></form>
-<div id="contenido">
+<div id="gris">
     <label id="lista">Lista de la salud de los Clientes</label>
+</div>
+<div id="contenedor">
+    <div class="row">
         {{#each lista}}
-        <div id="ocias">
-            <label id="ocia">Lesiones ocias</label>
-            <p id="cero">{{lesion_ocia}}</p>
-        </div>
-        <div id="musuclar">
-            <label id="musculo">Lesiones musculares:</label>
-            <p id="uno">{{lesion_muscular}}</p>
-        </div>
-        <div id="enfermedades">
-            <label id="enfermedad">Enfermedades:</label>
-            <p id="dos">{{enfermedad}}</p>
-        </div>
-        <div id="vicios">
-            <label id="vicio">Vicios:</label>
-            <p id="tres">{{vicio}}</p>
-        </div>
-        <div id="embarazos">
-            <label id="embarazo">Embarazos:</label>
-            <p id="cuatro">{{embarazo}}</p>
-        </div>
-        <div id="dificultades">
-            <label id="dificultad">Dificultades:</label>
-            <p id="cinco">{{dificultades}}</p>
-        </div>
-        <div id="actividades">
-            <label id="actividad">Actividades deportivas:</label>
-            <p id="seis">{{actividad_deportiva}}</p>
-        </div>
-        <div id="entidades">
-            <label id="entidad">¿Asistia a un gimnasio u entidad deportiva?:</label>
-            <p id="siete">{{entidad}}</p>
-        </div>
-        <a href="/salud/editar/{{idSalud}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
-        <button type="submit" id="instructor">
-            <a href="/instructor/agregar/{{idSalud}}">Agregar Instructor</a>
-        </button>
+        <div id="formulario">
+            <div id="ocias">
+                <label id="ocia">Lesiones ocias</label>
+                <p id="cero">{{lesion_ocia}}</p>
+            </div>
+            <div id="musuclar">
+                <label id="musculo">Lesiones musculares:</label>
+                <p id="uno">{{lesion_muscular}}</p>
+            </div>
+            <div id="enfermedades">
+                <label id="enfermedad">Enfermedades:</label>
+                <p id="dos">{{enfermedad}}</p>
+            </div>
+            <div id="vicios">
+                <label id="vicio">Vicios:</label>
+                <p id="tres">{{vicio}}</p>
+            </div>
+            <div id="embarazos">
+                <label id="embarazo">Embarazos:</label>
+                <p id="cuatro">{{embarazo}}</p>
+            </div>
+            <div id="dificultades">
+                <label id="dificultad">Dificultades:</label>
+                <p id="cinco">{{dificultades}}</p>
+            </div>
+            <div id="actividades">
+                <label id="actividad">Actividades deportivas:</label>
+                <p id="seis">{{actividad_deportiva}}</p>
+            </div>
+            <div id="entidades">
+                <label id="entidad">¿Asistia a un gimnasio u entidad deportiva?:</label>
+                <p id="siete">{{entidad}}</p>
+            </div>
+            <a href="/salud/editar/{{idSalud}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+            <button type="submit" id="agregarInstructor">
+                <a href="/instructor/agregar/{{idSalud}}">Agregar Instructor</a>
+            </button>
         </div>
         {{/each}}
+    </div>
 </div>

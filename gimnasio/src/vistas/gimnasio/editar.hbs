@@ -1,38 +1,46 @@
 <LINK REL=StyleSheet HREF="/css/gimnasio/editar.css" TYPE="text/css" MEDIA=screen>
- 
-<div id="contenido"> 
-   {{#each trae}} 
+<div id="img">
+    <img src="/img/gimnasio.jpg">
+</div>
+<div id="gris">
+    <label id="Inscripcion">Datos del Gimnasio</label>
+</div>
+<div id="contenido">
+    {{#each trae}}
     <form action="/gimnasio/editar/{{idGimnasio}}" method="post">
-
-        <label id="Inscripcion">Datos del Gimnasio</label>
-
         <div id="nombres">
             <label id="name">Nombre</label>
             <input type="text" name="nombre" id="cero" checked value="{{nombre}}">
         </div>
         <div id="inscripciones">
             <label id="uno">Inscripción</label>
-            <textarea name="inscripcion" id="descripcion" cols="30" rows="10" placeholder="Agregar Texto" spellcheck="true" maxlength="600">{{inscripcion}}</textarea>
+            <textarea name="inscripcion" id="descripcion" cols="30" rows="10" placeholder="Agregar Texto"
+                spellcheck="true" maxlength="600">{{inscripcion}}</textarea>
         </div>
         <div id="mensualidades">
             <label id="dos">Mensualidad</label>
-            <textarea name="mensualidad" id="mensualidad" cols="30" rows="10" placeholder="Agregar texto" spellcheck="true" maxlength="600">{{mensualidad}}</textarea>
+            <textarea name="mensualidad" id="mensualidad" cols="30" rows="10" placeholder="Agregar texto"
+                spellcheck="true" maxlength="600">{{mensualidad}}</textarea>
         </div>
         <div id="horarios">
             <label id="tres">Horarios</label>
-            <textarea name="horario" id="horario" cols="30" rows="10" placeholder="Agregar texto" spellcheck="true" maxlength="15">{{horario}}</textarea>
+            <textarea name="horario" id="horario" cols="30" rows="10" placeholder="Agregar texto" spellcheck="true"
+                maxlength="15">{{horario}}</textarea>
         </div>
         <div id="bajas">
             <label id="cuatro">Bajas</label>
-            <textarea name="bajas" id="baja" cols="30" rows="10" placeholder="Agregar texto" spellcheck="true" maxlength="600">{{bajas}}</textarea>
+            <textarea name="bajas" id="baja" cols="30" rows="10" placeholder="Agregar texto" spellcheck="true"
+                maxlength="600">{{bajas}}</textarea>
         </div>
         <div id="higienes">
             <label id="cinco">Higiene</label>
-            <textarea name="higiene" id="higiene" cols="30" rows="10" placeholder="Agregar texto" spellcheck="true" maxlength="600">{{higiene}}</textarea>
+            <textarea name="higiene" id="higiene" cols="30" rows="10" placeholder="Agregar texto" spellcheck="true"
+                maxlength="600">{{higiene}}</textarea>
         </div>
         <div id="seguridades">
             <label id="seis">Seguridad</label>
-            <textarea name="seguridad" id="seguridad" cols="30" rows="10" placeholder="Agregar texto" spellcheck="true" maxlength="600">{{seguridad}}</textarea>
+            <textarea name="seguridad" id="seguridad" cols="30" rows="10" placeholder="Agregar texto" spellcheck="true"
+                maxlength="600">{{seguridad}}</textarea>
         </div>
         <div id="contactos">
             <label id="siete">Contatos</label>
@@ -40,13 +48,14 @@
         </div>
         <div id="direcciones">
             <label id="ocho">Direcciones</label>
-            <textarea name="direccion" id="direccion" cols="30" rows="10" placeholder="Agregar texto" spellcheck="true" maxlength="600">{{direccion}}</textarea>
+            <textarea name="direccion" id="direccion" cols="30" rows="10" placeholder="Agregar texto" spellcheck="true"
+                maxlength="600">{{direccion}}</textarea>
         </div>
         <div id="estados">
             <label id="estado">Estados</label>
             <input type="text" name="estado" id="estado" value="{{estado}}">
         </div>
-        <div id="Boton">
+        <div id="Boton1">
             <button type="submit" id="edita"><img src="/img/editar.png" id="imagen"></button>
         </div>
     </form>

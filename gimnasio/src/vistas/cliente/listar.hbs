@@ -1,42 +1,48 @@
 <LINK REL=StyleSheet HREF="/css/cliente/listar.css" TYPE="text/css" MEDIA=screen>
 
-<form action="/cliente/listar/{{user.idUsuario}}"></form>
-<div id="contenedor">
+<form action="/cliente/listar/{{user.idUsuario}}" method="get"></form>
+<div id="gris">
     <label id="lista">Lista del Clientes</label>
-    {{#each lista}}
-    <div id="nombres">
-          <label id="name">Nombres</label>
-        <p id="nombre">{{nombres}}</p>
+</div>
+<div id="contenedor">
+    <div class="row">
+        {{#each lista}}
+        <div id="formulario">
+            <div id="nombres">
+                <label id="name">Nombres</label>
+                <p id="nombre">{{nombres}}</p>
+            </div>
+            <div id="apellidos">
+                <label id="apellido">Apellidos</label>
+                <p id="uno">{{apellidos}}</p>
+            </div>
+            <div id="cedulas">
+                <label id="cedula">Cedula</label>
+                <p id="dos">{{cedula}}</p>
+            </div>
+            <div id="edades">
+                <label id="edad">Edad</label>
+                <p id="tres">{{edad}}</p>
+            </div>
+            <div id="telefonos">
+                <label id="telefono">Teléfono</label>
+                <p id="cuatro">{{telefono}}</p>
+            </div>
+            <div id="alturas">
+                <label id="altura">Altura</label>
+                <p id="cinco">{{altura}}</p>
+            </div>
+            <div id="pesos">
+                <label id="peso">Peso</label>
+                <p id="seis">{{peso}}</p>
+            </div>
+            <a href="/cliente/editar/{{idInfo_Cliente}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+            <div id="agregaHorario">
+                <button type="submit" id="cliente">
+                    <a href="/horario/agregar/{{idInfo_Cliente}}">Agregar Horario</a>
+                </button>
+            </div>
+        </div>
+        {{/each}}
     </div>
-    <div id="apellidos">
-        <label id="apellido">Apellidos</label>
-        <p id="uno">{{apellidos}}</p>
-    </div>
-    <div id="cedulas">
-        <label id="cedula">Cedula</label>
-        <p id="dos">{{cedula}}</p>
-    </div>
-    <div id="edades">
-        <label id="edad">Edad</label>
-        <p id="tres">{{edad}}</p>
-    </div>
-    <div id="telefonos">
-        <label id="telefono">Teléfono</label>
-        <p id="cuatro">{{telefono}}</p>
-    </div>
-    <div id="alturas">
-        <label id="altura">Altura</label>
-        <p id="cinco">{{altura}}</p>
-    </div>
-    <div id="pesos">
-        <label id="peso">Peso</label>
-        <p id="seis">{{peso}}</p>
-    </div>
-    <a href="/cliente/editar/{{idInfo_Cliente}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
-    <div id="agregaHorario">
-        <button type="submit" id="cliente">
-            <a href="/horario/agregar/{{idInfo_Cliente}}">Agregar Horario</a>
-        </button>
-    </div>
-    {{/each}}
 </div>

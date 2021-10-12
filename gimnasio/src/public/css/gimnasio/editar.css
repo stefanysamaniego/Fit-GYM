@@ -1,246 +1,192 @@
-#imagen{
-    width: 90px;
+body{
+    background-color: rgb(245, 222, 179);
 }
-
-#imagen1{
-    width: 90px;
-}
-
-#Boton{
+#img{
     position: absolute;
-    left: 720px;
-    top: 500px;
+    width: 100%;
+    height: 100%;
+    top: 7.3%;
+    max-width: 100%;
+    max-height: 22.7%;
 }
-
-#Boton1{
+#img img{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+#gris{
+    background-color: rgba(2, 2, 2, 0.453);
+    width: 100%;
+    height: 100%;
+    top: 7.3%;
+    max-width: 100%;
+    max-height: 22.7%;
     position: absolute;
-    left: 720px;
-    top: 500px;
 }
-
-#edita{
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 60px;
-    border-color: rgba(0, 0, 0, 0);
-}
-
-#contenido{
+#gris label{
     position: absolute;
-    margin-left: 80px;
-    padding-top: 130px;
-    gap: 10px;
-    width: 80%;
-}
-
-#Inscripcion{
-    position: absolute;
+    top: 35%;
+    left: 42.5%;
     font-size: 25px;
-    top: 70px;
-    left: 450px;
+    color: white;
 }
-
-#name{
+#contenido{
+    width: 100%;
+    height: 100%;
+    top: 30%;
+    left: 5%;
+    max-width: 90%;
+    max-height: 80%;
+    text-align: center;
     position: absolute;
-    left: 180px;
+}
+#contenido label{
+    font-size: 20px;
 }
 #nombres{
-    position: absolute; 
-    top:120px; 
-}
-#cero{
     position: absolute;
-    height: 30px;
-    top: 25px;
-    border: 2px solid rgba(81, 255, 0, 0.644);
-  	padding: 10px;
-  	border-radius: 40px 10px;
-    left: 160px;
-    text-align: justify;
+    top: 3%;
+    text-align: center;
 }
-
-#siete{
-    position: absolute;
-    left: 400px;
+#nombres input{
+    font-size: 20px;
 }
 #contactos{
     position: absolute;
-    top:120px;
-    left: 138px;
+    top: 3%;
+    left: 41%;
+    text-align: center;
 }
-#contacto{
-    position: absolute;
-    height: 30px;
-    top: 25px;
-    border: 2px solid rgba(81, 255, 0, 0.644);
-  	padding: 10px;
-  	border-radius: 40px 10px;
-    left: 320px;
-    text-align: justify;
-    
-}
-
-#ocho{
-    position: absolute;
-    left: 400px;
-}
-#direcciones{
-    position: absolute;
-    top:120px;
-    left: 440px;
-}
-#direccion{
-    position: absolute;
-    height: 50px;
-    top: 25px;
-    border: 2px solid rgba(81, 255, 0, 0.644);
-  	padding: 10px;
-    border-radius: 40px 10px;
-    left: 320px;
-    text-align: justify;
-}
-
-#nueve{
-    position: absolute;
-    left: 690px;
+#contactos input{
+    font-size: 20px;
 }
 #estados{
     position: absolute;
-    top:500px;
-    left: -150px;
+    top: 3%;
+    left: 83%;
+    text-align: center;
 }
-#estado{
-    position: absolute;
-    height: 50px;
-    top: 25px;
-    border: 2px solid rgba(81, 255, 0, 0.644);
-  	padding: 10px;
-    border-radius: 40px 10px;
-    left: 610px;
-    text-align: justify;
-}
-
-#uno{
-    position: absolute;
-    left: 180px;
+#estados input{
+    font-size: 20px;
 }
 #inscripciones{
     position: absolute;
-    top:220px;
+    top: 25%;
+    left: 0.8%;
+    width: 100%;
+    height: 100%;
+    max-width: 20%;
+    max-height: 25%;
 }
-#descripcion{
-    position: absolute;
-    height: 90px;
-    top: 25px;
-    border: 2px solid rgba(81, 255, 0, 0.644);
-  	padding: 10px;
-  	border-radius: 40px 10px;
-    left: 150px;
-    text-align: justify;
-}
-
-#dos{
-    position: absolute;
-    left: 690px;
+#inscripciones textarea{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;   
 }
 #mensualidades{
     position: absolute;
-    top:220px;
-    left: -160px;
+    top: 25%;
+    left: 26.5%; 
+    width: 100%;
+    height: 100%;
+    max-width: 20%;
+    max-height: 25%;
 }
-#mensualidad{
-    position: absolute;
-    height: 90px;
-    top: 25px;
-    border: 2px solid rgba(81, 255, 0, 0.644);
-  	padding: 10px;
-  	border-radius: 40px 10px;
-    left: 610px;
-    text-align: justify;
-}
-
-#tres{
-    position: absolute;
-    left: 1000px;
+#mensualidades textarea{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;   
 }
 #horarios{
     position: absolute;
-    top:220px;
-    left: -147px;
+    top: 25%;
+    left: 52.8%;
+    width: 100%;
+    height: 100%;
+    max-width: 20%;
+    max-height: 25%;
 }
-#horario{
-    position: absolute;
-    height: 90px;
-    top: 25px;
-    border: 2px solid rgba(81, 255, 0, 0.644);
-  	padding: 10px;
-  	border-radius: 40px 10px;
-    left: 900px;
-    text-align: justify;
-}
-
-#cuatro{
-    position: absolute;
-    left: 350px;
+#horarios textarea{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;   
 }
 #bajas{
     position: absolute;
-    top:360px;
-    left: -170px;
+    top: 25%;
+    left: 79%;
+    width: 100%;
+    height: 100%;
+    max-width: 20%;
+    max-height: 25%;
 }
-#baja{
-    position: absolute;
-    height: 90px;
-    top: 25px;
-    border: 2px solid rgba(81, 255, 0, 0.644);
-  	padding: 10px;
-  	border-radius: 40px 10px;
-    left: 320px;
-    text-align: justify;
-}
-
-#cinco{
-    position: absolute;
-    left: 690px;
+#bajas textarea{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;   
 }
 #higienes{
     position: absolute;
-    top:360px;
-    left: -160px;
+    top: 65%;
+    left: 0.8%;
+    width: 100%;
+    height: 100%;
+    max-width: 20%;
+    max-height: 25%;
 }
-#higiene{
-    position: absolute;
-    height: 90px;
-    top: 25px;
-    border: 2px solid rgba(81, 255, 0, 0.644);
-  	padding: 10px;
-  	border-radius: 40px 10px;
-    left: 610px;
-    text-align: justify;
-}
-
-#seis{
-    position: absolute;
-    left: 1000px;
+#higienes textarea{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;   
 }
 #seguridades{
     position: absolute;
-    top:360px;
-    left: -147px;
+    top: 65%;
+    left: 26.5%;
+    width: 100%;
+    height: 100%;
+    max-width: 20%;
+    max-height: 25%;
 }
-#seguridad{
+#seguridades textarea{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;   
+}
+#direcciones{
     position: absolute;
-    height: 90px;
-    top: 25px;
-    border: 2px solid rgba(81, 255, 0, 0.644);
-  	padding: 10px;
-  	border-radius: 40px 10px;
-    left: 900px;
-    text-align: justify;
+    top: 65%;
+    left: 52.8%;
+    width: 100%;
+    height: 100%;
+    max-width: 20%;
+    max-height: 25%;
 }
-
-#mensaje{
-    position: absolute;  
-    top:300px;
-    left: 150px;
-  }
-  
+#direcciones textarea{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;   
+}
+#Boton1{
+    position: absolute;
+    top: 75%;
+    left: 79%;
+}
+#edita img{
+    width: 40%;
+    height: auto;
+}
+#edita{
+    border-color: transparent;
+    background-color: transparent;
+}

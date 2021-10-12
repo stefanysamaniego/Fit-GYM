@@ -1,11 +1,10 @@
 <LINK REL=StyleSheet HREF="/css/cliente/editar.css" TYPE="text/css" MEDIA=screen>
- 
+  <div id="gris">
+  <label id="datos">Datos del Cliente</label>
+</div>
 <div id="contenido">
     {{#each trae}}
     <form action="/cliente/editar/{{idInfo_Cliente}}" method="post">
-
-        <label id="datos">Datos del Cliente</label>
-
         <div id="nombres">
             <label id="uno">Nombres:</label>
             <input type="text" name="nombres" id="nombre" checked value="{{nombres}}">
@@ -34,7 +33,7 @@
             <label id="siete">Peso:</label>
             <input type="text" name="peso" id="peso" checked value="{{peso}}">
         </div>
-        <div id="Boton">
+        <div id="Boton1">
             <button type="submit" id="edita"><img src="/img/editar.png" id="imagen1"></button>
         </div>
     </form>

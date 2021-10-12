@@ -1,11 +1,10 @@
 <LINK REL=StyleSheet HREF="/css/horario/editar.css" TYPE="text/css" MEDIA=screen>
-
+<div id="gris">
+        <label id="horario">Datos del Horario del Gimnasio</label>
+</div>
 <div id="contenido">
     {{#each trae}}
     <form action="/horario/editar/{{idHorario}}" method="POST">
-
-        <label id="horario">Datos del Horario del Gimnasio</label>
-
         <div id="dias">
             <label id="uno">Dias:</label>
             <input type="number" name="dias" id="dia" checked value="{{dias}}">
