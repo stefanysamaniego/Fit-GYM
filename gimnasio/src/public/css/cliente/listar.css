@@ -1,146 +1,103 @@
+body{
+    background-color: rgb(245, 222, 179);
+}
 #imagen{
-    width: 5%;
+    width: 20%;
 }
-
-#edita{
-    font-size: 180px;
-    margin-left: 320px;
-}
-
-#contenedor{
+#gris{
+    background-color: rgba(2, 2, 2, 0.453);
+    width: 100%;
+    height: 100%;
+    top: 7.3%;
+    max-width: 100%;
+    max-height: 22.7%;
     position: absolute;
-    margin-left: 80px;
-    padding-top: 130px;
-    gap: 10px;
-    width: 80%;
 }
-
-#lista{
+#gris label{
     position: absolute;
+    top: 35%;
+    left: 42.5%;
     font-size: 25px;
-    top: 90px;
-    left: 500px;
+    color: white;
+}
+#contenedor     {
+    width: 100%;
+    height: 100%;
+    top: 30%;
+    left: 5%;
+    max-width: 90%;
+    max-height: 80%;
+    text-align: center;
+    position: absolute;
 }
 
-label{
-    font-style: oblique;
-    font-weight: bolder;
-    font-size: 15px;
+#formulario{  
+    background-color: rgb(96, 255, 123);
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    width: 100%;
+    height: 100%;
+    max-width: 30%;
+    max-height: 40%;
 }
-
-p{
-    text-align: justify;
-    width: 50%;
-}
-
 #nombres{
-    position: absolute; 
-    margin-left: 80px;
-}
-#nombre{
     position: absolute;
-    height: 25px;
-    top: 10px;
-    padding: 10px;
-    left: 10px;
-    text-align: justify;
+    top: 3%;
+    left: 3%;
+    text-align: center;
 }
-
-
 #apellidos{
-    position: absolute; 
-    margin-left: 200px;   
-}
-#uno{
     position: absolute;
-    height: 25px;
-    top: 10px;
-    padding: 10px;
-    left: 10px;
-    text-align: justify;
+    top: 3%;
+    left: 39%;
+    text-align: center;
 }
-
 #cedulas{
-    position: absolute; 
-    top: 200px;
-}
-#cedula{
     position: absolute;
-    left: 80px;
+    top: 3%;
+    left: 74%;
+    text-align: center;
 }
-#dos{
-    position: absolute;
-    height: 25px;
-    top: 10px;
-    padding: 10px;
-    left: 80px;
-    text-align: justify;
-}
-
 #edades{
-    position: absolute; 
-    top: 200px;
-}
-#edad{
     position: absolute;
-    left: 200px;
+    top: 30.5%;
+    left: 3%;
+    text-align: center; 
 }
-#tres{
-    position: absolute;
-    height: 25px;
-    top: 10px;
-    padding: 10px;
-    left: 200px;
-    text-align: justify;
-}
-
 #telefonos{
-    position: absolute; 
-    top: 200px;
-}
-#telefono{
     position: absolute;
-    left: 340px;
+    top: 30.5%;
+    left: 35%;
+    text-align: center;
 }
-#cuatro{
-    position: absolute;
-    height: 25px;
-    top: 10px;
-    padding: 10px;
-    left: 350px;
-    text-align: justify;
-}
-
 #alturas{
-    position: absolute; 
-    top: 270px;
-}
-#altura{
     position: absolute;
-    left: 80px;
+    top: 30.5%;
+    left: 78%;
+    text-align: center;
 }
-#cinco{
-    position: absolute;
-    height: 25px;
-    top: 10px;
-    padding: 10px;
-    left: 80px;
-    text-align: justify;
-}
-
 #pesos{
-    position: absolute; 
-    top: 270px;
-}
-#peso{
     position: absolute;
-    left: 200px;
+    top: 60%;
+    left: 3%;
+    text-align: center; 
 }
-#seis{
+#edita{
     position: absolute;
-    height: 25px;
-    top: 10px;
-    padding: 10px;
-    left: 200px;
-    text-align: justify;
+    top: 60%;
+    left: 15%;
+}
+#edita img{
+    width: 30%;
+    height: auto;
+}
+#agregaHorario{
+    position: absolute;
+    top: 69%;
+    left: 65%;
+    font-size: 20px;
+}
+#cliente a{
+    font-size: 15px;
 }

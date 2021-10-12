@@ -1,10 +1,9 @@
-<LINK REL=StyleSheet HREF="/css/horario/editar.css" TYPE="text/css" MEDIA=screen>
-
+<LINK REL=StyleSheet HREF="/css/horario/agregar.css" TYPE="text/css" MEDIA=screen>
+<div id="gris">
+        <label id="horario">Datos del Horario del Gimnasio</label>
+</div>
 <div id="contenido">
     <form action="/horario/agregar/{{user.idUsuario}}" method="post">
-
-        <label id="horario">Datos del Horario del Gimnasio</label>
-
         <div id="dias">
             <label id="uno">Dias:</label>
             <input type="number" name="dias" id="dia" checked>

@@ -1,10 +1,9 @@
-<LINK REL=StyleSheet HREF="/css/instructor/editar.css" TYPE="text/css" MEDIA=screen>
- 
+<LINK REL=StyleSheet HREF="/css/instructor/agregar.css" TYPE="text/css" MEDIA=screen>
+<div id="gris">
+    <label id="datos">Datos del instructor</label>
+</div>
 <div id="contenido">
     <form action="/instructor/agregar/{{user.idUsuario}}" method="post">
-
-        <label id="datos">Datos del instructor</label> 
-
         <div id="nombres">
             <label id="uno">Nombres:</label>
             <input type="text" name="nombres" id="nombre" checked>
@@ -21,7 +20,7 @@
             <label id="cuatro">Edad:</label>
             <input type="number" name="edad" id="edad" checked>
         </div>
-        <div id="telefonos"> 
+        <div id="telefonos">
             <label id="cinco">Teléfono</label>
             <input type="number" name="telefono" id="telefono" checked>
         </div>
@@ -29,7 +28,7 @@
             <label id="seis">Título:</label>
             <select name="titulo" id="titulo" checked>
                 {{#each lista}}
-                    <option value="{{this.nombre}}">{{this.nombre}}</option>
+                <option value="{{this.nombre}}">{{this.nombre}}</option>
                 {{/each}}
             </select>
         </div>
@@ -39,7 +38,8 @@
         </div>
         <div id="descripciones">
             <label id="ocho">Descripción:</label>
-            <textarea name="descripcion" id="descripcion" cols="30" rows="10" rows="10" spellcheck="true" maxlength="600"></textarea>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" rows="10" spellcheck="true"
+                maxlength="600"></textarea>
         </div>
         <div id="Boton1">
             <button type="submit" id="edita"><img src="/img/guardar.png" id="imagen1"></button>

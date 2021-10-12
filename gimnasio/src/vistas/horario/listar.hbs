@@ -1,27 +1,31 @@
-<LINK REL=StyleSheet HREF="/css/horario/editar.css" TYPE="text/css" MEDIA=screen>
+<LINK REL=StyleSheet HREF="/css/horario/lista.css" TYPE="text/css" MEDIA=screen>
 
 <form action="/horario/listar/{{user.idUsuario}}"></form>
-<div id="contenedor">
+<div id="gris">
     <label id="lista">Lista de Horarios</label>
-    <div id="formulario">
+</div>
+<div id="contenedor">
+    <div class="row">
         {{#each lista}}
-        <div id="dias">
-            <label id="dia">Dias</label>
-            <p id="uno">{{dias}}</p>
-        </div>
-        <div id="meses">
-            <label id="mes">Mes</label>
-            <p id="dos">{{mes}}</p>
-        </div>
-        <div id="hora">
-            <label id="horas">Horas</label>
-            <p id="tres">{{horas}}</p>
-        </div>
-        <a href="/horario/editar/{{idHorario}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
-        <div id="agregaSalud">
-        <button type="submit" id="horario">
-            <a href="/salud/agregar/{{idHorario}}">Agregar Salud</a>
-        </button>
+        <div id="formulario">
+            <div id="dias">
+                <label id="dia">Dias</label>
+                <p id="uno">{{dias}}</p>
+            </div>
+            <div id="meses">
+                <label id="mes">Mes</label>
+                <p id="dos">{{mes}}</p>
+            </div>
+            <div id="hora">
+                <label id="horas">Horas</label>
+                <p id="tres">{{horas}}</p>
+            </div>
+            <a href="/horario/editar/{{idHorario}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+            <div id="agregaSalud">
+                <button type="submit" id="horario">
+                    <a href="/salud/agregar/{{idHorario}}">Agregar Salud</a>
+                </button>
+            </div>
         </div>
         {{/each}}
     </div>
