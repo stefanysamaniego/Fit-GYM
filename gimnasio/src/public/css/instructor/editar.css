@@ -1,6 +1,22 @@
 body{
     background-color: rgb(245, 222, 179);
 }
+#img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 7.3%;
+    max-width: 100%;
+    max-height: 22.7%;
+}
+#img img{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
 #gris{
     background-color: rgba(2, 2, 2, 0.453);
     width: 100%;
@@ -115,7 +131,7 @@ body{
     left: 40%;
 }
 #edita img{
-    width: 18%;
+    width: 35%;
     height: auto;
 }
 #edita{

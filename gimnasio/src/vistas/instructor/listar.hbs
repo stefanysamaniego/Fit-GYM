@@ -1,46 +1,54 @@
 <LINK REL=StyleSheet HREF="/css/instructor/listar.css" TYPE="text/css" MEDIA=screen>
-
+<div id="img">
+    <img src="/img/listar.jpeg">
+</div>
+<div id="gris">
+    <label id="lista">Lista de Instructores</label>
+</div>
 <form action="/instructor/listar/{{user.idUsuario}}"></form>
 <div id="contenedor">
-    <label id="lista">Lista del Instructores</label>
-    {{#each lista}}
-    <div id="nombres">
-        <label id="uno">Nombres</label>
-        <p id="nombre">{{nombres}}</p>
+    <div class="row">
+        {{#each lista}}
+        <div id="formulario">
+            <div id="nombres">
+                <label id="uno">Nombres</label>
+                <p id="nombre">{{nombres}}</p>
+            </div>
+            <div id="apellidos">
+                <label id="dos">Apellidos</label>
+                <p id="apellido">{{apellidos}}</p>
+            </div>
+            <div id="cedulas">
+                <label id="tres">Cedula</label>
+                <p id="cedula">{{cedula}}</p>
+           </div>
+            <div id="edades">
+                <label id="cuatro">Edad</label>
+                <p id="edad">{{edad}}</p>
+            </div>
+            <div id="telefonos">
+                <label id="cinco">Teléfono</label>
+                <p id="telefono">{{telefono}}</p>
+            </div>
+            <div id="titulos">
+                <label id="seis">Título</label>
+                <p id="titulo">{{titulo}}</p>
+            </div>
+            <div id="años">
+                <label id="siete">Años de experiencia</label>
+                <p id="año">{{añosExperiencia}}</p>
+            </div>
+            <div id="descripciones">
+                <label id="ocho">Descripción</label>
+                <p id="descripcion">{{descripcion}}</p>
+            </div>
+            <a href="/instructor/editar/{{idEntrenador}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+            <div id="agregaInstructor">
+                <button type="submit" id="instructor">
+                <a href="/menu/agregar/{{idEntrenador}}">Agregar Menú</a>
+            </button>
+            </div>
+        </div>
+        {{/each}}
     </div>
-    <div id="apellidos">
-        <label id="dos">Apellidos</label>
-        <p id="apellido">{{apellidos}}</p>
-    </div>
-    <div id="cedulas">
-        <label id="tres">Cedula</label>
-        <p id="cedula">{{cedula}}</p>
-    </div>
-    <div id="edades">
-        <label id="cuatro">Edad</label>
-        <p id="edad">{{edad}}</p>
-    </div>
-    <div id="telefonos">
-        <label id="cinco">Teléfono</label>
-        <p id="telefono">{{telefono}}</p>
-    </div>
-    <div id="titulos">
-        <label id="seis">Título</label>
-        <p id="titulo">{{titulo}}</p>
-    </div>
-    <div id="años">
-        <label id="siete">Años de experiencia</label>
-        <p id="año">{{añosExperiencia}}</p>
-    </div>
-    <div id="descripciones">
-        <label id="ocho">Descripción</label>
-        <p id="descripcion">{{descripcion}}</p>
-    </div>
-    <a href="/instructor/editar/{{idEntrenador}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
-    <div id="agregaInstructor">
-        <button type="submit" id="instructor">
-            <a href="/menu/agregar/{{idEntrenador}}">Agregar Menú</a>
-        </button>
-    </div>
-    {{/each}}
 </div>

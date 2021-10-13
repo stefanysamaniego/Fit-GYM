@@ -1,10 +1,12 @@
- <LINK REL=StyleSheet HREF="/css/menu/editar.css" TYPE="text/css" MEDIA=screen>
- 
+ <LINK REL=StyleSheet HREF="/css/menu/agregar.css" TYPE="text/css" MEDIA=screen>
+<div id="img">
+    <img src="/img/gimnasio.jpg">
+</div>
+<div id="gris">
+        <label id="datos">Datos del Menú</label>
+</div>
 <div id="contenido">
     <form action="/menu/agregar/{{user.idUsuario}}" method="post">
-
-        <label id="datos">Datos del Menú</label>
-
         <div id="nombres">
             <label id="uno">Nombre:</label>
             <input type="text" name="nombre" id="nombre" checked>

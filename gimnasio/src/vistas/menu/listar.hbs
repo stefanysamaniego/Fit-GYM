@@ -1,29 +1,37 @@
 <LINK REL=StyleSheet HREF="/css/menu/lista.css" TYPE="text/css" MEDIA=screen>
- 
 <form action="/menu/listar/{{user.idUsuario}}"></form>
+<div id="img">
+    <img src="/img/listar.jpeg">
+</div>
+<div id="gris">
+    <label id="lista">Lista del Menus</label>
+</div>
 <div id="contenedor">
-    <label id="lista">Lista del Menú</label>
-    {{#each lista}}
-    <div id="nombres">
-        <label id="uno">Nombre</label>
-        <p id="nombre">{{nombre}}</p>
+    <div class="row">
+        {{#each lista}}
+        <div id="formulario">
+            <div id="nombres">
+                <label id="uno">Nombre</label>
+                <p id="nombre">{{nombre}}</p>
+            </div>
+            <div id="categorias">
+                <label id="dos">Categoria</label>
+                <p id="categoria">{{categoria}}</p>
+            </div>
+            <div id="dias">
+                <label id="tres">Días</label>
+                <p id="dia">{{dias}}</p>
+            </div>
+            <div id="semanas">
+                <label id="cuatro">Semanas</label>
+                <p id="semana">{{semanas}}</p>
+            </div>
+            <div id="descripciones">
+                <label id="cinco">Descripción</label>
+                <p id="descripcion">{{descripcion}}</p>
+            </div>
+            <a href="/menu/editar/{{idMenu}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
+        </div>
+        {{/each}}
     </div>
-    <div id="categorias">
-        <label id="dos">Categoria</label>
-        <p id="categoria">{{categoria}}</p>
-    </div>
-    <div id="dias">
-        <label id="tres">Días</label>
-        <p id="dia">{{dias}}</p>
-    </div>
-    <div id="semanas">
-        <label id="cuatro">Semanas</label>
-        <p id="semana">{{semanas}}</p>
-    </div>
-    <div id="descripciones">
-        <label id="cinco">Descripción</label>
-        <p id="descripcion">{{descripcion}}</p>
-    </div>
-    <a href="/menu/editar/{{idMenu}}" id="edita"><img src="/img/editar.png" id="imagen"></a>
-    {{/each}}
 </div>

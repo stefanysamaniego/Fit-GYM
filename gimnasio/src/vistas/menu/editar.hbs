@@ -1,11 +1,13 @@
 <LINK REL=StyleSheet HREF="/css/menu/editar.css" TYPE="text/css" MEDIA=screen>
- 
+ <div id="img">
+    <img src="/img/gimnasio.jpg">
+</div>
+<div id="gris">
+        <label id="datos">Datos del Menú</label>
+</div>
 <div id="contenido">
     {{#each trae}}
     <form action="/menu/editar/{{idMenu}}" method="post">
-
-        <label id="datos">Datos del Menú</label>
-
         <div id="nombres">
             <label id="uno">Nombre:</label>
             <input type="text" name="nombres" id="nombre" checked value="{{nombre}}">
@@ -31,7 +33,7 @@
                 {{/each}}
             </select>
         </div>
-        <div id="Boton">
+        <div id="Boton1">
             <button type="submit" id="edita"><img src="/img/editar.png" id="imagen1"></button>
         </div>
     </form>
